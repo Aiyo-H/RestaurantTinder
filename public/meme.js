@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>This example demonstrates how to assign an "onclick" event to a p element.</p>
-
-<img id="img" onclick="next()" src = "./assets/fabric.jpg">
-
-<script>
 var id = 0;
 function next() {
   id = (id + 1) % 4;
@@ -25,7 +16,3 @@ function next() {
       break;
   }
 }
-</script>
-
-</body>
-</html>
