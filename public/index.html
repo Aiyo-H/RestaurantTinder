@@ -7,12 +7,22 @@ var id = 1;
  
 function next(){
 	id = (id + 1) % 5;
-  if ()
-	document.getElementById("image").src = './img/' + id + '.jpg';
+  switch (id) {
+      case 0：
+        document.getElementById("image").src = './assets/fabric.jpg"
+      case 1：
+        document.getElementById("image").src = './assets/fatherPortrait.jpg"
+      case 2：
+        document.getElementById("image").src = './assets/openAfterDeath.jpg"
+      case 3：
+        document.getElementById("image").src = './assets/roomCube.jpg"
+      case 4：
+        document.getElementById("image").src = './assets/fabric.jpg"
+  }
 	console.log(id);
 }
  
 </script>
-<img id="image" width="1250" height="900" οnclick="next()" src="./img/1.jpg" />
+<img id="image" width="1250" height="900" οnclick="next()" src="./assets/fabric.jpg" />
 </body>
 </html>
