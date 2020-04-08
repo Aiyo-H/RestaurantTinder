@@ -1,28 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html>
 <body>
-<script type="text/javascript">
+
+<p>This example demonstrates how to assign an "onclick" event to a p element.</p>
+
+<img id="img" onclick="next()" src = "./assets/fabric.jpg">
+
+<script>
 var id = 1;
- 
-function next(){
-	id = (id + 1) % 5;
+function next() {
+  id = (id + 1) % 4;
   switch (id) {
-      case 0：
-        document.getElementById("image").src = './assets/fabric.jpg"
-      case 1：
-        document.getElementById("image").src = './assets/fatherPortrait.jpg"
-      case 2：
-        document.getElementById("image").src = './assets/openAfterDeath.jpg"
-      case 3：
-        document.getElementById("image").src = './assets/roomCube.jpg"
-      case 4：
-        document.getElementById("image").src = './assets/fabric.jpg"
+    case 0:
+      document.getElementById("img").src = "https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&#038;d=retro&#038;r=pg";
+      break;
+    case 0:
+      document.getElementById("img").src = "https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&#038;d=retro&#038;r=pg";
+      
+    case 0:
+      document.getElementById("img").src = "https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&#038;d=retro&#038;r=pg";
+    case 0:
+      document.getElementById("img").src = "https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&#038;d=retro&#038;r=pg";
   }
-	console.log(id);
 }
- 
 </script>
-<img id="image" width="1250" height="900" οnclick="next()" src="./assets/fabric.jpg" />
+
 </body>
 </html>
