@@ -62,8 +62,9 @@ nav li {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#info{
-  margin = 0px;
+#info {
+  margin-top: 0px;
+  margin-bottom: 20px;
 	font-family: 'Open Sans', sans-serif;
 	background-color: black;
 	color: white;
