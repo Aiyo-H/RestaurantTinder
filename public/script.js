@@ -12,7 +12,7 @@ function next() {
     case 1:
       document.getElementById("pic").src = "./assets/fatherPortrait.jpg";
       document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170" + '3/4'.split('/') + "inches";
+        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170 3/4 inches";
       break;
     case 2:
       document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
@@ -49,8 +49,6 @@ function showtime() {
   var nowtime = new Date();
   var endtime = new Date("2020/05/10, 17:00:00");
   var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
-  document.getElementById("countdown").innerHTML = Number(
-    lefttime
-  ).toLocaleString();
+  document.getElementById("countdown").innerHTML = Number(lefttime).toLocaleString();
   setTimeout(showtime, 1000);
 }
