@@ -5,10 +5,6 @@
   text-align: center;
 }
 
-#top > div {
-  width: 100%;
-}
-
 #text {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -17,14 +13,15 @@
 }
 
 #text span {
-  font-weight: bold;
   color: #c9523d;
+  /* font-weight: bold; */
 }
 
 nav li {
   display: inline;
-  margin: 40px;
+  margin: 30px;
   font-size: 18px;
+  padding-bottom: 50px;
 }
 
 nav {
@@ -40,11 +37,9 @@ nav {
 	background-color: black;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 0;
-	margin-bottom: 0;
 }
 
-#title {
+#title h3 {
 	margin: 0 auto;
 	width: 70%;
 	text-align: center;
@@ -54,6 +49,7 @@ nav {
 #title h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
+  text-align: center;
 	font-size: 30px;
 }
 
@@ -73,11 +69,6 @@ a {
 
 a:visited {
   color: black;
-}
-
-h3 {
-  margin-bottom: 20px;
-	font-size: 20px;
 }
 
 body {
