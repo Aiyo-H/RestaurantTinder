@@ -71,3 +71,7 @@ p.msg {
 	flex-direction: column;
 	text-align: center;
 }
+
+#top>div {
+	width: 100%;
+}
