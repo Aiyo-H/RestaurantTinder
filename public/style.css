@@ -22,22 +22,18 @@
 }
 
 nav li {
+  display: inline;
+  margin: 40px;
   font-size: 20px;
-  list-style: none;
-  padding: 0;
-  display: inline;
-  margin: 40px;
-}
-
-nav ul li {
-  display: inline;
-  margin: 40px;
+  /*list-style: none;
+  padding: 0;*/
 }
 
 nav {
   padding-right: 2%;
   margin-bottom: 20px;
 }
+
 
 /* styles */
 
