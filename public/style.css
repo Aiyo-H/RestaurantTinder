@@ -46,6 +46,12 @@ nav ul li {
    in internal CSS calculations */
 * {
   box-sizing: border-box;
+  
+}
+
+a {
+  TEXT-DECORATION: none
+  TEXT-DECORATION-COLOR: none
 }
 
 h3 {
