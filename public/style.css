@@ -50,8 +50,11 @@ nav ul li {
 }
 
 a {
-  TEXT-DECORATION: none
-  TEXT-DECORATION-COLOR: none
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
 }
 
 h3 {
