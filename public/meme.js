@@ -1,5 +1,6 @@
-var id = 0;
 showtime();
+var id = 0;
+
 function next() {
   id = (id + 1) % 4;
   switch (id) {
@@ -41,4 +42,5 @@ function showtime() {
   var endtime = new Date("2020/05/10,17:00:00");
   var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
   document.getElementById("countdown").innerHTML = Number(lefttime).toLocaleString();
+  setTimeout(showtime, 1000);
 }
