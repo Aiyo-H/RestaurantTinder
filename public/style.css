@@ -51,7 +51,7 @@ nav li {
 	margin-bottom: 20px;
   text-align: center;
 	font-size: 30px;
-  font-weight: 540;
+  font-weight: 500;
 }
 
 #title h3 {
@@ -78,6 +78,7 @@ main p {
 	background-color: #c6d2da;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 13px;
+  font-weight: 400;
   line-height: 130%;
   margin-top: 40px;
 	padding-left: 5%;
