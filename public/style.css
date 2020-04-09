@@ -24,7 +24,7 @@ a:visited {
   color: #2a2d7c;
 }
 
-#text span {
+#text dfont {
   color: #c9523d;
   font-weight: 700;
 }
@@ -41,116 +41,93 @@ nav li {
 }
 
 #countdown {
-	font-size: 80px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-	background-color: black;
-	color: white;
-	font-family: 'Open Sans', sans-serif;
+  font-size: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
 
 #title h2 {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
-	font-size: 30px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 #title h3 {
-	margin-top: 20px;
-	margin-bottom: 10px;
-	width: 100%;
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 #info {
   margin-top: -3px;
   margin-bottom: 20px;
-	font-family: 'Open Sans', sans-serif;
-	background-color: black;
-	color: white;
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  color: white;
   line-height: 25px;
-	font-size: 18px;
-	padding-top: 3%;
-	padding-bottom: 3%;
-	padding-left: 5%;
-	padding-right: 5%;
-	text-align: center;
+  font-size: 18px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
 }
 
 main p {
   margin: 0 auto;
   line-height: 25px;
-	width: 90%;
+  width: 90%;
   font-size: 18px;
-	font-family: 'Montserrat', sans-serif;
-	margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
 }
 
 #bottom {
   margin: 0 auto;
-	display: flex;
-	flex-direction: column-reverse;
-	background-color: #c6d2da;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 13px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #c6d2da;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
   font-weight: 400;
   line-height: 130%;
   margin-top: 40px;
-	padding-left: 5%;
-	padding-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-#bottom>div {
-	margin-top: 0px;
+#bottom > div {
+  margin-top: 0px;
   margin-bottom: 40px;
 }
 
 #bottom h3 {
   font-size: 15px;
-	font-weight: bold;
-	margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #bottom ul {
-	list-style: none;
+  list-style: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* styles */
 
 /* size of margin, border and padding is included in size of element 
    in internal CSS calculations */
-* {
-  box-sizing: border-box;
-}
 
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 25px;
 }
-
 
 img {
   width: 100%;
