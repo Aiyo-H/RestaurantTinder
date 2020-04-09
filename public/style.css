@@ -54,6 +54,15 @@ nav li {
 	font-family: 'Open Sans', sans-serif;
 }
 
+main p {
+  margin: 0 auto;
+  line-height: 20px;
+	width: 90%;
+  font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 20px;
+}
+
 
 
 
@@ -78,10 +87,6 @@ body {
   margin: 25px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-}
 
 img {
   width: 100%;
@@ -90,7 +95,6 @@ img {
 p.meme {
   color: #f1f1f1; /* color given as RGB */
   font-size: 22px;
-
   margin: 10px;
   position: absolute; /* this places the element within its parent */
   left: 0; /* coord within parent */
