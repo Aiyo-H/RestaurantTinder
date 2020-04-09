@@ -17,12 +17,12 @@ function next() {
     case 2:
       document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
       document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches, edition of 10.";
+        "Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved, with unknown contents, 3 x 6 x 3 inches.";
       break;
     case 3:
       document.getElementById("pic").src = "./assets/roomCube.jpg";
       document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved, with unknown contents, 3 x 6 x 3 inches.";
+        "Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches, edition of 10.";
       break;
   }
 }

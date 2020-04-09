@@ -68,13 +68,16 @@ nav li {
 	font-family: 'Open Sans', sans-serif;
 	background-color: black;
 	color: white;
+  line-height: 25px;
 	font-size: 18px;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
 }
+
+@supports
 
 main p {
   margin: 0 auto;
