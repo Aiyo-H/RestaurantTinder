@@ -1,44 +1,43 @@
-
 #top {
-	font-family: 'Montserrat', sans-serif;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-#top>div {
-	width: 100%;
+#top > div {
+  width: 100%;
 }
 
 #text {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-size: 15px;
-	color: #2a2d7c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #2a2d7c;
 }
 
 #text span {
-	font-weight: bold;
-	color: #c9523d;
+  font-weight: bold;
+  color: #c9523d;
 }
 
-nav ul {
-	font-size: 20px;
-	list-style: none;
-	padding: 0;
+nav li {
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+  display: inline;
+  margin: 40px;
 }
 
 nav ul li {
-	display: inline;
-	margin: 40px;
+  display: inline;
+  margin: 40px;
 }
 
 nav {
-	padding-right: 2%;
-	margin-bottom: 20px;
+  padding-right: 2%;
+  margin-bottom: 20px;
 }
-
-
 
 /* styles */
 
@@ -46,7 +45,6 @@ nav {
    in internal CSS calculations */
 * {
   box-sizing: border-box;
-  
 }
 
 a {
@@ -62,7 +60,6 @@ h3 {
   color: PaleVioletRed;
 }
 
-
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 25px;
@@ -73,7 +70,6 @@ main {
   justify-content: center;
 }
 
-
 img {
   width: 100%;
 }
@@ -81,28 +77,27 @@ img {
 p.meme {
   color: #f1f1f1; /* color given as RGB */
   font-size: 22px;
-  
+
   margin: 10px;
   position: absolute; /* this places the element within its parent */
   left: 0; /* coord within parent */
-  bottom: 0;  /* coord within parent */
+  bottom: 0; /* coord within parent */
 }
 
 div.imageWrapper {
   width: 100%;
   max-width: 400px;
-  
-  position: relative;  /* this has no effect */
-  /* except that the parent of a positioned element has to be positioned.  */ 
+
+  position: relative; /* this has no effect */
+  /* except that the parent of a positioned element has to be positioned.  */
   /* hey, I did not devise this crazy system, that is just how it is.  */
 }
-
 
 footer {
   margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid lightgrey;
-  
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
