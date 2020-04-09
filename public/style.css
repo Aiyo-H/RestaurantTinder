@@ -1,3 +1,45 @@
+
+#top {
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+#top>div {
+	width: 100%;
+}
+
+#text {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	color: #2a2d7c;
+}
+
+#text span {
+	font-weight: bold;
+	color: #c9523d;
+}
+
+nav ul {
+	font-size: 20px;
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline;
+	margin: 40px;
+}
+
+#nav {
+	padding-right: 2%;
+	margin-bottom: 20px;
+}
+
+
+
 /* styles */
 
 /* size of margin, border and padding is included in size of element 
@@ -64,43 +106,3 @@ div.glitchButton {
 p.msg {
   margin: 15px;
 }
-
-#top {
-	font-family: 'Montserrat', sans-serif;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-}
-
-#top>div {
-	width: 100%;
-}
-
-#text {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-size: 15px;
-	color: #2a2d7c;
-}
-
-#text span {
-	font-weight: bold;
-	color: #c9523d;
-}
-
-nav ul {
-	font-size: 20px;
-	list-style: none;
-	padding: 0;
-}
-
-nav ul li {
-	display: inline;
-	margin: 40px;
-}
-
-#nav {
-	padding-right: 2%;
-	margin-bottom: 20px;
-}
-
