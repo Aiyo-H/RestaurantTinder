@@ -77,8 +77,6 @@ nav li {
 	text-align: center;
 }
 
-@supports
-
 main p {
   margin: 0 auto;
   line-height: 25px;
