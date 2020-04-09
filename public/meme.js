@@ -41,4 +41,3 @@ function showtime() {
   var lefttime = parseInt(endtime.getTime() - nowtime.getTime());
   document.getElementById("countdown").innerHTML = Number(10).toLocaleString();
 }
-showtime();

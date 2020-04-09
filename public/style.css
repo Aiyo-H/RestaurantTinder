@@ -34,13 +34,13 @@ nav {
   margin-bottom: 20px;
 }
 
-#contdown {
+#countdown {
 	font-size: 80px;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	text-align: center;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 0;
 	margin-bottom: 0;
