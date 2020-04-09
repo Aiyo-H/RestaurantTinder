@@ -46,9 +46,7 @@ function last() {
 }
 
 function showtime() {
-  var nowtime = new Date();
-  var endtime = new Date("2020/05/10, 17:00:00");
-  var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
-  document.getElementById("countdown").innerHTML = Number(lefttime).toLocaleString();
+  var leftTime = parseInt(((new Date("2020/05/10, 17:00:00")).getTime() - (new Date()).getTime()) / 1000);
+  document.getElementById("countdown").innerHTML = Number(leftTime).toLocaleString();
   setTimeout(showtime, 1000);
 }
