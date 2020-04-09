@@ -12,7 +12,7 @@ function next() {
     case 1:
       document.getElementById("pic").src = "./assets/fatherPortrait.jpg";
       document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170 3/4 inches";
+        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170¾ inches";
       break;
     case 2:
       document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
