@@ -1,76 +1,101 @@
 <!-- This is the awful HTML comment syntax -->
-<!DOCTYPE html> <!-- Message to browser...I think I am HTML -->
+<!DOCTYPE html>
+<!-- Message to browser...I think I am HTML -->
 <html lang="en">
-<!-- My text is in English -->
+  <!-- My text is in English -->
 
-<head>
-  <meta charset="utf-8"> <!-- Binary encoding of characters -->
-  <title>Static server</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This will come in handy later -->
+  <head>
+    <meta charset="utf-8" />
+    <!-- Binary encoding of characters -->
+    <title>Static server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- This will come in handy later -->
 
-  <!-- import the webpage's css -->
-  <link rel="stylesheet" href="/style.css">
-</head>
+    <!-- import the webpage's css -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link
+      href="https://fonts.google.com/specimen/Montserrat"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.google.com/specimen/Open+Sans" rel="stylesheet" />
+    <script src="./script.js"></script>
+  </head>
 
-<body>
-  <script type="text/javascript" src="meme.js"></script>
-  <header>
-  <div id = "top">
-    <div id = "text">
-      <p>jan shrem and maria <span><strong>manetti shrem museum</strong></span> of art</p>
-    </div>
-    <div id = "nav">
-      <nav>
-      <ul>
-        <li><a>home</a></li>
-        <li><a>visit</a></li>
-        <li><a>about</a></li>
-      </ul>
-    </nav>
-    </div>
-  </div>
-    
-  </header>
-  <img id="pic" onclick="next()" src = "./assets/fabric.jpg">
-  <main>
-    <p>During the late 1960s, after graduating from UC Davis (BA, 1966; MA, 1967) and moving to New York, Stephen Kaltenbach established a reputation in the emerging international field of Conceptual art. But in 1970, just as he was achieving career
-      success, Kaltenbach abruptly withdrew to California’s Central Valley, appearing to abandon Conceptual work in favor of the more traditional mediums of painting and sculpture. Coinciding with the 50th anniversary of his “dropout,” this
-      exhibition considers Kaltenbach’s engagement with time as a principal theme across his remarkably diverse career, which encompasses bronze time capsules, advertisements placed anonymously in Artforum magazine in 1968-69, and the monumental
-      photorealist painting Portrait of My Father (1972-79)</p>
-    <p>Guest Curators: Constance Lewallen and Ted Mann</p>
-  </main>
-  <footer>
-    <div>
-      <h3>manetti shrem museum</h3>
-      <p>254 Old Davis Rd. <br>Davis, CA 95616</p>
-    </div>
-    <div>
-      <h3>Hours</h3>
-      <ul>
-        <li>Tuesday, Wednesday, and Friday: Noon-6pm</li>
-        <li>Thursday: Noon-9pm</li>
-        <li>Saturday-Sunday: 11am-5pm</li>
-        <li>Monday: Closed</li>
-      </ul>
-    </div>
-    <div>
-      <h3>The Manetti Shrem Museum will be temporarily closed starting March 16, 2020</h3>
-      <p>This is to prioritize the health and safety of our students, faculty, and the community at large. Thank you for your patience.</p>
-    </div>
-    <div class="flex-container">
-      <div></div>
-    </div>
-  </footer>
+  <body>
+    <script type="text/javascript" src="meme.js"></script>
+    <header>
+      <div id="top">
+        <div id="text">
+          <p>
+            jan shrem and maria
+            <span><strong>manetti shrem museum</strong></span> of art
+          </p>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul>
+              <li><a>home</a></li>
+              <li><a>visit</a></li>
+              <li><a>about</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <img id="pic" onclick="next()" src="./assets/fabric.jpg" />
+    <main>
+      <p>
+        During the late 1960s, after graduating from UC Davis (BA, 1966; MA,
+        1967) and moving to New York, Stephen Kaltenbach established a
+        reputation in the emerging international field of Conceptual art. But in
+        1970, just as he was achieving career success, Kaltenbach abruptly
+        withdrew to California’s Central Valley, appearing to abandon Conceptual
+        work in favor of the more traditional mediums of painting and sculpture.
+        Coinciding with the 50th anniversary of his “dropout,” this exhibition
+        considers Kaltenbach’s engagement with time as a principal theme across
+        his remarkably diverse career, which encompasses bronze time capsules,
+        advertisements placed anonymously in Artforum magazine in 1968-69, and
+        the monumental photorealist painting Portrait of My Father (1972-79)
+      </p>
+      <p>Guest Curators: Constance Lewallen and Ted Mann</p>
+    </main>
+    <footer>
+      <div>
+        <h3>manetti shrem museum</h3>
+        <p>254 Old Davis Rd. <br />Davis, CA 95616</p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Tuesday, Wednesday, and Friday: Noon-6pm</li>
+          <li>Thursday: Noon-9pm</li>
+          <li>Saturday-Sunday: 11am-5pm</li>
+          <li>Monday: Closed</li>
+        </ul>
+      </div>
+      <div>
+        <h3>
+          The Manetti Shrem Museum will be temporarily closed starting March 16,
+          2020
+        </h3>
+        <p>
+          This is to prioritize the health and safety of our students, faculty,
+          and the community at large. Thank you for your patience.
+        </p>
+      </div>
+      <div class="flex-container">
+        <div></div>
+      </div>
+    </footer>
 
-  <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
+    <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
 
-  <!-- include the Glitch button to show what the webpage is about and
+    <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-  <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
+    <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
 
-  <!-- import the webpage's browser-side javascript file -->
-  <!-- Does not do anything yet -->
-  <script src="./script.js"></script>
-</body>
-
+    <!-- import the webpage's browser-side javascript file -->
+    <!-- Does not do anything yet -->
+  </body>
 </html>
