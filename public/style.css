@@ -1,3 +1,11 @@
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
 #top {
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -93,20 +101,29 @@ main p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* styles */
 
 /* size of margin, border and padding is included in size of element 
    in internal CSS calculations */
 * {
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: black;
 }
 
 body {
