@@ -289,16 +289,16 @@ p.msg {
     margin-left: 4%;
     font-size: 10px;
   }
-  
+
   #home {
     margin: 0 auto;
     text-align: right;
     padding-top: 18px;
     margin-right: 4%;
     font-size: 20px;
-    display: inline;   
+    display: inline;
   }
-  
+
   nav ul li {
     margin: 10px;
   }
@@ -366,10 +366,16 @@ p.msg {
 }
 
 @media only screen and (min-width: 800px) {
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
   #top {
     flex-direction: row;
     padding-bottom: 5px;
-    
   }
   #info {
     margin-left: 2%;
@@ -382,9 +388,9 @@ p.msg {
     padding-top: 18px;
     margin-right: 2%;
     font-size: 20px;
-    display: inline;   
+    display: inline;
   }
-  
+
   nav ul li {
     margin: 10px;
   }
@@ -436,12 +442,18 @@ p.msg {
     margin-left: 28%;
   }
   
+  main {
+  flex: 1 0 auto;
+  min-height: auto;
+}
+
   #bottom {
     flex-direction: row;
     font-size: 10px;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 25px;
+    margin-top: 10px;
   }
 
   #bottom h3 {
