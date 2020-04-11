@@ -1,79 +1,35 @@
-showtime();
-var id = 0;
+var id = 1;
+showSlide(id);
+showTime();
 
-function next() {
-  id = (id + 1) % 4;
-  switch (id) {
-    case 0:
-      document.getElementById("pic").src = "./assets/fabric.jpg";
-      document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x 60 inches.";
-      break;
-    case 1:
-      document.getElementById("pic").src = "./assets/fatherPortrait.jpg";
-      document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170¾ inches";
-      break;
-    case 2:
-      document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
-      document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved, with unknown contents, 3 x 6 x 3 inches.";
-      break;
-    case 3:
-      document.getElementById("pic").src = "./assets/roomCube.jpg";
-      document.getElementById("info").innerHTML =
-        "Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches, edition of 10.";
-      break;
-  }
-}
-function last() {
-  if (id == 0) id = 4;
-  id = (id - 1) % 4;
-  switch (id) {
-    case 0:
-      document.getElementById("pic").src = "./assets/fabric.jpg";
-      break;
-    case 1:
-      document.getElementById("pic").src = "./assets/fatherPortrait.jpg";
-      break;
-    case 2:
-      document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
-      break;
-    case 3:
-      document.getElementById("pic").src = "./assets/roomCube.jpg";
-      break;
-  }
-}
-
-function showtime() {
+function showTime() {
   var leftTime = parseInt(((new Date("2020/05/10, 17:00:00")).getTime() - (new Date()).getTime()) / 1000);
   document.getElementById("countdown").innerHTML = Number(leftTime).toLocaleString();
-  setTimeout(showtime, 1000);
+  setTimeout(showTime, 1000);
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+function nextSlide(n) {
+  showSlide(++id);
+}
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function lastSlide(n) {
+  showSlide(--id);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlide(id = n);
 }
 
-function showSlides(n) {
-  var i;
+function showSlide(n) {
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  var buttons = document.getElementsByClassName("dot");
+  id = n > slides.length ? 1 : (n < 1 ? slides.length : n);
+  for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  for (var i = 0; i < buttons.length; i++) {
+      buttons[i].className = buttons[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[id - 1].style.display = "block";  
+  buttons[id - 1].className += " active";
 }
