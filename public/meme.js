@@ -39,23 +39,20 @@ function showSlide(n) {
 
 function showText(n) {
   switch (n) {
-    case 0:
-      document.getElementBy("info").innerHTML =
+    case 1:
+      document.getElementById("text2").innerHTML =
         "Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x 60 inches.";
       break;
-    case 1:
-      document.getElementById("pic").src = "./assets/fatherPortrait.jpg";
-      document.getElementById("info").innerHTML =
+    case 2:
+      document.getElementById("text2").innerHTML =
         "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170¾ inches";
       break;
-    case 2:
-      document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
-      document.getElementById("info").innerHTML =
+    case 3:
+      document.getElementById("text2").innerHTML =
         "Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved, with unknown contents, 3 x 6 x 3 inches.";
       break;
-    case 3:
-      document.getElementById("pic").src = "./assets/roomCube.jpg";
-      document.getElementById("info").innerHTML =
+    case 4:
+      document.getElementById("text2").innerHTML =
         "Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches, edition of 10.";
       break;
   }

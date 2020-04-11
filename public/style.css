@@ -114,7 +114,7 @@ nav li {
   display: none;
 }
 
-.text2 {
+#text2 {
   margin-top: -19px;
   margin-bottom: 15px;
   font-family: "Open Sans", sans-serif;
