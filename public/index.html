@@ -25,103 +25,108 @@
   </head>
 
   <body>
-    <header>
-      <div id="top">
-        <div id="info">
-          <p>jan shrem and maria <span>manetti shrem museum</span> of art</p>
-        </div>
-        <div id="home">
-          <nav>
-            <ul>
-              <li><a href="https://manettishremmuseum.ucdavis.edu">home</a></li>
-              <li>
-                <a href="https://manettishremmuseum.ucdavis.edu">visit</a>
-              </li>
-              <li>
-                <a href="https://manettishremmuseum.ucdavis.edu">about</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <p id="countdown"></p>
-    </header>
-
-    <main>
-      <div id="title">
-        <h2>Stephan Kaltenbach: The Beginning and The End</h2>
-        <h3>On view January 26-May 10, 2020</h3>
-      </div>
-
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img src="./assets/fabric.jpg" style="width:100%" />
-          <div class="text1">
-            Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45
-            x 60 inches
+    <div class="content">
+      <header>
+        <div id="top">
+          <div id="info">
+            <p>jan shrem and maria <span>manetti shrem museum</span> of art</p>
+          </div>
+          <div id="home">
+            <nav>
+              <ul>
+                <li>
+                  <a href="https://manettishremmuseum.ucdavis.edu">home</a>
+                </li>
+                <li>
+                  <a href="https://manettishremmuseum.ucdavis.edu">visit</a>
+                </li>
+                <li>
+                  <a href="https://manettishremmuseum.ucdavis.edu">about</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
+        <p id="countdown"></p>
+      </header>
 
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="./assets/fatherPortrait.jpg" style="width:100%" />
-          <div class="text1">
-            Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on
-            canvas, 114 x 170 ¾ inches
-          </div>
+      <main>
+        <div id="title">
+          <h2>Stephan Kaltenbach: The Beginning and The End</h2>
+          <h3>On view January 26-May 10, 2020</h3>
         </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="./assets/openAfterDeath.jpg" style="width:100%" />
-          <div class="text1">
-            Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved,
-            with unknown contents, 3 x 6 x 3 inches
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./assets/fabric.jpg" style="width:100%" />
+            <div class="text1">
+              Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric,
+              45 x 60 inches
+            </div>
           </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./assets/fatherPortrait.jpg" style="width:100%" />
+            <div class="text1">
+              Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on
+              canvas, 114 x 170 ¾ inches
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./assets/openAfterDeath.jpg" style="width:100%" />
+            <div class="text1">
+              Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel,
+              engraved, with unknown contents, 3 x 6 x 3 inches
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./assets/roomCube.jpg" style="width:100%" />
+            <div class="text1">
+              Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches,
+              edition of 10
+            </div>
+          </div>
+
+          <a class="last" onclick="lastSlide()">&#10094;</a>
+          <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <br />
+
+        <p id="text2">
+          Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x
+          60 inches.
+        </p>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
         </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">4 / 4</div>
-          <img src="./assets/roomCube.jpg" style="width:100%" />
-          <div class="text1">
-            Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches,
-            edition of 10
-          </div>
-        </div>
-
-        <a class="last" onclick="lastSlide()">&#10094;</a>
-        <a class="next" onclick="nextSlide()">&#10095;</a>
-      </div>
-      <br />
-
-      <p id="text2">
-        Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x
-        60 inches.
-      </p>
-
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-
-      <p>
-        During the late 1960s, after graduating from UC Davis (BA, 1966; MA,
-        1967) and moving to New York, Stephen Kaltenbach established a
-        reputation in the emerging international field of Conceptual art. But in
-        1970, just as he was achieving career success, Kaltenbach abruptly
-        withdrew to California’s Central Valley, appearing to abandon Conceptual
-        work in favor of the more traditional mediums of painting and sculpture.
-        Coinciding with the 50th anniversary of his “dropout,” this exhibition
-        considers Kaltenbach’s engagement with time as a principal theme across
-        his remarkably diverse career, which encompasses bronze time capsules,
-        advertisements placed anonymously in Artforum magazine in 1968-69, and
-        the monumental photorealist painting Portrait of My Father (1972-79)
-      </p>
-      <p>Guest Curators: Constance Lewallen and Ted Mann</p>
-    </main>
+        <p>
+          During the late 1960s, after graduating from UC Davis (BA, 1966; MA,
+          1967) and moving to New York, Stephen Kaltenbach established a
+          reputation in the emerging international field of Conceptual art. But
+          in 1970, just as he was achieving career success, Kaltenbach abruptly
+          withdrew to California’s Central Valley, appearing to abandon
+          Conceptual work in favor of the more traditional mediums of painting
+          and sculpture. Coinciding with the 50th anniversary of his “dropout,”
+          this exhibition considers Kaltenbach’s engagement with time as a
+          principal theme across his remarkably diverse career, which
+          encompasses bronze time capsules, advertisements placed anonymously in
+          Artforum magazine in 1968-69, and the monumental photorealist painting
+          Portrait of My Father (1972-79)
+        </p>
+        <p>Guest Curators: Constance Lewallen and Ted Mann</p>
+      </main>
+    </div>
     <footer>
       <div id="bottom">
         <div>
