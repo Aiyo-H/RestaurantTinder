@@ -286,6 +286,7 @@ p.msg {
     margin-left: 4%;
     font-size: 10px;
   }
+  
   nav li {
     margin-top: 20px;
     font-size: 12px;
@@ -293,55 +294,53 @@ p.msg {
   }
   
   #home {
-    display:inline-block;
-    margin: 100%;
+    display: inline-block;
     text-align: right;
     padding-top: 15px;
   }
   
-  #counter {
+  #countdown {
     font-size: 65px;
   }
-  /*
-  h1 {
-    font-size: 65px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+  
   #title {
     width: 80%;
+    margin-left: 10%;
   }
+  
   #title h2 {
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: 500;
   }
+  
   #title h3 {
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: 600;
   }
-  .sliderimg {
+  
+  .slideshow-container {
     width: 80%;
     margin: 0 auto;
   }
-  #num {
-    font-size: 12px;
-    top: 2%;
-    left: 12%;
-  }
-  .arrow-left {
-    font-size: 20px;
-    left: 11%;
-  }
-  .arrow-right {
-    font-size: 20px;
-    right: 11%;
-  }
-  #info {
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    right: 10%;
-    background-color: transparent;
-    width: 70%;
-  }
+  
+  .text1 {
+  display: inline;
+}
+
+#text2 {
+  margin-top: -19px;
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
   main p {
     font-size: 12px;
     width: 77%;
