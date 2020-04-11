@@ -368,10 +368,12 @@ p.msg {
 
   #home {
     margin-bottom: 20px;
+    text-align: right;
   }
 
   nav ul li {
     display: inline;
+    text-align: right;
     margin: 10px;
   }
   nav ul {
