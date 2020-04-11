@@ -17,14 +17,14 @@ a:visited {
   text-align: center;
 }
 
-#text {
+#info {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 15px;
   color: #2a2d7c;
 }
 
-#text span {
+#info span {
   color: #c9523d;
   font-weight: 700;
 }
@@ -285,7 +285,7 @@ p.msg {
     padding-bottom: 5px;
   }
 
-  #text {
+  #info {
     text-align: left;
     margin-left: 4%;
     font-size: 10px;
@@ -372,27 +372,29 @@ p.msg {
   #top {
     flex-direction: row;
     padding-bottom: 5px;
+    
   }
-  #text {
+  #info {
     margin-left: 2%;
     font-size: 15px;
   }
 
   #home {
-    margin-bottom: 20px;
+    margin: 0 auto;
     text-align: right;
+    margin-right: 2%;
+    font-size: 20px;
+    display: inline;   
   }
 
-  nav ul li {
-    display: inline;
-    text-align: right;
-    margin: 10px;
-  }
   nav ul {
-    margin: 10px;
-    margin-top: 20px;
+    padding-top: 3px;
     text-align: right;
-    font-size: 12px;
+    display: inline;   
+  }
+  
+  nav ul li {
+    margin: 10px;
   }
 
   #countdown {
