@@ -441,7 +441,7 @@ p.msg {
   main p {
     font-size: 20px;
     width: 50%;
-    
+    margin-left: 25%;
   }
 
   #bottom {
