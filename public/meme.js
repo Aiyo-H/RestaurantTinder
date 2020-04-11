@@ -23,6 +23,8 @@ function currentSlide(n) {
 function showSlide(n) {
   var slides = document.getElementsByClassName("mySlides");
   var buttons = document.getElementsByClassName("dot");
+  var text = document.getElementsByClassName("text1");
+  var info = document.getElementsByClassName("text2");
   id = n > slides.length ? 1 : (n < 1 ? slides.length : n);
   for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
@@ -32,4 +34,11 @@ function showSlide(n) {
   }
   slides[id - 1].style.display = "block";  
   buttons[id - 1].className += " active";
+  if (text.style.display == "none") {
+    switch (id) {
+      case 1:
+        info.style.innerHTML = "1";
+        break;
+    }
+  }
 }

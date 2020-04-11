@@ -102,7 +102,7 @@ nav li {
 }
 
 /* Caption text */
-.text {
+.text1 {
   color: #f2f2f2;
   font-size: 13px;
   font-wight: 300;
@@ -111,9 +111,10 @@ nav li {
   bottom: 8px;
   width: 95%;
   text-align: center;
+  display: none;
 }
 
-.info {
+.text2 {
   margin-top: -19px;
   margin-bottom: 15px;
   font-family: "Open Sans", sans-serif;
