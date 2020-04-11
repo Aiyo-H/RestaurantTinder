@@ -130,7 +130,6 @@ nav ul li {
   bottom: 8px;
   width: 95%;
   text-align: center;
-  visibility: hidden;
 }
 
 #text2 {
@@ -232,12 +231,8 @@ main p {
 
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 0 0 150px;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+  margin: 25px;
+  min-height: 100vh;
 }
 
 img {
@@ -269,6 +264,10 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  /*position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;*/
 }
 
 div.glitchButton {
@@ -330,7 +329,6 @@ p.msg {
   }
 
   .text1 {
-    visibility: visible;
     font-size: 20px;
     line-height: 25px;
   }
@@ -368,7 +366,7 @@ p.msg {
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 800px) {
   #top {
     flex-direction: row;
     padding-bottom: 5px;
@@ -414,7 +412,7 @@ p.msg {
   }
 
   .slideshow-container {
-    width: 100%;
+    width: 1%;
     margin: 0 auto;
   }
 
@@ -439,20 +437,16 @@ p.msg {
     margin-left: 28%;
   }
 
-  .content {
-    min-height: 100%;
+  footer {
+    flex-shrink: 0;
   }
   
   #bottom {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 150px;
-    width: 100%;
     flex-direction: row;
     font-size: 10px;
     padding-left: 3%;
     padding-right: 3%;
+    padding-top: 25px;
   }
 
   #bottom h3 {
