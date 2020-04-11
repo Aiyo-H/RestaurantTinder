@@ -232,7 +232,6 @@ main p {
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 25px;
-  min-height: 100vh;
 }
 
 img {
@@ -412,7 +411,7 @@ p.msg {
   }
 
   .slideshow-container {
-    width: 1%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -436,10 +435,6 @@ p.msg {
     width: 44%;
     margin-left: 28%;
   }
-
-  footer {
-    flex-shrink: 0;
-  }
   
   #bottom {
     flex-direction: row;
@@ -456,6 +451,6 @@ p.msg {
   }
 
   #bottom > div {
-    margin: 10px;
+    margin: 15px;
   }
 }
