@@ -106,10 +106,10 @@ nav li {
   color: #f2f2f2;
   font-size: 13px;
   font-wight: 300;
-  padding:10px;
+  padding-left: 10px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  width: 95%;
   text-align: center;
 }
 
@@ -156,10 +156,8 @@ nav li {
   to {opacity: 1}
 }
 
-
-
 #info {
-  margin-top: -3px;
+  margin-top: -22px;
   margin-bottom: 20px;
   font-family: "Open Sans", sans-serif;
   background-color: black;
