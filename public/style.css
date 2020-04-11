@@ -278,6 +278,12 @@ p.msg {
 }
 
 @media only screen and (min-width: 600px) {
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
   #top {
     flex-direction: row;
     padding-top: 5px;
@@ -347,6 +353,11 @@ p.msg {
     margin-left: 12%;
   }
 
+  main {
+    flex: 1 0 auto;
+    min-height: auto;
+  }
+
   #bottom {
     flex-direction: row;
     font-size: 10px;
@@ -366,13 +377,6 @@ p.msg {
 }
 
 @media only screen and (min-width: 800px) {
-  
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
   #top {
     flex-direction: row;
     padding-bottom: 5px;
@@ -389,10 +393,6 @@ p.msg {
     margin-right: 2%;
     font-size: 20px;
     display: inline;
-  }
-
-  nav ul li {
-    margin: 10px;
   }
 
   #countdown {
@@ -441,11 +441,6 @@ p.msg {
     width: 44%;
     margin-left: 28%;
   }
-  
-  main {
-  flex: 1 0 auto;
-  min-height: auto;
-}
 
   #bottom {
     flex-direction: row;
