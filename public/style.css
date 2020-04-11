@@ -34,14 +34,14 @@ a:visited {
 }
 
 nav ul {
-	font-size: 15px;
-	list-style: none;
-	padding: 0;
+  font-size: 15px;
+  list-style: none;
+  padding: 0;
 }
 
 nav ul li {
-	display: inline;
-	margin: 20px;
+  display: inline;
+  margin: 20px;
 }
 
 #countdown {
@@ -291,19 +291,6 @@ p.msg {
     font-size: 10px;
   }
 
-  nav li {
-    margin: 10px;
-    margin-top: 20px;
-    font-size: 12px;
-    text-align: right;
-  }
-
-  #home {
-    display: inline-block;
-    text-align: right;
-    padding-top: 18px;
-    padding-left: 20%;
-  }
 
   #countdown {
     font-size: 65px;
@@ -375,23 +362,23 @@ p.msg {
     padding-bottom: 5px;
   }
   #text {
-    text-align: left;
     margin-left: 2%;
     font-size: 15px;
   }
 
-  nav li {
+  #home {
+    margin-bottom: 20px;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 10px;
+  }
+  nav ul {
     margin: 10px;
     margin-top: 20px;
     text-align: right;
     font-size: 12px;
-  }
-
-  #home {
-    display: inline-block;
-    text-align: right;
-    padding-top: 18px;
-    padding-left: 70%;
   }
 
   #countdown {
