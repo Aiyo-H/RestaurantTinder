@@ -130,7 +130,7 @@ nav li {
 }
 
 #text2 {
-  margin-top: -19px;
+  margin-top: -18px;
   margin-bottom: 15px;
   font-family: "Open Sans", sans-serif;
   background-color: black;
@@ -269,4 +269,82 @@ div.glitchButton {
 
 p.msg {
   margin: 15px;
+}
+
+
+@media only screen and (min-width: 600px) {
+#top {
+	flex-direction: row;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: left;
+}
+#text{
+	margin-left: 3%;
+	font-size: 10px;
+}
+nav ul {
+	margin-top: 20px;
+	font-size: 12px;
+	text-align: right;
+}
+nav ul li {
+	margin: 10px;
+}
+#nav {
+	padding-right: 2%;
+}
+#counter{
+	font-size: 65px;
+}
+h1 {
+	font-size: 65px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#title {
+	width: 80%;
+}
+#title h2 {
+	font-size: 20px;
+}
+#title h3 {
+	font-size: 15px;
+}
+.sliderimg{
+	width: 80%;
+	margin: 0 auto;
+}
+#num{
+	font-size: 12px;
+	top: 2%;
+	left: 12%;
+}
+.arrow-left{
+	font-size: 20px;
+	left: 11%;
+}
+.arrow-right{
+	font-size: 20px;
+	right: 11%;
+}
+#info{
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	right: 10%;
+	background-color: transparent;
+	width: 70%;
+}
+main p {
+	font-size: 12px;
+	width: 77%;
+}
+.footer1 {
+	flex-direction: row;
+	font-size: 10px;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 3px;
+}
 }
