@@ -42,6 +42,7 @@ function showText(n) {
     case 1:
       document.getElementById("text2").innerHTML =
         "Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x 60 inches";
+      document.getElementById("text2").style.fontSize = "large";
       break;
     case 2:
       document.getElementById("text2").innerHTML =

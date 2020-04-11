@@ -130,7 +130,6 @@ nav ul li {
   bottom: 8px;
   width: 95%;
   text-align: center;
-  visibility: hidden;
 }
 
 #text2 {
@@ -318,7 +317,7 @@ p.msg {
   }
 
   .text1 {
-    visibility: visible;
+    display: inline;
     font-size: 20px;
     line-height: 25px;
   }
