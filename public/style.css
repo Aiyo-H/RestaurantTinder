@@ -232,8 +232,7 @@ main p {
 
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 0 0 100px;
-  height: 100%;
+  margin: 0 0 150px;
 }
 
 html {
@@ -445,12 +444,15 @@ p.msg {
   }
   
   #bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 150px;
+    width: 100%;
     flex-direction: row;
     font-size: 10px;
     padding-left: 3%;
     padding-right: 3%;
-    margin-top: -150px;
   }
 
   #bottom h3 {
