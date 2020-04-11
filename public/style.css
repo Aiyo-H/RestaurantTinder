@@ -288,6 +288,7 @@ p.msg {
   }
 
   nav li {
+    margin: 10px;
     margin-top: 20px;
     font-size: 12px;
     text-align: right;
@@ -296,7 +297,8 @@ p.msg {
   #home {
     display: inline-block;
     text-align: right;
-    padding-top: 15px;
+    padding-top: 18px;
+    padding-left: 20%;
   }
 
   #countdown {
@@ -321,7 +323,7 @@ p.msg {
   .slideshow-container {
     width: 80%;
     margin: 0 auto;
-    margin-bottom: -7%;
+    margin-bottom: -10%;
   }
 
   .text1 {
@@ -358,9 +360,12 @@ p.msg {
     font-weight: 700;
     margin-bottom: 20px;
   }
+  #bottom > div {
+    margin: 8px;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   #top {
     flex-direction: row;
     padding-bottom: 5px;
@@ -381,7 +386,7 @@ p.msg {
     display: inline-block;
     text-align: right;
     padding-top: 20px;
-    padding-left: 20%;
+    margin-left: 62%;
   }
 
   #countdown {
@@ -443,8 +448,8 @@ p.msg {
     font-weight: 700;
     margin-bottom: 20px;
   }
-  
+
   #bottom > div {
-	margin: 10px;
-}
+    margin: 10px;
+  }
 }
