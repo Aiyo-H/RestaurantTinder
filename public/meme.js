@@ -10,21 +10,22 @@ function showTime() {
 
 function nextSlide(n) {
   showSlide(++id);
+  showText(id);
 }
 
 function lastSlide(n) {
   showSlide(--id);
+  showText(id);
 }
 
 function currentSlide(n) {
   showSlide(id = n);
+  showText(id);
 }
 
 function showSlide(n) {
   var slides = document.getElementsByClassName("mySlides");
   var buttons = document.getElementsByClassName("dot");
-  var text = document.getElementsByClassName("text1");
-  var info = document.getElementsByClassName("text2");
   id = n > slides.length ? 1 : (n < 1 ? slides.length : n);
   for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
@@ -34,11 +35,28 @@ function showSlide(n) {
   }
   slides[id - 1].style.display = "block";  
   buttons[id - 1].className += " active";
-  if (text.style.display == "none") {
-    switch (id) {
-      case 1:
-        info.style.innerHTML = "1";
-        break;
-    }
+}
+
+function showText(n) {
+  switch (n) {
+    case 0:
+      document.getElementBy("info").innerHTML =
+        "Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x 60 inches.";
+      break;
+    case 1:
+      document.getElementById("pic").src = "./assets/fatherPortrait.jpg";
+      document.getElementById("info").innerHTML =
+        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170¾ inches";
+      break;
+    case 2:
+      document.getElementById("pic").src = "./assets/openAfterDeath.jpg";
+      document.getElementById("info").innerHTML =
+        "Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved, with unknown contents, 3 x 6 x 3 inches.";
+      break;
+    case 3:
+      document.getElementById("pic").src = "./assets/roomCube.jpg";
+      document.getElementById("info").innerHTML =
+        "Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches, edition of 10.";
+      break;
   }
 }
