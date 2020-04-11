@@ -34,15 +34,14 @@ a:visited {
 }
 
 nav ul {
-	display: inline;
-  margin: 30px;
-  font-size: 18px;
-  padding-bottom: 50px;
+	font-size: 15px;
+	list-style: none;
+	padding: 0;
 }
 
 nav ul li {
 	display: inline;
-	margin: 40px;
+	margin: 20px;
 }
 
 #countdown {
