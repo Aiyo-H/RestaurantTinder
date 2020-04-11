@@ -104,8 +104,9 @@ nav li {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  font-size: 13px;
+  font-wight: 300;
+  padding:10px;
   position: absolute;
   bottom: 8px;
   width: 100%;
