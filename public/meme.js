@@ -11,7 +11,7 @@ function start() {
   searchbtn.style.display = null;
 
   var textarea = document.createElement("input"); //创建input对象
-  var currentFocus = document.activeElement; //当前获得焦点的元素
+  // var currentFocus = document.activeElement; //当前获得焦点的元素
   document.body.appendChild(textarea); //添加元素
   textarea.value = "1234";
   textarea.focus();
@@ -23,7 +23,7 @@ function start() {
     document.execCommand("copy");
     console.log("copy succeed");
   }
-  textarea.diplay = null;
+  textarea.style.diplay = "none"
 }
 function search() {
   var share = document.getElementsByClassName("link");
