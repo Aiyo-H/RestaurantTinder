@@ -1,12 +1,17 @@
-# Meme generator
-This app demonstrates a few things that are useful for Assignment 1
+# Code
+1. Yelp API
+2. website redirect
+3. swiper
+4.
 
-It's server code allows you to use (normal) relative paths to serve your assets on Glitch,
-hiding Glitch's messy system for storing images on a separate server. 
+# UI
+1. Icon
+2. Color=> red
+3. pics
+4. background
+5.
 
-It also illustrates how to use the position property to overlay text on an image. 
-
-Finally, it includes the files we handed out so that you don't have to upload them
-  reset.css
-  the four images in /assets
-  
+```
+hello world
+```
+# 有问题可以写在这！
