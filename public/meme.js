@@ -1,7 +1,7 @@
 var id = "";
 
 function start() {
-  window.
+  window.location.replace("https://weak-playful-winterberry.glitch.me/game.html");
   var home = document.getElementById("desc");
   home.style.display = "none";
   var startbtn = document.getElementById("butn");
