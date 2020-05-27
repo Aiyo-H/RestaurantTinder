@@ -69,7 +69,7 @@ function get() {
 
 document.querySelector('#link3').addEventListener('click', () => {
   const el = document.createElement('textarea');
-  el.value = "https://weak-playful-winterberry.glitch.me/display.html?id=" + id;
+  el.value = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
   document.body.appendChild(el);
   el.select();
   document.execCommand('copy');
