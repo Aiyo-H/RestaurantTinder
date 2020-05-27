@@ -1,6 +1,17 @@
-var id = "";
+window.onload = () => {
+  var home = document.getElementById("desc");
+  home.style.display = "none";
+  var startbtn = document.getElementById("butn");
+  startbtn.style.display = "none";
+  var share = document.getElementsByClassName("link");
+  for (var i = 0; i < share.length; i++) {
+    share[i].style.display = null;
+  }
+  var searchbtn = document.getElementById("butn2");
+  searchbtn.style.display = null;
+};
 
-document.querySelector('#butn').addEventListener('click', () => {window.location.replace("https://weak-playful-winterberry.glitch.me/game.html");});
+var id = "";
 
 function search() {
   var share = document.getElementsByClassName("link");
