@@ -58,9 +58,9 @@ body{
 #link3{
     font-family: 'Playfair Display', serif;
     font-size: 16px;
-    position: fixed;
-    top: 50%;
-    left: 40%;
+    position: absolute;
+    left: 42%;
+    bottom: 10px;
     font-style: italic;
     cursor: pointer;
 }
@@ -120,9 +120,9 @@ body{
     font-family: 'Playfair Display', serif;
     color: #721121;
     font-style: 12px;
-    position: fixed;
-    right: 10%;
-    top: 62%;
+    position: absolute;
+    right: 13%;
+    top: 52%;
     cursor: pointer;
 }
 #butn3{
@@ -233,8 +233,6 @@ footer p{
     }
     #link3{
         font-size: 15px;
-        top: 46%;
-        left: 47%;
     }
     #butn2, #butn3{
         font-size: 30px;
@@ -251,7 +249,7 @@ footer p{
     #forgot{
         font-size: 12px;
         right: 25%;
-        top: 58%;
+        top: 50%;
     }
     .infodisplay{
         border-radius: 25px;
@@ -304,6 +302,8 @@ footer p{
         font-size: 20px;
         padding: 15px;
     }
+   #link3{
+        left: 43%;
     #butn2, #butn3{
         font-size: 35px;
         margin-top: 475px;
