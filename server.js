@@ -136,3 +136,28 @@ app.all("*", function (request, response) {
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+
+
+
+
+
+// -----------------------------EmailSender-------------------------------------
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'restaurantinder@gmail.com',
+    pass: 'a19981117'
+  }
+});
+
+var mailOptions = {
+  from: 'restaurantinder@gmail.com',
+  to: 'wangbingwei1117@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+// -----------------------------------------------------------------------------
