@@ -53,7 +53,7 @@ document.querySelector('#butn2').addEventListener('click', () => {
   forgot.style.display = null;
 });
 
-document.querySelector('#butn2').addEventListener('click', () => {
+document.querySelector('#forgot').addEventListener('click', () => {
   var share = document.getElementsByClassName("link");
   for (var i = 0; i < share.length; i++) {
     share[i].style.display = null;
@@ -70,7 +70,7 @@ document.querySelector('#butn2').addEventListener('click', () => {
   forgot.style.display = "none";
 });
 
-function get() {
+document.querySelector('#butn3').addEventListener('click', () => {
   var getbtn = document.getElementById("butn3");
   getbtn.style.display = "none";
   var enter = document.getElementsByClassName("enter");
@@ -87,7 +87,7 @@ function get() {
   no.style.display = null;
   var yes = document.getElementById("yes");
   yes.style.display = null;
-}
+});
 
 
 document.querySelector('#link3').addEventListener('click', () => {
