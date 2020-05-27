@@ -64,6 +64,15 @@ body {
   font-style: italic;
   cursor: pointer;
 }
+#link4 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  position: absolute;
+  left: 42%;
+  bottom: 10px;
+  font-style: italic;
+  cursor: pointer;
+}
 #butn {
   width: 40%;
   background-color: white;
@@ -259,6 +268,9 @@ footer p {
     font-size: 14px;
   }
   #link3 {
+    font-size: 15px;
+  }
+  #link4 {
     font-size: 15px;
   }
   #butn2,
