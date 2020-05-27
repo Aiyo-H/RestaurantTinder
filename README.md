@@ -24,3 +24,9 @@ waiting 也做成新的website
 function写成addEventListener的形式
 
 # 有问题可以写在这！
+
+## 5/27 
+
+1. ~~copy link~~
+2. email
+3. swiper
