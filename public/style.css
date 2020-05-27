@@ -1,340 +1,374 @@
-body{
-    background-color: #FFCF99;
+body {
+  background-color: #FFCF99;
 }
-#hd1{
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-    font-family: 'Vidaloka', serif;
-    color: #F15156;
-    font-size: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+#hd1 {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  color: #F15156;
+  font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-#hrline1, #hrline2{
-    margin: 0 auto;
-    width: 60%;
-    border: 1px solid #F15156;
+#hrline1,
+#hrline2 {
+  margin: 0 auto;
+  width: 60%;
+  border: 1px solid #F15156;
 }
-#hrline1{
-    margin-top: 70px;
+#hrline1 {
+  margin-top: 70px;
 }
-#desc{
-    font-style: italic;
-    margin: 0 auto;
-    width: 50%;
-    font-size: 13px;
-    margin-top: 40px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: #721121;
+#desc {
+  font-style: italic;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 13px;
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #721121;
 }
-.link{
-    position: absolute;
-    top: 30%;
-    left: 7%;
-    height: 150px;
-    color: #A62639;
-    background-color: white;
-    width: 75%;
-    margin: 0 auto;
-    border-radius: 20px;
-    font-size: 25px;
-    padding: 20px;
-    text-align: center;
+.link {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  height: 150px;
+  color: #A62639;
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
 }
-#link1{
-    margin-top: 20px;
-    font-family: 'Playfair Display', serif;
-    font-size: 25px;
+#link1 {
+  margin-top: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
 }
-#link2{
-    font-style: italic;
-    margin-top: 15px;
-    font-size: 13px;
-    color: black;
-    font-family: 'Playfair Display', serif;
+#link2 {
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 13px;
+  color: black;
+  font-family: "Playfair Display", serif;
 }
-#link3{
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    position: absolute;
-    left: 42%;
-    bottom: 10px;
-    font-style: italic;
-    cursor: pointer;
+#link3 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  position: absolute;
+  left: 42%;
+  bottom: 10px;
+  font-style: italic;
+  cursor: pointer;
 }
-#butn{
-    width: 40%;
-    background-color: white;
-    color: #f15156;
-    font-size: 35px;
-    font-family: 'Vidaloka', serif;
-    position: absolute;
-    top: 68%;
-    left: 30%;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 50px;
-    cursor: pointer;
+#butn {
+  width: 40%;
+  background-color: white;
+  color: #f15156;
+  font-size: 35px;
+  font-family: "Vidaloka", serif;
+  position: absolute;
+  top: 68%;
+  left: 30%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
+  cursor: pointer;
 }
-#butn2{
-    text-align: center;
-    font-family: 'Vidaloka', serif;
-    color: #f15156;
-    font-size: 35px;
-    margin-top: 350px;
-    cursor: pointer;
+#butn2 {
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  color: #f15156;
+  font-size: 35px;
+  margin-top: 350px;
+  cursor: pointer;
 }
-.enter{
-    position: absolute;
-    top: 28%;
-    left: 7%;
-    padding: 20px;
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
-    height: 200px;
-    color: #721121;
-    background-color: white;
-    border-radius: 25px;
-    width: 75%;
-    margin: 0 auto;
+.enter {
+  position: absolute;
+  top: 28%;
+  left: 7%;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  height: 200px;
+  color: #721121;
+  background-color: white;
+  border-radius: 25px;
+  width: 75%;
+  margin: 0 auto;
 }
-#textarea1, #textarea2{
-    font-size: 13px;
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid #721121;
-    border-radius: 5px;
+#textarea1,
+#textarea2 {
+  font-size: 13px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #721121;
+  border-radius: 5px;
 }
-#textarea1{
-    margin-bottom: 10px;
+#textarea1 {
+  margin-bottom: 10px;
 }
-#textarea2{
-    height: 65px;
+#textarea2 {
+  height: 65px;
 }
-#forgot{
-    font-size: 14px;
-    font-style: italic;
-    font-family: 'Playfair Display', serif;
-    color: #721121;
-    font-style: 12px;
-    position: absolute;
-    right: 11%;
-    top: 90%;
-    cursor: pointer;
+#forgot {
+  font-size: 14px;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  color: #721121;
+  font-style: 12px;
+  position: absolute;
+  right: 11%;
+  top: 90%;
+  cursor: pointer;
 }
-#butn3{
-    text-align: center;
-    font-family: 'Vidaloka', serif;
-    color: #f15156;
-    font-size: 25px;
-    margin-top: 350px;
-    cursor: pointer;
+#butn3 {
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  color: #f15156;
+  font-size: 25px;
+  margin-top: 350px;
+  cursor: pointer;
 }
-.infodisplay{
-    background-color: white;
-    border-radius: 25px;
-    height: 350px;
-    width: 85%;
-    margin: 0 auto;
-    color: #A62639;
-    margin-top: 20px;
-    text-align: center;
+.infodisplay {
+  background-color: white;
+  border-radius: 25px;
+  height: 350px;
+  width: 85%;
+  margin: 0 auto;
+  color: #A62639;
+  margin-top: 20px;
+  text-align: center;
 }
-#no, #yes{
-    position: absolute;
-    font-size: 40px;
-    font-family: 'Carter One', cursive;
-    margin-top: 20px;
-    padding: 15px;
-    cursor: pointer;
-    border: 5px solid white;
-    border-radius: 50px;
+#no,
+#yes {
+  position: absolute;
+  font-size: 40px;
+  font-family: "Carter One", cursive;
+  margin-top: 20px;
+  padding: 15px;
+  cursor: pointer;
+  border: 5px solid white;
+  border-radius: 50px;
 }
-#no{
-    color: #000000;
-    left: 20px;
+#no {
+  color: #000000;
+  left: 20px;
 }
-#yes{
-    color: #A62639;
-    right: 20px;
+#yes {
+  color: #A62639;
+  right: 20px;
 }
-#no:hover, #yes:hover{
-    text-shadow: 4px 4px #FFFFFF;
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+#no:hover,
+#yes:hover {
+  text-shadow: 4px 4px #FFFFFF;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
-footer{
-    text-align: center;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: #FFC07F;
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
-footer p{
-    margin-top: 8px;
-    font-size: 12px;
-    color: #F15156;
-    font-family: 'Vidaloka', serif;
+footer {
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: #FFC07F;
+}
+footer p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #F15156;
+  font-family: "Vidaloka", serif;
 }
 
 @media only screen and (min-width: 600px) {
-    #hd1{
-        margin-top: 50px;
-        font-size: 40px;
-    }
-    #hrline1, #hrline2{
-        position: absolute;
-        margin: 0 auto;
-        width: 20%;
-        top: 70px;
-    }
-    #hrline1{
-        left: 3%;
-    }
-    #hrline2{
-        right: 3%;
-    }
-    #butn{
-        width: 30%;
-        left: 35%;
-    }
-    .link{
-        top: 30%;
-        left: 25%;
-        height: 130px;
-        width: 50%;
-        margin: 0 auto;
-        font-size: 20px;
-        padding: 15px;
-    }
-    #link1{
-        margin-top: 10px;
-        font-size: 20px;
-    }
-    #link2{
-        font-size: 14px;
-    }
-    #link3{
-        font-size: 15px;
-    }
-    #butn2, #butn3{
-        font-size: 30px;
-        margin-top: 450px;
-    }
-    .enter{
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        font-size: 18px;
-        height: 200px;
-        width: 50%;
-    }
-    #forgot{
-        font-size: 12px;
-        right: 10%;
-        top: 90%;
-    }
-    .infodisplay{
-        border-radius: 25px;
-        height: 350px;
-        width: 45%;
-        margin-top: 15%;
-    }
-    #no, #yes{
-        font-size: 50px;
-        top: 40%;
-    }
-    #no{
-        left: 25px;
-    }
-    #yes{
-        right: 25px;
-    }
-} 
+  #hd1 {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  #hrline1,
+  #hrline2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20%;
+    top: 70px;
+  }
+  #hrline1 {
+    left: 3%;
+  }
+  #hrline2 {
+    right: 3%;
+  }
+  #butn {
+    width: 30%;
+    left: 35%;
+  }
+  .link {
+    top: 30%;
+    left: 25%;
+    height: 130px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 15px;
+  }
+  #link1 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  #link2 {
+    font-size: 14px;
+  }
+  #link3 {
+    font-size: 15px;
+  }
+  #butn2,
+  #butn3 {
+    font-size: 30px;
+    margin-top: 450px;
+  }
+  .enter {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    font-size: 18px;
+    height: 200px;
+    width: 50%;
+  }
+  #forgot {
+    font-size: 12px;
+    right: 10%;
+    top: 90%;
+  }
+  .infodisplay {
+    border-radius: 25px;
+    height: 350px;
+    width: 45%;
+    margin-top: 10%;
+  }
+  #no,
+  #yes {
+    font-size: 50px;
+    top: 40%;
+  }
+  #no {
+    left: 25px;
+  }
+  #yes {
+    right: 25px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
-    #hd1{
-        margin-top: 55px;
-        font-size: 50px;
-    }
-    #hrline1, #hrline2{
-        position: absolute;
-        margin: 0 auto;
-        top: 75px;
-        width: 23%;
-    }
-    #hrline1{
-        left: 3%;
-    }
-    #hrline2{
-        right: 3%;
-    }
-    #desc{
-        margin-top: 60px;
-        font-size: 14px;
-    }
-    #butn{
-        width: 15%;
-        left: 42%;
-    }
-    .link{
-        top: 30%;
-        left: 29%;
-        height: 130px;
-        width: 40%;
-        margin: 0 auto;
-        font-size: 20px;
-        padding: 15px;
-    }
-    #link3{
-        left: 43%;
-    #butn2, #butn3{
-        font-size: 35px;
-        margin-top: 475px;
-    }
-    .enter{
-        top: 20%;
-        left: 30%;
-        font-size: 18px;
-        height: 200px;
-        width: 40%;
-    }
-    #forgot{
-        right: 20%;
-        top: 90%;
-    }
-    .infodisplay{
-        position: absolute;
-        top: 8%;
-        left: 35%;
-        height: 400px;
-        width: 30%;
-    }
-    #no, #yes{
-        font-size: 70px;
-        top: 40%;
-    }
-    #no{
-        left: 40px;
-    }
-    #yes{
-        right: 40px;
-    }
-} 
+  #hd1 {
+    margin-top: 55px;
+    font-size: 50px;
+  }
+  #hrline1,
+  #hrline2 {
+    position: absolute;
+    margin: 0 auto;
+    top: 75px;
+    width: 23%;
+  }
+  #hrline1 {
+    left: 3%;
+  }
+  #hrline2 {
+    right: 3%;
+  }
+  #desc {
+    margin-top: 60px;
+    font-size: 14px;
+  }
+  #butn {
+    width: 15%;
+    left: 42%;
+  }
+  .link {
+    top: 30%;
+    left: 29%;
+    height: 130px;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 15px;
+  }
+  #link3 {
+    left: 43%;
+  }
+  #butn2,
+  #butn3 {
+    font-size: 35px;
+    margin-top: 475px;
+  }
+  .enter {
+    top: 20%;
+    left: 30%;
+    font-size: 18px;
+    height: 200px;
+    width: 40%;
+  }
+  #forgot {
+    right: 20%;
+    top: 90%;
+  }
+  .infodisplay {
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    height: 400px;
+    width: 30%;
+  }
+  #no,
+  #yes {
+    font-size: 70px;
+    top: 40%;
+  }
+  #no {
+    left: 40px;
+  }
+  #yes {
+    right: 40px;
+  }
+}
