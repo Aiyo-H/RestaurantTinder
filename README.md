@@ -17,4 +17,10 @@ hello world
 
 start 做到下一个website 这样可以让用户点后退
 
+search 也做到下一个website 这样可以新开app
+
+waiting 也做成新的website
+
+function写成addEventListener的形式
+
 # 有问题可以写在这！
