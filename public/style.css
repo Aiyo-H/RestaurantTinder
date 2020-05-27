@@ -95,7 +95,7 @@ body{
     font-size: 20px;
     font-family: 'Playfair Display', serif;
     height: 200px;
-    color: #f15156;
+    color: #721121;
     background-color: white;
     border-radius: 25px;
     width: 75%;
@@ -106,7 +106,7 @@ body{
     margin-top: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 1px solid black;
+    border: 1px solid #721121;
     border-radius: 5px;
 }
 #textarea1{
@@ -148,17 +148,21 @@ body{
     font-size: 40px;
     font-family: 'Carter One', cursive;
     margin-top: 20px;
+    padding: 15px;
     cursor: pointer;
+    border: 5px solid white;
+    border-radius: 50px;
 }
 #no{
-    color: #606060;
+    color: #000000;
     left: 20px;
 }
 #yes{
-    color: #f86161;
+    color: #A62639;
     right: 20px;
 }
 #no:hover, #yes:hover{
+    text-shadow: 4px 4px #FFFFFF;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
@@ -316,9 +320,11 @@ footer p{
         top: 55%;
     }
     .infodisplay{
+        position: absolute;
+        top: 8%;
+        left: 35%;
         height: 400px;
         width: 30%;
-        margin-top: 5%;
     }
     #no, #yes{
         font-size: 70px;
