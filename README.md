@@ -6,10 +6,9 @@
 
 # UI
 1. Icon
-2. Color=> red
-3. pics
-4. background
-5.
+2. pics
+3. background
+4.
 
 ```
 hello world
