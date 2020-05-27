@@ -9,6 +9,13 @@ function start() {
   }
   var searchbtn = document.getElementById("butn2");
   searchbtn.style.display = null;
+  
+  
+  document.getElementById("link").select(); 
+  if (document.execCommand('copy')) {
+		document.execCommand('copy');
+		console.log('复制成功');
+	}
 }
 function search() {
   var share = document.getElementsByClassName("link");
