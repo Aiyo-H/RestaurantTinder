@@ -9,13 +9,21 @@ function start() {
   }
   var searchbtn = document.getElementById("butn2");
   searchbtn.style.display = null;
-  
-  
-  document.getElementById("link").select(); 
-  if (document.execCommand('copy')) {
-		document.execCommand('copy');
-		console.log('复制成功');
-	}
+
+  var textarea = document.createElement("input"); //创建input对象
+  var currentFocus = document.activeElement; //当前获得焦点的元素
+  document.body.appendChild(textarea); //添加元素
+  textarea.value = "1234";
+  textarea.focus();
+  if (textarea.setSelectionRange)
+    textarea.setSelectionRange(0, textarea.value.length);
+  else textarea.select();
+
+  if (document.execCommand("copy")) {
+    document.execCommand("copy");
+    console.log("copy succeed");
+  }
+  textarea.diplay = null;
 }
 function search() {
   var share = document.getElementsByClassName("link");
