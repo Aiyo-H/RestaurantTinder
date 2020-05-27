@@ -36,30 +36,7 @@ function randomString() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var id = "";
-
-function search() {
+document.querySelector('#butn2').addEventListener('click', () => {
   var share = document.getElementsByClassName("link");
   for (var i = 0; i < share.length; i++) {
     share[i].style.display = "none";
@@ -74,9 +51,9 @@ function search() {
   }
   var forgot = document.getElementById("forgot");
   forgot.style.display = null;
-}
+});
 
-function forgot() {
+document.querySelector('#butn2').addEventListener('click', () => {
   var share = document.getElementsByClassName("link");
   for (var i = 0; i < share.length; i++) {
     share[i].style.display = null;
@@ -91,7 +68,7 @@ function forgot() {
   }
   var forgot = document.getElementById("forgot");
   forgot.style.display = "none";
-}
+});
 
 function get() {
   var getbtn = document.getElementById("butn3");
