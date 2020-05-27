@@ -1,465 +1,337 @@
-a {
-  text-decoration: none;
+body{
+    background-color: #d9e5d6;
 }
-
-a:link {
-  color: black;
+#hd1{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    font-family: 'Vidaloka', serif;
+    color: #0fa3b1;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-
-a:visited {
-  color: black;
+#hrline1, #hrline2{
+    margin: 0 auto;
+    width: 60%;
+    border: 1px solid #0fa3b1;
 }
-
-#top {
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+#hrline1{
+    margin-top: 70px;
 }
-
-#info {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 15px;
-  color: #2a2d7c;
+#desc{
+    font-style: italic;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 13px;
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #033e3c;
 }
-
-#info span {
-  color: #c9523d;
-  font-weight: 700;
+.link{
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    height: 150px;
+    color: #033e3c;
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
 }
-
-#home {
-  margin-bottom: 20px;
+#link1{
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
 }
-
-nav ul {
-  font-size: 15px;
-  list-style: none;
-  padding: 0;
+#link2{
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 13px;
+    color: black;
+    font-family: 'Playfair Display', serif;
 }
-
-nav ul li {
-  display: inline;
-  margin: 20px;
+#link3{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    font-style: italic;
+    cursor: pointer;
 }
-
-#countdown {
-  font-size: 80px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  background-color: black;
-  color: white;
-  font-family: "Open Sans", sans-serif;
+#butn{
+    width: 40%;
+    background-color: white;
+    color: #0fa3b1;
+    font-size: 35px;
+    font-family: 'Vidaloka', serif;
+    position: absolute;
+    top: 68%;
+    left: 30%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 50px;
+    cursor: pointer;
 }
-
-#title h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 500;
+#butn2{
+    text-align: center;
+    font-family: 'Vidaloka', serif;
+    color: #033e3c;
+    font-size: 35px;
+    margin-top: 350px;
+    cursor: pointer;
 }
-
-#title h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
+.enter{
+    position: absolute;
+    top: 28%;
+    left: 7%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    height: 200px;
+    color: #033e3c;
+    background-color: white;
+    border-radius: 25px;
+    width: 75%;
+    margin: 0 auto;
 }
-
-.mySlides {
-  display: none;
+#textarea1, #textarea2{
+    font-size: 13px;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+#textarea1{
+    margin-bottom: 10px;
 }
-
-.last {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+#textarea2{
+    height: 65px;
 }
-
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  right: 0;
-  border-radius: 3px 0 0 3px;
+#forgot{
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #033e3c;
+    font-style: 12px;
+    position: fixed;
+    right: 10%;
+    top: 62%;
+    cursor: pointer;
 }
-
-.last:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+#butn3{
+    text-align: center;
+    font-family: 'Vidaloka', serif;
+    color: #033e3c;
+    font-size: 25px;
+    margin-top: 350px;
+    cursor: pointer;
 }
-
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.infodisplay{
+    background-color: white;
+    border-radius: 25px;
+    height: 350px;
+    width: 85%;
+    margin: 0 auto;
+    color: #033e3c;
+    margin-top: 20px;
+    text-align: center;
 }
-
-.text1 {
-  color: #f2f2f2;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  padding-left: 2.5%;
-  position: absolute;
-  bottom: 8px;
-  width: 95%;
-  text-align: center;
-  visibility: hidden;
+#no, #yes{
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Carter One', cursive;
+    margin-top: 20px;
+    cursor: pointer;
 }
-
-#text2 {
-  margin-top: -19px;
-  margin-bottom: 15px;
-  font-family: "Open Sans", sans-serif;
-  background-color: black;
-  color: white;
-  line-height: 25px;
-  font-size: 18px;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: center;
+#no{
+    color: #606060;
+    left: 20px;
 }
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+#yes{
+    color: #f86161;
+    right: 20px;
 }
-
-.dot {
-  cursor: pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 3px;
-  margin-bottom: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+#no:hover, #yes:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
-  to {
-    opacity: 1;
-  }
+footer{
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #fcf3d0;
 }
-
-main p {
-  margin: 0 auto;
-  line-height: 25px;
-  width: 90%;
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 20px;
-}
-
-#bottom {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column-reverse;
-  background-color: #c6d2da;
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 130%;
-  margin-top: 40px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-#bottom > div {
-  margin-top: 0px;
-  margin-bottom: 40px;
-}
-
-#bottom h3 {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#bottom ul {
-  list-style: none;
-}
-
-/* styles */
-
-/* size of margin, border and padding is included in size of element 
-   in internal CSS calculations */
-
-body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 25px;
-}
-
-img {
-  width: 100%;
-}
-
-p.meme {
-  color: #f1f1f1; /* color given as RGB */
-  font-size: 22px;
-  margin: 10px;
-  position: absolute; /* this places the element within its parent */
-  left: 0; /* coord within parent */
-  bottom: 0; /* coord within parent */
-}
-
-div.imageWrapper {
-  width: 100%;
-  max-width: 400px;
-
-  position: relative; /* this has no effect */
-  /* except that the parent of a positioned element has to be positioned.  */
-  /* hey, I did not devise this crazy system, that is just how it is.  */
-}
-
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /*position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;*/
-}
-
-div.glitchButton {
-  width: 80px;
-}
-
-p.msg {
-  margin: 15px;
+footer p{
+    margin-top: 8px;
+    font-size: 12px;
+    color: #0fa3b1;
+    font-family: 'Vidaloka', serif;
 }
 
 @media only screen and (min-width: 600px) {
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  #top {
-    flex-direction: row;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  #info {
-    text-align: left;
-    margin-left: 4%;
-    font-size: 10px;
-  }
-
-  #home {
-    margin: 0 auto;
-    text-align: right;
-    padding-top: 18px;
-    margin-right: 4%;
-    font-size: 20px;
-    display: inline;
-  }
-
-  nav ul li {
-    margin: 10px;
-  }
-
-  #countdown {
-    font-size: 65px;
-  }
-
-  #title {
-    width: 80%;
-    margin-left: 10%;
-  }
-
-  #title h2 {
-    font-size: 40px;
-    font-weight: 500;
-  }
-
-  #title h3 {
-    font-size: 25px;
-    font-weight: 600;
-  }
-
-  .slideshow-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .text1 {
-    visibility: visible;
-    font-size: 17px;
-    line-height: 25px;
-  }
-
-  #text2 {
-    display: none;
-  }
-
-  .dot {
-    height: 15px;
-    width: 15px;
-  }
-
-  main p {
-    font-size: 20px;
-    width: 76%;
-    margin-left: 12%;
-  }
-
-  main {
-    flex: 1 0 auto;
-    min-height: auto;
-  }
-
-  #bottom {
-    flex-direction: row;
-    font-size: 10px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 25px;
-  }
-
-  #bottom h3 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  #bottom > div {
-    margin: 8px;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  #top {
-    flex-direction: row;
-    padding-bottom: 5px;
-  }
-  #info {
-    margin-left: 2%;
-    font-size: 15px;
-  }
-
-  #home {
-    margin: 0 auto;
-    text-align: right;
-    padding-top: 18px;
-    margin-right: 2%;
-    font-size: 20px;
-    display: inline;
-  }
-
-  #countdown {
-    font-size: 65px;
-  }
-
-  #title {
-    width: 80%;
-    margin-left: 10%;
-  }
-
-  #title h2 {
-    font-size: 40px;
-    font-weight: 500;
-  }
-
-  #title h3 {
-    font-size: 25px;
-    font-weight: 600;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .slideshow-container {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .text1 {
-    visibility: visible;
-    font-size: 20px;
-    line-height: 25px;
-  }
-
-  #text2 {
-    display: none;
-  }
-
-  .dot {
-    height: 15px;
-    width: 15px;
-  }
-
-  main p {
-    font-size: 20px;
-    width: 50%;
-    margin-left: 25%;
-  }
-
-  #bottom {
-    flex-direction: row;
-    font-size: 10px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 25px;
-    margin-top: 10px;
-  }
-
-  #bottom h3 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-
-  #bottom > div {
-    margin: 15px;
-  }
-}
+    #hd1{
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    #hrline1, #hrline2{
+        position: absolute;
+        margin: 0 auto;
+        width: 20%;
+        top: 70px;
+        border: 1px solid #0fa3b1;
+    }
+    #hrline1{
+        left: 3%;
+    }
+    #hrline2{
+        right: 3%;
+    }
+    #butn{
+        width: 30%;
+        left: 35%;
+    }
+    .link{
+        top: 30%;
+        left: 25%;
+        height: 130px;
+        color: #033e3c;
+        background-color: white;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 20px;
+        padding: 15px;
+    }
+    #link1{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    #link2{
+        font-size: 14px;
+    }
+    #link3{
+        font-size: 15px;
+        top: 46%;
+        left: 47%;
+    }
+    #butn2, #butn3{
+        font-size: 30px;
+        margin-top: 450px;
+    }
+    .enter{
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-size: 18px;
+        height: 200px;
+        width: 50%;
+    }
+    #forgot{
+        font-size: 12px;
+        right: 25%;
+        top: 58%;
+    }
+    .infodisplay{
+        border-radius: 25px;
+        height: 350px;
+        width: 45%;
+        margin-top: 15%;
+    }
+    #no, #yes{
+        font-size: 50px;
+        top: 40%;
+    }
+    #no{
+        left: 25px;
+    }
+    #yes{
+        right: 25px;
+    }
+} 
+@media only screen and (min-width: 768px) {
+    #hd1{
+        margin-top: 55px;
+        font-size: 50px;
+    }
+    #hrline1, #hrline2{
+        position: absolute;
+        margin: 0 auto;
+        top: 75px;
+        width: 23%;
+        border: 1px solid #0fa3b1;
+    }
+    #hrline1{
+        left: 3%;
+    }
+    #hrline2{
+        right: 3%;
+    }
+    #desc{
+        margin-top: 60px;
+        font-size: 14px;
+    }
+    #butn{
+        width: 15%;
+        left: 42%;
+    }
+    .link{
+        top: 30%;
+        left: 29%;
+        height: 130px;
+        width: 40%;
+        margin: 0 auto;
+        font-size: 20px;
+        padding: 15px;
+    }
+    #butn2, #butn3{
+        font-size: 35px;
+        margin-top: 475px;
+    }
+    .enter{
+        top: 20%;
+        left: 30%;
+        font-size: 18px;
+        height: 200px;
+        width: 40%;
+    }
+    #forgot{
+        right: 30%;
+        top: 55%;
+    }
+    .infodisplay{
+        height: 400px;
+        width: 30%;
+        margin-top: 5%;
+    }
+    #no, #yes{
+        font-size: 70px;
+        top: 40%;
+    }
+    #no{
+        left: 40px;
+    }
+    #yes{
+        right: 40px;
+    }
+} 

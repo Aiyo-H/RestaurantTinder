@@ -1,154 +1,57 @@
-<!-- This is the awful HTML comment syntax -->
 <!DOCTYPE html>
-<!-- Message to browser...I think I am HTML -->
 <html lang="en">
-  <!-- My text is in English -->
-
-  <head>
-    <meta charset="utf-8" />
-    <!-- Binary encoding of characters -->
-    <title>Static server</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- This will come in handy later -->
-
-    <!-- import the webpage's css -->
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./reset.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant Tinder</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/530f4a495f.js" crossorigin="anonymous"></script>
+</head>
+<body>
     <header>
-      <div id="top">
-        <div id="info">
-          <p>jan shrem and maria <span>manetti shrem museum</span> of art</p>
-        </div>
-        <div id="home">
-          <nav>
-            <ul>
-              <li><a href="https://manettishremmuseum.ucdavis.edu">home</a></li>
-              <li><a href="https://manettishremmuseum.ucdavis.edu">visit</a></li>
-              <li><a href="https://manettishremmuseum.ucdavis.edu">about</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <p id="countdown"></p>
+        <div id="hrline1"></div>
+        <p id="hd1">Restaurant Tinder</p>
+        <div id="hrline2"></div>
     </header>
-
-    <main>
-      <div id="title">
-        <h2>Stephan Kaltenbach: The Beginning and The End</h2>
-        <h3>On view January 26-May 10, 2020</h3>
-      </div>
-
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img src="./assets/fabric.jpg" style="width:100%" alt="" />
-          <div class="text1">
-            Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45
-            x 60 inches
-          </div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="./assets/fatherPortrait.jpg" style="width:100%" alt="" />
-          <div class="text1">
-            Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on
-            canvas, 114 x 170 ¾ inches
-          </div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="./assets/openAfterDeath.jpg" style="width:100%" alt="" />
-          <div class="text1">
-            Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved,
-            with unknown contents, 3 x 6 x 3 inches
-          </div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">4 / 4</div>
-          <img src="./assets/roomCube.jpg" style="width:100%" alt="" />
-          <div class="text1">
-            Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches,
-            edition of 10
-          </div>
-        </div>
-
-        <a class="last" onclick="lastSlide()">&#10094;</a>
-        <a class="next" onclick="nextSlide()">&#10095;</a>
-      </div>
-      <br />
-
-      <p id="text2">
-        Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x
-        60 inches.
-      </p>
-
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-      <p>
-        During the late 1960s, after graduating from UC Davis (BA, 1966; MA,
-        1967) and moving to New York, Stephen Kaltenbach established a
-        reputation in the emerging international field of Conceptual art. But in
-        1970, just as he was achieving career success, Kaltenbach abruptly
-        withdrew to California’s Central Valley, appearing to abandon Conceptual
-        work in favor of the more traditional mediums of painting and sculpture.
-        Coinciding with the 50th anniversary of his “dropout,” this exhibition
-        considers Kaltenbach’s engagement with time as a principal theme across
-        his remarkably diverse career, which encompasses bronze time capsules,
-        advertisements placed anonymously in Artforum magazine in 1968-69, and
-        the monumental photorealist painting Portrait of My Father (1972-79)
-      </p>
-      <p>Guest Curators: Constance Lewallen and Ted Mann</p>
-    </main>
+    <section id="desc">
+        <p>"A cool website helps you choose a good restaurant when you and your friends can't decide."
+            <br><br>٩(◕‿◕｡)۶</p>
+    </section>
+    <div class="link" style="display: none;">
+        <p id="link1">Share with your friends:</p>
+        <p id="link2">https://▓▒░(°◡°)░▒▓</p>
+        <p id="link3">Copy link</p>
+    </div>
+    <div id="butn" onclick="start()">
+        <p>Start</p>
+    </div>
+    <div id="butn2" style="display: none;" onclick="search()">
+        <p>Search<i class="fas fa-search"></i></p>
+    </div>
+    <div class="enter" style="display: none;">
+        <p>Location:</p>
+        <div contenteditable="true" id="textarea1"></div>
+        <p>Keywords:</p>
+        <div contenteditable="true" id="textarea2"></div>
+    </div>
+    <p id="forgot" style="display: none;" onclick="forgot()">Forgot link?</p>
+    <div id="butn3" style="display: none;" onclick="get()">
+        <p>Get Restaurants<i class="fas fa-arrow-right"></i></p>
+    </div>
+    <div class="infodisplay" style="display: none;">
+        <p>(◉Θ◉)</p>
+    </div>
+    <p id="no" style="display: none;">No!</p>
+    <p id="yes" style="display: none;">Yes!</p>
     <footer>
-      <div id="bottom">
-        <div>
-          <h3>manetti shrem museum</h3>
-          <p>254 Old Davis Rd. <br />Davis, CA 95616</p>
-        </div>
-        <div>
-          <h3>Hours</h3>
-          <ul>
-            <li>Tuesday, Wednesday, and Friday: Noon-6pm</li>
-            <li>Thursday: Noon-9pm</li>
-            <li>Saturday-Sunday: 11am-5pm</li>
-            <li>Monday: Closed</li>
-          </ul>
-        </div>
-        <div>
-          <h3>
-            The Manetti Shrem Museum will be temporarily closed starting March
-            16, 2020
-          </h3>
-          <p>
-            This is to prioritize the health and safety of our students,
-            faculty, and the community at large. Thank you for your patience.
-          </p>
-        </div>
-        <div class="flex-container">
-          <div></div>
-        </div>
-      </div>
+        <p>Team: Yearbook Hater ᕕ( ᐛ )ᕗ</p>
+        <p>Spring 2020 ECS162</p>
     </footer>
-    <!-- import the webpage's browser-side javascript file -->
-    <!-- Does not do anything yet -->
     <script src="./meme.js"></script>
-  </body>
+</body>
 </html>

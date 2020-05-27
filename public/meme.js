@@ -1,64 +1,62 @@
-var id = 1;
-showSlide(id);
-showTime();
-
-function showTime() {
-  var leftTime = parseInt(
-    (new Date("2020/05/10, 17:00:00").getTime() - new Date().getTime()) / 1000
-  );
-  document.getElementById("countdown").innerHTML = Number(
-    leftTime
-  ).toLocaleString();
-  setTimeout(showTime, 1000);
-}
-
-function nextSlide(n) {
-  showSlide(++id);
-  showText(id);
-}
-
-function lastSlide(n) {
-  showSlide(--id);
-  showText(id);
-}
-
-function currentSlide(n) {
-  showSlide((id = n));
-  showText(id);
-}
-
-function showSlide(n) {
-  var slides = document.getElementsByClassName("mySlides");
-  var buttons = document.getElementsByClassName("dot");
-  id = n > slides.length ? 1 : n < 1 ? slides.length : n;
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function start() {
+  var home = document.getElementById("desc");
+  home.style.display = "none";
+  var startbtn = document.getElementById("butn");
+  startbtn.style.display = "none";
+  var share = document.getElementsByClassName("link");
+  for (var i = 0; i < share.length; i++) {
+    share[i].style.display = null;
   }
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].className = buttons[i].className.replace(" active", "");
-  }
-  slides[id - 1].style.display = "block";
-  buttons[id - 1].className += " active";
+  var searchbtn = document.getElementById("butn2");
+  searchbtn.style.display = null;
 }
-
-function showText(n) {
-  var text = document.getElementById("text2");
-  switch (n) {
-    case 1:
-      text.innerHTML =
-        "Stephen Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Fabric, 45 x 60 inches";
-      break;
-    case 2:
-      text.innerHTML =
-        "Stephen Kaltenbach, Portrait of My Father, 1972-79. Acrylic on canvas, 114 x 170¾ inches";
-      break;
-    case 3:
-      text.innerHTML =
-        "Stephen Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved, with unknown contents, 3 x 6 x 3 inches";
-      break;
-    case 4:
-      text.innerHTML =
-        "Stephen Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches, edition of 10";
-      break;
+function search() {
+  var share = document.getElementsByClassName("link");
+  for (var i = 0; i < share.length; i++) {
+    share[i].style.display = "none";
   }
+  var searchbtn = document.getElementById("butn2");
+  searchbtn.style.display = "none";
+  var get = document.getElementById("butn3");
+  get.style.display = null;
+  var enter = document.getElementsByClassName("enter");
+  for (var i = 0; i < enter.length; i++) {
+    enter[i].style.display = null;
+  }
+  var forgot = document.getElementById("forgot");
+  forgot.style.display = null;
+}
+function forgot() {
+  var share = document.getElementsByClassName("link");
+  for (var i = 0; i < share.length; i++) {
+    share[i].style.display = null;
+  }
+  var searchbtn = document.getElementById("butn2");
+  searchbtn.style.display = null;
+  var get = document.getElementById("butn3");
+  get.style.display = "none";
+  var enter = document.getElementsByClassName("enter");
+  for (var i = 0; i < enter.length; i++) {
+    enter[i].style.display = "none";
+  }
+  var forgot = document.getElementById("forgot");
+  forgot.style.display = "none";
+}
+function get() {
+  var getbtn = document.getElementById("butn3");
+  getbtn.style.display = "none";
+  var enter = document.getElementsByClassName("enter");
+  for (var i = 0; i < enter.length; i++) {
+    enter[i].style.display = "none";
+  }
+  var forgot = document.getElementById("forgot");
+  forgot.style.display = "none";
+  var resinfo = document.getElementsByClassName("infodisplay");
+  for (var i = 0; i < resinfo.length; i++) {
+    resinfo[i].style.display = null;
+  }
+  var no = document.getElementById("no");
+  no.style.display = null;
+  var yes = document.getElementById("yes");
+  yes.style.display = null;
 }
