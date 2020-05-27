@@ -28,5 +28,5 @@ function写成addEventListener的形式
 ## 5/27 
 
 1. ~~copy link~~
-2. email
+2. WebSocket
 3. swiper

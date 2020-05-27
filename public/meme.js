@@ -1,6 +1,7 @@
 var id = "";
 
 function start() {
+  window.
   var home = document.getElementById("desc");
   home.style.display = "none";
   var startbtn = document.getElementById("butn");

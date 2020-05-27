@@ -117,9 +117,9 @@ app.use(express.static('public'));
 app.use("/images",express.static('images'));
 
 // Handle GET request to base URL with no other route specified
-// by sending creator.html, the main page of the app
+// by sending index.html, the main page of the app
 app.get("/", function (request, response) {
-  response.sendFile(__dirname + '/public/creator.html');
+  response.sendFile(__dirname + '/public/index.html');
 });
 
 // custom 404 page (not a very good one...)
