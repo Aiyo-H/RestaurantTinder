@@ -13,31 +13,26 @@ window.onload = () => {
   var searchbtn = document.getElementById("butn2");
   searchbtn.style.display = null;
   id = randomString();
-  document.getElementById("link2").innerHTML = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
+  document.getElementById("link2").innerHTML =
+    "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
 };
-
-
-
 
 // --------------------------RandomString-----------------------------------------
 // Availability: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 
 function randomString() {
-   var result           = '';
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-   var charactersLength = characters.length;
-   for ( var i = 0; i < 22; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+  var result = "";
+  var characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersLength = characters.length;
+  for (var i = 0; i < 22; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }
 // --------------------------------------------------------------------------------
 
-
-
-
-
-document.querySelector('#butn2').addEventListener('click', () => {
+document.querySelector("#butn2").addEventListener("click", () => {
   var share = document.getElementsByClassName("link");
   for (var i = 0; i < share.length; i++) {
     share[i].style.display = "none";
@@ -54,7 +49,7 @@ document.querySelector('#butn2').addEventListener('click', () => {
   forgot.style.display = null;
 });
 
-document.querySelector('#forgot').addEventListener('click', () => {
+document.querySelector("#forgot").addEventListener("click", () => {
   var share = document.getElementsByClassName("link");
   for (var i = 0; i < share.length; i++) {
     share[i].style.display = null;
@@ -71,7 +66,7 @@ document.querySelector('#forgot').addEventListener('click', () => {
   forgot.style.display = "none";
 });
 
-document.querySelector('#butn3').addEventListener('click', () => {
+document.querySelector("#butn3").addEventListener("click", () => {
   var getbtn = document.getElementById("butn3");
   getbtn.style.display = "none";
   var enter = document.getElementsByClassName("enter");
@@ -90,26 +85,16 @@ document.querySelector('#butn3').addEventListener('click', () => {
   yes.style.display = null;
 });
 
-
-document.querySelector('#link3').addEventListener('click', () => {
-  const el = document.createElement('textarea');
+document.querySelector("#link3").addEventListener("click", () => {
+  const el = document.createElement("textarea");
   el.value = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
   document.body.appendChild(el);
   el.select();
-  document.execCommand('copy');
+  document.execCommand("copy");
   document.body.removeChild(el);
   console.log("link copied");
-  
-  
-  
-  
-  
-  transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-});
 
+  var xmlhttp = new XMLHttpRequest();   
+  xmlhttp.open("POST", '/sendemail');
+  
+});
