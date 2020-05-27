@@ -1,3 +1,6 @@
+"use strict";
+var id = "";
+
 window.onload = () => {
   var home = document.getElementById("desc");
   home.style.display = "none";
@@ -9,7 +12,50 @@ window.onload = () => {
   }
   var searchbtn = document.getElementById("butn2");
   searchbtn.style.display = null;
+  id = randomString();
+  document.getElementById("link2").innerHTML = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
 };
+
+
+
+
+// --------------------------RandomString-----------------------------------------
+// Availability: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+
+function randomString() {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < 22; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+// --------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var id = "";
 
