@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const sql = require("sqlite3").verbose();
 const FormData = require("form-data");
+const nodemailer = require('nodemailer');
 
 // ----------------------------DATABASE--------------------------------------
 
@@ -139,17 +140,25 @@ var listener = app.listen(process.env.PORT, function () {
 
 
 
-
+app.post("/sendemail", function (request, response) {
+  console.log("1");
+  transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+});
 
 
 // -----------------------------EmailSender-------------------------------------
-var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'restaurantinder@gmail.com',
-    pass: 'a19981117'
+    pass: '19981117'
   }
 });
 

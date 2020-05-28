@@ -93,8 +93,9 @@ document.querySelector("#link3").addEventListener("click", () => {
   document.execCommand("copy");
   document.body.removeChild(el);
   console.log("link copied");
-
-  var xmlhttp = new XMLHttpRequest();   
-  xmlhttp.open("POST", '/sendemail');
+var xdr = new XDomainRequest();
+  var xhr = new XMLHttpRequest();   
+  xhr.open("POST", '/sendemail');
+  xhr.send();
   
 });
