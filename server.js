@@ -3,7 +3,6 @@
 
 // include modules
 const express = require('express');
-
 const multer = require('multer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -11,6 +10,10 @@ const sql = require("sqlite3").verbose();
 const FormData = require("form-data");
 const nodemailer = require('nodemailer');
 
+// begin constructing the server pipeline
+const app = express();
+
+/*
 // ----------------------------DATABASE--------------------------------------
 
 // This creates an interface to the file if it already exists, and makes the 
@@ -60,9 +63,7 @@ let storage = multer.diskStorage({
 // let upload = multer({dest: __dirname+"/assets"});
 let upload = multer({storage: storage});
 
-
-// begin constructing the server pipeline
-const app = express();
+*/
 
 
 // ------------------------------DATABASE---------------------------------------
@@ -70,7 +71,7 @@ const app = express();
 // A middleware function to handles the GET query /saveDisplay
 // Observe that it either ends up sending the HTTP response or calls next(), so it
 // is a valid middleware function. 
-function handlePostcard(request, response, next) {
+//function handlePostcard(request, response, next) {
   /*
   //let cmd = "SELECT * FROM PostcardsTable";
   postcardsDB.all(cmd, function (err, rows) {
@@ -85,6 +86,8 @@ function handlePostcard(request, response, next) {
   });*/
   
   // Example of just getting first row
+
+/*
   const r = request.query.id;
   let xcmd = "SELECT * FROM RestaurantsTable WHERE randomString = ?";
   postcardsDB.get( xcmd, r, function ( err, rowData ) {    
@@ -93,6 +96,7 @@ function handlePostcard(request, response, next) {
   });
 
 }
+*/
 // -------------------------------------------------------------------------------
 
 
