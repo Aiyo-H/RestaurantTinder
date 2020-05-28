@@ -2,12 +2,6 @@
 var id = "";
 
 window.onload = () => {
-  var share = document.getElementsByClassName("link");
-  for (var i = 0; i < share.length; i++) {
-    share[i].style.display = null;
-  }
-  var searchbtn = document.getElementById("butn2");
-  searchbtn.style.display = null;
   id = randomString();
   document.getElementById("link2").innerHTML =
     "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
