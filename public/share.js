@@ -93,9 +93,6 @@ document.querySelector("#link3").addEventListener("click", () => {
   document.execCommand("copy");
   document.body.removeChild(el);
   console.log("link copied");
-var xdr = new XDomainRequest();
-  var xhr = new XMLHttpRequest();   
-  xhr.open("POST", '/sendemail');
-  xhr.send();
+  window.open('mailto:test@example.com');
   
 });

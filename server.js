@@ -139,7 +139,7 @@ var listener = app.listen(process.env.PORT, function () {
 });
 
 
-
+/*
 app.post("/sendemail", function (request, response) {
   console.log("1");
   transporter.sendMail(mailOptions, function(error, info){
@@ -170,3 +170,4 @@ var mailOptions = {
 };
 
 // -----------------------------------------------------------------------------
+*/
