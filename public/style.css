@@ -154,28 +154,23 @@ body {
   margin-top: 20px;
   text-align: center;
 }
+img {
+  width: 20%;
+}
 #no,
 #yes {
-  position: absolute;
-  font-size: 40px;
-  font-family: "Carter One", cursive;
-  margin-top: 20px;
-  padding: 15px;
+  position: fixed;
   cursor: pointer;
-  border: 5px solid white;
-  border-radius: 50px;
+  margin-top: 30px;
 }
 #no {
-  color: #000000;
-  left: 20px;
+  left: 30px;
 }
 #yes {
-  color: #A62639;
-  right: 20px;
+  right: 30px;
 }
 #no:hover,
 #yes:hover {
-  text-shadow: 4px 4px #FFFFFF;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -293,9 +288,12 @@ footer p {
   }
   .infodisplay {
     border-radius: 25px;
-    height: 350px;
+    height: 375px;
     width: 45%;
-    margin-top: 10%;
+    margin-top: 15%;
+  }
+  img {
+    width: 10%;
   }
   #no,
   #yes {
@@ -366,7 +364,8 @@ footer p {
   }
   .infodisplay {
     position: absolute;
-    top: 8%;
+    margin-top: 0;
+    top: 175px;
     left: 35%;
     height: 400px;
     width: 30%;
