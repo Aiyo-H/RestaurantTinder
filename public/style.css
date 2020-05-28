@@ -1,6 +1,12 @@
 body {
   background-color: #FFCF99;
 }
+#icon {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 #hd1 {
   margin: 0 auto;
   width: 50%;
@@ -154,11 +160,9 @@ body {
   margin-top: 20px;
   text-align: center;
 }
-img {
-  width: 20%;
-}
 #no,
 #yes {
+  width: 20%;
   position: fixed;
   cursor: pointer;
   margin-top: 30px;
@@ -225,6 +229,9 @@ footer p {
 }
 
 @media only screen and (min-width: 600px) {
+  #icon {
+    width: 40%;
+  }
   #hd1 {
     margin-top: 50px;
     font-size: 40px;
@@ -292,11 +299,9 @@ footer p {
     width: 45%;
     margin-top: 15%;
   }
-  img {
-    width: 10%;
-  }
   #no,
   #yes {
+    width: 10%;
     font-size: 50px;
     top: 40%;
   }
@@ -309,6 +314,9 @@ footer p {
 }
 
 @media only screen and (min-width: 768px) {
+    #icon{
+  width: 40%;
+  }
   #hd1 {
     margin-top: 55px;
     font-size: 50px;
