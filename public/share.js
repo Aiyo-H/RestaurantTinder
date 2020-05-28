@@ -86,15 +86,15 @@ document.querySelector("#butn3").addEventListener("click", () => {
 });
 
 document.querySelector("#link3").addEventListener("click", () => {
+  const url = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
   const el = document.createElement("textarea");
-  el.value = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
+  el.value = url;
   document.body.appendChild(el);
   el.select();
   document.execCommand("copy");
   document.body.removeChild(el);
   console.log("link copied");
-  var subject = "Invitation";
-  var body = "body";
+  var subject = "Invitation to RestaurantTinder";
+  var body = "Here is the link to join the Game:)\n" + url;
   window.open('mailto:test@example.com?subject=subject&body=body');
-  
 });
