@@ -93,6 +93,8 @@ document.querySelector("#link3").addEventListener("click", () => {
   document.execCommand("copy");
   document.body.removeChild(el);
   console.log("link copied");
-  window.open('mailto:test@example.com');
+  var subject = "Invitation";
+  var body = "body";
+  window.open('mailto:test@example.com?subject=subject&body=body');
   
 });
