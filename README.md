@@ -9,7 +9,7 @@
 https://drive.google.com/drive/folders/1F_8lAtSYVqlKjhE8q63KsejW8bcZAW7q?usp=sharing
 2. pics
 3. background
-4.
+4. waiting gif
 
 ```
 hello world
