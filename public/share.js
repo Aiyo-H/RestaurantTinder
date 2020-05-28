@@ -2,10 +2,6 @@
 var id = "";
 
 window.onload = () => {
-  var home = document.getElementById("desc");
-  home.style.display = "none";
-  var startbtn = document.getElementById("butn");
-  startbtn.style.display = "none";
   var share = document.getElementsByClassName("link");
   for (var i = 0; i < share.length; i++) {
     share[i].style.display = null;
@@ -94,7 +90,12 @@ document.querySelector("#link3").addEventListener("click", () => {
   document.execCommand("copy");
   document.body.removeChild(el);
   console.log("link copied");
+  
+  
+  
+  // Use them in email.onclick()
   var subject = "Invitation to RestaurantTinder";
   var body = "Here is the link to join the Game:) " + url;
   window.open('mailto:test@example.com?subject=' + subject + '&body=' + body);
 });
+
