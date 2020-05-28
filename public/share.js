@@ -95,6 +95,6 @@ document.querySelector("#link3").addEventListener("click", () => {
   document.body.removeChild(el);
   console.log("link copied");
   var subject = "Invitation to RestaurantTinder";
-  var body = "Here is the link to join the Game:)\n" + url;
-  window.open('mailto:test@example.com?subject=subject&body=body');
+  var body = "Here is the link to join the Game:) " + url;
+  window.open('mailto:test@example.com?subject=' + subject + '&body=' + body);
 });
