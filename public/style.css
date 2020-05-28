@@ -36,6 +36,9 @@ body {
   font-family: "Playfair Display", serif;
   color: #721121;
 }
+#bg1{
+  width: 80%;
+}
 .link {
   position: absolute;
   top: 30%;
@@ -213,6 +216,15 @@ body {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+#wait{
+  margin: 0 auto;
+  width: 50%;
+  font-size: 20px;
+  margin-top: 60px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #721121;
+}
 footer {
   text-align: center;
   bottom: 0;
@@ -249,6 +261,9 @@ footer p {
   #hrline2 {
     right: 3%;
   }
+  #bg1{
+  width: 50%;
+}
   #butn {
     width: 30%;
     left: 35%;
@@ -311,6 +326,11 @@ footer p {
   #yes {
     right: 25px;
   }
+  #wait{
+  width: 50%;
+  font-size: 25px;
+  margin-top: 80px;
+}
 }
 
 @media only screen and (min-width: 768px) {
@@ -338,6 +358,9 @@ footer p {
     margin-top: 60px;
     font-size: 14px;
   }
+  #bg1{
+  width: 30%;
+}
   #butn {
     width: 15%;
     left: 42%;
