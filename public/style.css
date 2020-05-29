@@ -83,7 +83,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 16px;
   position: absolute;
-  left: 39%;
+  left: 20%;
   bottom: 10px;
   font-style: italic;
   cursor: pointer;
@@ -92,7 +92,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 16px;
   position: absolute;
-  left: 42%;
+  right: 20%;
   bottom: 10px;
   font-style: italic;
   cursor: pointer;
@@ -392,15 +392,18 @@ footer p {
   }
   .link {
     top: 30%;
-    left: 29%;
+    left: 32%;
     height: 130px;
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
     font-size: 20px;
     padding: 15px;
   }
   #link3 {
-    left: 43%;
+    left: 10%;
+  }
+  #link4 {
+    right: 10%;
   }
   #butn2,
   #butn3 {
@@ -409,10 +412,10 @@ footer p {
   }
   .enter {
     top: 20%;
-    left: 30%;
+    left: 32.5%;
     font-size: 18px;
     height: 200px;
-    width: 40%;
+    width: 35%;
   }
   #forgot {
     right: 20%;
