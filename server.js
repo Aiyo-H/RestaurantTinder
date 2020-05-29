@@ -180,6 +180,11 @@ var mailOptions = {
 
 
 /*----------------WebSocket---------------------*/
+
+/*--------Chat box------------*/
 const server = http.createServer(app);
 
 const wssT = new WebSocket.Server({server});
+
+
+/*--------Game round------------*/
