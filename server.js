@@ -182,7 +182,7 @@ var mailOptions = {
 /*----------------WebSocket---------------------*/
 
 /*--------Chat box------------*/
-c*onst server = http.createServer(app);
+/*const server = http.createServer(app);
 
 const wssT = new WebSocket.Server({server});
 
@@ -211,4 +211,4 @@ server.listen(process.env.PORT, () => {
     console.log(`Server started on port ${server.address().port} :)`);
 });
 */
-*--------Game round------------*///
+/*--------Game round------------*/
