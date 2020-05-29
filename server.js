@@ -9,6 +9,8 @@ const fs = require('fs');
 const sql = require("sqlite3").verbose();
 const FormData = require("form-data");
 const nodemailer = require('nodemailer');
+const WebSocket = require('ws');
+const http = require("http");
 
 // begin constructing the server pipeline
 const app = express();
