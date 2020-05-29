@@ -177,3 +177,9 @@ var mailOptions = {
 
 // -----------------------------------------------------------------------------
 */
+
+
+/*----------------WebSocket---------------------*/
+const server = http.createServer(app);
+
+const wssT = new WebSocket.Server({server});
