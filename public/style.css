@@ -240,6 +240,16 @@ body {
   font-family: "Playfair Display", serif;
   color: #721121;
 }
+#icon1 {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 footer {
   text-align: center;
   bottom: 0;
