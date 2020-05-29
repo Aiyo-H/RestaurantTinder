@@ -241,7 +241,7 @@ body {
   color: #721121;
 }
 #icon1 {
-  width: 60%;
+  width: 40%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -354,7 +354,7 @@ footer p {
   #wait {
     width: 50%;
     font-size: 25px;
-    margin-top: 80px;
+    margin-top: 70px;
   }
 }
 
@@ -439,5 +439,8 @@ footer p {
   }
   #yes {
     right: 40px;
+  }
+  #wait {
+    margin-top: 50px;
   }
 }
