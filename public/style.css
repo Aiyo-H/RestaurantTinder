@@ -1,13 +1,13 @@
-html{
-  height: 90%;
+html {
+  height: 100%;
 }
 body {
   height: 100%;
   background-color: #FFCF99;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right 0% bottom 1%;
-  background-image:url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1590974545535");
+  background-position: right 0% bottom 0%;
+  background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg-small.png?v=1590974998374");
 }
 #icon {
   width: 60%;
@@ -45,7 +45,7 @@ body {
   color: #721121;
 }
 #bg1 {
-  width: 80%;
+  width: 50%;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -274,9 +274,6 @@ footer p {
 }
 
 @media only screen and (min-width: 600px) {
-  body {
-    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1590973511517");
-  }
   #icon {
     width: 40%;
   }
@@ -370,6 +367,10 @@ footer p {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    background-position: right 0% bottom 1%;
+    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1590974545535");
+  }
   #icon {
     width: 30%;
   }
@@ -395,7 +396,7 @@ footer p {
     font-size: 14px;
   }
   #bg1 {
-    width: 30%;
+    width: 20%;
   }
   #butn {
     width: 15%;
