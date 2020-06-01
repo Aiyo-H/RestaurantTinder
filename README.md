@@ -5,10 +5,9 @@
 4.
 
 # UI
-1. pics
-2. background
+1. background
 
-Icon:
+Icon/Pics(加了五个):
 https://drive.google.com/drive/folders/1F_8lAtSYVqlKjhE8q63KsejW8bcZAW7q?usp=sharing
 
 ```
