@@ -1,9 +1,13 @@
+html{
+  height: 90%;
+}
 body {
+  height: 100%;
   background-color: #FFCF99;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right top;     
-  background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1590973511517");
+  background-position: right 0% bottom 1%;
+  background-image:url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1590974545535");
 }
 #icon {
   width: 60%;
@@ -270,6 +274,9 @@ footer p {
 }
 
 @media only screen and (min-width: 600px) {
+  body {
+    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1590973511517");
+  }
   #icon {
     width: 40%;
   }
