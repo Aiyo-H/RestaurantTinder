@@ -107,7 +107,6 @@ body {
 }
 #butn {
   width: 40%;
-  background-color: white;
   color: #f15156;
   font-size: 35px;
   font-family: "Vidaloka", serif;
@@ -117,16 +116,22 @@ body {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  background-color: white;
   border-radius: 50px;
   cursor: pointer;
 }
 #butn2 {
-  text-align: center;
   font-family: "Vidaloka", serif;
   color: #f15156;
   font-size: 35px;
   margin-top: 350px;
   cursor: pointer;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  border-radius: 50px;
+  width: 40%;
 }
 .enter {
   position: absolute;
@@ -169,12 +174,16 @@ body {
   cursor: pointer;
 }
 #butn3 {
-  text-align: center;
   font-family: "Vidaloka", serif;
   color: #f15156;
   font-size: 25px;
   margin-top: 350px;
   cursor: pointer;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  border-radius: 50px;
 }
 .infodisplay {
   background-color: white;
@@ -423,7 +432,6 @@ footer p {
   #butn2,
   #butn3 {
     font-size: 35px;
-    margin-top: 475px;
   }
   .enter {
     top: 20%;
