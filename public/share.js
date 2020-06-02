@@ -31,11 +31,11 @@ document.querySelector("#link3").addEventListener("click", () => {
   const el = document.createElement("textarea");
   el.value = url;
   document.body.appendChild(el);
-  
+
   // Use them in email.onclick()
   var subject = "Invitation to RestaurantTinder";
   var body = "Here is the link to join the Game:) " + url;
-  window.open('mailto:test@example.com?subject=' + subject + '&body=' + body);
+  window.open("mailto:test@example.com?subject=" + subject + "&body=" + body);
 });
 
 document.querySelector("#link4").addEventListener("click", () => {
@@ -49,5 +49,3 @@ document.querySelector("#link4").addEventListener("click", () => {
   console.log("link copied");
   alert("Copied the text: " + url);
 });
-
-
