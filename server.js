@@ -229,3 +229,83 @@ client.search({
 });
 */
 // ---------------------------------------------------------
+
+// 
+const server = http.createServer(app);
+
+const wss = new WebSocket.Server({server});
+
+let clientCount = 0;
+let voteCount = 0;
+const restaurantList = ["AA","BB","CC","DD"];
+const yOrN = ["Yes", "No"];
+
+let restaurantInd = 0;
+let numOfVotes = [0, 0, 0, 0];
+let voteYes = 0;
+
+
+wss.on('connection', (ws) => {
+  clientCount += 1;
+  restaurantInd = 0;
+  console.log("a new client, now ", clientCount, "users connected");
+  ws.on('message', (message) => {
+    console.log(message);
+    //ws.send("server echo:" + message);
+    //broadcast(message)
+    let cmdObj = JSON.parse(message);
+    if (cmdObj.type == 'message'){
+      let msgObj = {'type': 'message', 'info':cmdObj.msg};
+      broadcast(message);
+    }
+    if (cmdObj.type == 'command'){
+      console.log("one user vote ", yOrN[cmdObj.choice], "on this restaurant");
+      voteCount += 1;
+      console.log(voteCount, "users voted");
+      if (cmdObj.choice == 0){
+        numOfVotes[restaurantInd] += 1;
+        voteYes += 1;
+      }
+      console.log("voteYes is ", voteYes);
+      if (voteCount == clientCount){
+        voteCount = 0;
+        if (voteYes == clientCount) {
+          let endObj = {'type': 'end', 'info':restaurantList[restaurantInd]};
+          broadcast(JSON.stringify(endObj));
+        }
+        
+        else if (restaurantInd == restaurantList.length-1){
+          //reference:https://stackoverflow.com/questions/11301438/return-index-of-greatest-value-in-an-array
+          let indexOfMaxValue = numOfVotes.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
+          let endObj = {'type': 'end', 'info':restaurantList[indexOfMaxValue]};
+          
+          broadcast(JSON.stringify(endObj));
+        }
+        else{
+          restaurantInd += 1;
+          
+          let nrObj = {'type': 'command', 'info':restaurantList[restaurantInd]};
+          broadcast(JSON.stringify(nrObj));
+        }
+        voteYes = 0;
+        
+      }
+    }
+  })
+  
+  ws.on('close', ()=>{
+    clientCount -= 1;
+    console.log("a client quit, now ", clientCount, "users connected")
+  });
+  ws.send('connected!');
+  
+})
+
+function broadcast(data) {
+  wss.clients.forEach((client) => {
+    if (client.readyState === WebSocket.OPEN) {
+      console.log(data);
+      client.send(data);
+    }
+  });
+}
