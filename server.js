@@ -11,7 +11,7 @@ const FormData = require("form-data");
 const nodemailer = require('nodemailer');
 const WebSocket = require('ws');
 const http = require("http");
-const yelp = require('yelp-fusion');
+//const yelp = require('yelp-fusion');
 
 // begin constructing the server pipeline
 const app = express();
@@ -216,7 +216,7 @@ server.listen(process.env.PORT, () => {
 
 
 // -------------------Yelp API-----------------------------
-
+/*
 const client = yelp.client('YOUR_API_KEY');
 
 client.search({
@@ -227,5 +227,5 @@ client.search({
 }).catch(e => {
   console.log(e);
 });
-
+*/
 // ---------------------------------------------------------
