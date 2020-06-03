@@ -44,32 +44,14 @@ body {
   font-family: "Playfair Display", serif;
   color: #721121;
 }
-#bg1 {
-  width: 50%;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-@keyframes floating {
-  from {
-    transform: translate(0, 0px);
-  }
-  65% {
-    transform: translate(0, 15px);
-  }
-  to {
-    transform: translate(0, -0px);
-  }
-}
 .link {
   position: absolute;
   top: 30%;
-  left: 7%;
+  left: 14%;
   height: 150px;
   color: #A62639;
   background-color: white;
-  width: 75%;
+  width: 65%;
   margin: 0 auto;
   border-radius: 20px;
   font-size: 25px;
@@ -125,14 +107,16 @@ body {
   font-family: "Vidaloka", serif;
   color: #f15156;
   font-size: 35px;
-  margin-top: 350px;
+  position: absolute;
+  top: 68%;
+  left: 30%;
   cursor: pointer;
   text-shadow: 1px 1px white;
 }
 .enter {
   position: absolute;
   top: 30%;
-  left: 7%;
+  left: 13%;
   padding: 20px;
   font-size: 20px;
   font-family: "Playfair Display", serif;
@@ -140,7 +124,7 @@ body {
   color: #721121;
   background-color: white;
   border-radius: 25px;
-  width: 75%;
+  width: 65%;
   margin: 0 auto;
 }
 #textarea1,
@@ -311,6 +295,11 @@ footer p {
     width: 30%;
     left: 35%;
   }
+  #butn2{
+    position: absolute;
+    top: 20%;
+    left: 42%;
+  }
   .link {
     top: 30%;
     left: 25%;
@@ -431,8 +420,11 @@ footer p {
   #butn3 {
     font-size: 35px;
   }
+  #butn2{
+    left: 44%;
+  }
   .enter {
-    top: 20%;
+    top: 25%;
     left: 31%;
     font-size: 18px;
     height: 200px;
