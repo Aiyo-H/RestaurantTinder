@@ -109,7 +109,8 @@ body {
   font-size: 35px;
   position: absolute;
   bottom: 28%;
-  left: 30%;
+  left: 50%;
+  transform: translate(-50%,0)
   cursor: pointer;
   text-shadow: 1px 1px white;
 }
