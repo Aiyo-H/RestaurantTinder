@@ -110,7 +110,7 @@ body {
   position: absolute;
   bottom: 28%;
   left: 50%;
-  transform: translate(-50%,0)
+  transform: translate(-50%,0);
   cursor: pointer;
   text-shadow: 1px 1px white;
 }
@@ -262,10 +262,6 @@ footer p {
   font-family: "Vidaloka", serif;
 }
 
-.swiper-container {
-    width: 600px;
-    height: 300px;
-}
 
 @media only screen and (min-width: 600px) {
   body {
@@ -301,7 +297,6 @@ footer p {
   #butn2{
     pposition: absolute;
     bottom: 28%;
-    left: 42%;
   }
   #butn3{
     pposition: absolute;
