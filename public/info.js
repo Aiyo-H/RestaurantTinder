@@ -22,11 +22,11 @@ window.onload = () => {
     document.getElementById("restname5").innerHTML = data[4].name;
     
     // Ratings
-    document.getElementById("restname1").innerHTML = data[0].name;
-    document.getElementById("restname2").innerHTML = data[1].name;
-    document.getElementById("restname3").innerHTML = data[2].name;
-    document.getElementById("restname4").innerHTML = data[3].name;
-    document.getElementById("restname5").innerHTML = data[4].name;
+    document.getElementById("rating1").src = getRating(data[0].rating);
+    document.getElementById("rating2").src = getRating(data[1].rating);
+    document.getElementById("rating3").src = getRating(data[2].rating);
+    document.getElementById("rating4").src = getRating(data[3].rating);
+    document.getElementById("rating5").src = getRating(data[4].rating);
   });
   xhr.send(null);
 };
@@ -34,8 +34,28 @@ window.onload = () => {
 function getRating(e) {
   switch (e) {
     case 0:
-      return 
-      break;
-      
+      return "/0.png";
+    case 0.5:
+      return "/1.png";
+    case 1:
+      return "/2.png";
+    case 1.5:
+      return "/3.png";
+    case 2:
+      return "/4.png";
+    case 2.5:
+      return "/5.png";
+    case 3:
+      return "/6.png";
+    case 3.5:
+      return "/7.png";
+    case 4:
+      return "/8.png";
+    case 4.5:
+      return "/9.png";
+    case 5:
+      return "/10.png";
+    default:
+      return "/";
   }
 }
