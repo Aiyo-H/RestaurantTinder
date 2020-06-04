@@ -5,7 +5,7 @@ window.onload = () => {
   xhr.addEventListener("load", () => {
     let restaurant = JSON.parse(xhr.responseText);
     data = restaurant.data;
-    console.log(data);
+    console.log(data[0].image_url);
     document.getElementById("rest1").src = data[0].image_url;
   });
   xhr.send(null);
