@@ -7,41 +7,30 @@ window.onload = () => {
     data = restaurant.data;
     console.log(data[0].image_url);
     let img, name, rating, dollar, location, reviews;
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 8; i++) {
+      
+      // Images
       img = 'rest' + (i + 1).toString();
-      name = 'restname' + (i + 1).toString();
-      rating = 'rating' + (i + 1).toString();
-      dollar = 'dollar' + (i + 1).toString();
       document.getElementById(img).src = data[i].image_url;
+      
+      // Names
+      name = 'restname' + (i + 1).toString();
       document.getElementById(name).innerHTML = data[i].name;
+      
+      // Ratings
+      rating = 'rating' + (i + 1).toString();
       document.getElementById(rating).src = getRating(data[i].rating);
-      document.getElementById(dollar).innerHTML = ((data[i].hasOwnProperty('price')) ? data[i].price : ?);
+      
+      // Prices
+      dollar = 'dollar' + (i + 1).toString();
+      document.getElementById(dollar).innerHTML = ((data[i].hasOwnProperty('price')) ? data[i].price : '?');
+      
+      // Locations
+      location = 'location' + (i + 1).toString();
+      document.getElementById(location).innerHTML = data[i].location.display_address[0]
+      console.log(data[i].location);
+      
     }
-    /*
-    // Images
-    document.getElementById("rest1").src = data[0].image_url;
-    document.getElementById("rest2").src = data[1].image_url;
-    document.getElementById("rest3").src = data[2].image_url;
-    document.getElementById("rest4").src = data[3].image_url;
-    document.getElementById("rest5").src = data[4].image_url;
-    
-    // Names
-    document.getElementById("restname1").innerHTML = data[0].name;
-    document.getElementById("restname2").innerHTML = data[1].name;
-    document.getElementById("restname3").innerHTML = data[2].name;
-    document.getElementById("restname4").innerHTML = data[3].name;
-    document.getElementById("restname5").innerHTML = data[4].name;
-    
-    // Ratings
-    document.getElementById("rating1").src = getRating(data[0].rating);
-    document.getElementById("rating2").src = getRating(data[1].rating);
-    document.getElementById("rating3").src = getRating(data[2].rating);
-    document.getElementById("rating4").src = getRating(data[3].rating);
-    document.getElementById("rating5").src = getRating(data[4].rating);
-    
-    // Price
-    document.getElementById("dollar1").innerHTML = data[0].price;
-    */
   });
   xhr.send(null);
 };
