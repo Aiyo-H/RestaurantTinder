@@ -30,7 +30,6 @@ https://drive.google.com/drive/folders/1K-vASDDNZMuKxL1WD2K-7TjW9FmMi5mk
 
 在tinder.html中间 改一个卡片就行 在style.css里用 
 
-3.我还希望在Tinder页面加个聊天室 小的就行
 
 # Aiyo
 
