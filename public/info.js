@@ -27,6 +27,8 @@ window.onload = () => {
     document.getElementById("rating3").src = getRating(data[2].rating);
     document.getElementById("rating4").src = getRating(data[3].rating);
     document.getElementById("rating5").src = getRating(data[4].rating);
+    
+    // 
   });
   xhr.send(null);
 };
