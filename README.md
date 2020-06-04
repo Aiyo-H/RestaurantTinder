@@ -36,7 +36,7 @@ https://drive.google.com/drive/folders/1K-vASDDNZMuKxL1WD2K-7TjW9FmMi5mk
 
 1.最后统计的HTML
 
-2.实现一下 人数满了 加不进来 （可以在之前那个app里试
+2.实现一下 人数满了 加不进来 （可以在之前那个app里先试
 
 3.Websockets最后得整合一下（不用现在做
 
@@ -47,14 +47,11 @@ https://drive.google.com/drive/folders/1K-vASDDNZMuKxL1WD2K-7TjW9FmMi5mk
 
 2.统计算法
 
-3.人数到了之后的拒绝HTML
+3.选完waiting
 
-4.选完waiting
+4.❤❌ + 震动
 
-5.开始游戏时的HTML
-
-6.❤❌ + 震动
-
+人数到了之后的拒绝HTML & 开始游戏时的HTML
 
 
 # 有问题可以写在这！
