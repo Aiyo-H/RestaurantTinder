@@ -252,14 +252,16 @@ body {
   }
 }
 
+/* Restaurant Tinder */
 .rest--tinder {
   width: 100%;
   height: 60%;
 }
 
 .rating--tinder {
-  
+  margin-top: 1vh;
 }
+/*----------------*/
 
 #wait {
   margin: 0 auto;
