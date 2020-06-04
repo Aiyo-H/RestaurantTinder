@@ -83,7 +83,7 @@ body {
 #link1 {
   margin-top: 20px;
   font-family: "Playfair Display", serif;
-  font-size: 25px;
+  font-size: 22px;
 }
 #link2 {
   margin-top: 15px;
@@ -93,7 +93,7 @@ body {
 }
 #link3 {
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 12px;
   position: absolute;
   left: 20%;
   bottom: 10px;
@@ -102,7 +102,7 @@ body {
 }
 #link4 {
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 12px;
   position: absolute;
   right: 20%;
   bottom: 10px;
@@ -143,7 +143,7 @@ body {
   padding: 20px;
   font-size: 20px;
   font-family: "Playfair Display", serif;
-  height: 200px;
+  height: 175px;
   color: #721121;
   background-color: white;
   border-radius: 25px;
@@ -163,7 +163,7 @@ body {
   margin-bottom: 10px;
 }
 #textarea2 {
-  height: 65px;
+  height: 50px;
 }
 #forgot {
   font-size: 14px;
@@ -369,7 +369,7 @@ footer p {
     top: 25%;
     left: 25%;
     font-size: 18px;
-    height: 200px;
+    height: 180px;
     width: 50%;
   }
   #forgot {
@@ -470,7 +470,7 @@ footer p {
     top: 25%;
     left: 31%;
     font-size: 18px;
-    height: 200px;
+    height: 180px;
     width: 35%;
   }
   #forgot {
