@@ -183,8 +183,9 @@ body {
   font-size: 25px;
   position: absolute;
   bottom: 28%;
-  left: 30%;
+  left: 48%;
   cursor: pointer;
+  transform: translate(-50%, 0);
   text-shadow: 1px 1px white;
 }
 .infodisplay {
@@ -325,11 +326,11 @@ footer p {
     left: 35%;
   }
   #butn2 {
-    pposition: absolute;
+    position: absolute;
     bottom: 28%;
   }
   #butn3 {
-    pposition: absolute;
+    position: absolute;
     bottom: 28%;
     left: 37%;
   }
@@ -358,6 +359,10 @@ footer p {
   #butn2,
   #butn3 {
     font-size: 30px;
+  }
+  #butn3{
+    left: 50%;
+    transform: translate(-50%, 0);
   }
   .enter {
     position: absolute;
