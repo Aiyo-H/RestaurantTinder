@@ -11,7 +11,7 @@ const FormData = require("form-data");
 const nodemailer = require('nodemailer');
 const WebSocket = require('ws');
 const http = require("http");
-//const yelp = require('yelp-fusion');
+const yelp = require('yelp-fusion');
 
 // begin constructing the server pipeline
 const app = express();
@@ -216,8 +216,8 @@ server.listen(process.env.PORT, () => {
 
 
 // -------------------Yelp API-----------------------------
-/*
-const client = yelp.client('YOUR_API_KEY');
+
+const client = yelp.client('a-rz6KFK-1vvLJPMK_MBe-87qtO7omEq8Fk9q4YUo5lAodMng785UgrhB7iDHs8BDW4B3Czqlf0kDpBn4UGpQIFq_xFASEi6Gh1XlCSG0ckQlPcR32ZqHV_PQkPYXnYx');
 
 client.search({
   term: 'Four Barrel Coffee',
@@ -227,7 +227,7 @@ client.search({
 }).catch(e => {
   console.log(e);
 });
-*/
+
 // ---------------------------------------------------------
 
 // 
