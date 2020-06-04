@@ -244,6 +244,16 @@ client.search({
   console.log(e);
 });
 
+app.get('/display', function(request, response){
+  fs.readFile('/app/restaurant.json', function(err, data) {
+    response.writeHead(200, { "Content-Type": "application/json"});
+    console.log(JSON.parse(data));
+    response.write(data);
+    response.end();
+  });
+});
+
+
 // ---------------------------------------------------------
 
 // 
