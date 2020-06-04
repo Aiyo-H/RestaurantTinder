@@ -220,10 +220,11 @@ server.listen(process.env.PORT, () => {
 const client = yelp.client('a-rz6KFK-1vvLJPMK_MBe-87qtO7omEq8Fk9q4YUo5lAodMng785UgrhB7iDHs8BDW4B3Czqlf0kDpBn4UGpQIFq_xFASEi6Gh1XlCSG0ckQlPcR32ZqHV_PQkPYXnYx');
 
 client.search({
-  term: 'Four Barrel Coffee',
-  location: 'san francisco, ca',
+  term: 'coffee',
+  location: 'davis, ca',
 }).then(response => {
-  console.log(response.jsonBody.businesses[0].name);
+  //console.log(response.jsonBody.businesses[0].name);
+  console.log(response.jsonBody.businesses[0]);
 }).catch(e => {
   console.log(e);
 });
