@@ -225,6 +225,15 @@ client.search({
 }).then(response => {
   //console.log(response.jsonBody.businesses[0].name);
   console.log(response.jsonBody.businesses[0]);
+  fs.writeFile(
+    './restaurant.json',
+    JSON.stringify(response.jsonBody.businesses[0]),
+    function(err) {
+      if (err) {
+        return console.log(err);
+      }
+    }
+  );
 }).catch(e => {
   console.log(e);
 });
