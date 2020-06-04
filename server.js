@@ -224,10 +224,14 @@ client.search({
   location: 'davis, ca',
 }).then(response => {
   //console.log(response.jsonBody.businesses[0].name);
+  var data = [];
   console.log(response.jsonBody.businesses[0]);
+  for (var i = 0; i < 8; i++) {
+    data.push(response.jsonBody.businesses[i]);
+  }
   fs.writeFile(
     './restaurant.json',
-    JSON.stringify(response.jsonBody.businesses[0]),
+    JSON.stringify(data),
     function(err) {
       if (err) {
         return console.log(err);
