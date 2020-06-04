@@ -54,7 +54,7 @@ function getRating(e) {
     case 4.5:
       return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F9.png?v=1591255699229";
     case 5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F1.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F10.png?v=1591255699229";
     default:
       return "/";
   }
