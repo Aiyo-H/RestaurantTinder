@@ -10,6 +10,28 @@ body {
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
 
+.hoverimg {
+  height: 100px;
+  width: 150px;
+  background-color: white;
+  position: fixed;
+  display: inline-block;
+  cursor: pointer;
+  left: 60px;
+  bottom: 12%;
+}
+.hoverimg img {
+  opacity: 0;
+  transition: all 300ms;
+  position: absolute;
+  width: 250px;
+  top: -150%;
+  left: -25%;
+  z-index: 99999;
+}
+.hoverimg:hover img {
+  opacity: 1;
+}
 #icon {
   width: 60%;
   display: block;

@@ -130,12 +130,6 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/public/index.html');
 });
 
-// custom 404 page (not a very good one...)
-// last item in pipeline, sends a response to any request that gets here
-app.all("*", function (request, response) { 
-  response.status(404);  // the code for "not found"
-  response.send("This is not the droid you are looking for"); });
-
 
 // The GET AJAX query is handled by the static server, since the 
 // file postcardData.json is stored in /public
@@ -245,13 +239,12 @@ client.search({
 });
 
 app.get('/info', function(request, response){
-  console.log("1");
   fs.readFile('/app/restaurant.json', function(err, data) {
     response.writeHead(200, { "Content-Type": "application/json"});
-    console.log(data);
+    console.log(JSON.parse(data));
     response.write(data);
-    response.end();}
-    );
+    response.end();
+  });
 });
 
 
@@ -336,3 +329,10 @@ function broadcast(data) {
     }
   });
 }
+
+
+// custom 404 page (not a very good one...)
+// last item in pipeline, sends a response to any request that gets here
+app.all("*", function (request, response) { 
+  response.status(404);  // the code for "not found"
+  response.send("This is not the droid you are looking for"); });
