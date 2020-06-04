@@ -225,10 +225,12 @@ client.search({
 }).then(response => {
   //console.log(response.jsonBody.businesses[0].name);
   var data = [];
-  console.log(response.jsonBody.businesses[0]);
+  //console.log(response.jsonBody.businesses[0]);
   for (var i = 0; i < 8; i++) {
     data.push(response.jsonBody.businesses[i]);
   }
+  //console.log(data);
+  var data = {data: data};
   fs.writeFile(
     './restaurant.json',
     JSON.stringify(data),

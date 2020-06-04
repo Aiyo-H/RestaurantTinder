@@ -7,7 +7,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right 0% bottom 0%;
-  background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg-small.png?v=1590976102966");
+  background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
 #icon {
   width: 60%;
@@ -110,7 +110,7 @@ body {
   position: absolute;
   bottom: 28%;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   cursor: pointer;
   text-shadow: 1px 1px white;
 }
@@ -262,7 +262,6 @@ footer p {
   font-family: "Vidaloka", serif;
 }
 
-
 @media only screen and (min-width: 600px) {
   body {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591242183375");
@@ -294,11 +293,11 @@ footer p {
     width: 30%;
     left: 35%;
   }
-  #butn2{
+  #butn2 {
     pposition: absolute;
     bottom: 28%;
   }
-  #butn3{
+  #butn3 {
     pposition: absolute;
     bottom: 28%;
     left: 37%;
