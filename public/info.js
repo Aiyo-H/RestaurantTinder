@@ -16,10 +16,26 @@ window.onload = () => {
     
     // Names
     document.getElementById("restname1").innerHTML = data[0].name;
-    document.getElementById("restname2").innerHTML  = data[1].name;
-    document.getElementById("restname3").innerHTML  = data[2].name;
-    document.getElementById("restname4").innerHTML  = data[3].name;
-    document.getElementById("restname5").innerHTML  = data[4].name;
+    document.getElementById("restname2").innerHTML = data[1].name;
+    document.getElementById("restname3").innerHTML = data[2].name;
+    document.getElementById("restname4").innerHTML = data[3].name;
+    document.getElementById("restname5").innerHTML = data[4].name;
+    
+    // Ratings
+    document.getElementById("restname1").innerHTML = data[0].name;
+    document.getElementById("restname2").innerHTML = data[1].name;
+    document.getElementById("restname3").innerHTML = data[2].name;
+    document.getElementById("restname4").innerHTML = data[3].name;
+    document.getElementById("restname5").innerHTML = data[4].name;
   });
   xhr.send(null);
 };
+
+function getRating(e) {
+  switch (e) {
+    case 0:
+      return 
+      break;
+      
+  }
+}
