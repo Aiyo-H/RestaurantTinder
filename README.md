@@ -14,6 +14,12 @@ https://drive.google.com/drive/folders/1F_8lAtSYVqlKjhE8q63KsejW8bcZAW7q?usp=sha
 
 popup没对齐
 
+location 和 keyword 做一下 preholder
+
+location: coffee
+
+keyword: Davis, CA
+
 
 
 统计算法
