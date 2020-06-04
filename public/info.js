@@ -6,7 +6,18 @@ window.onload = () => {
     let restaurant = JSON.parse(xhr.responseText);
     data = restaurant.data;
     console.log(data[0].image_url);
-    
+    let img, name, rating, dollar, location, reviews;
+    for (var i = 0; i < 5; i++) {
+      img = 'rest' + (i + 1).toString();
+      name = 'restname' + (i + 1).toString();
+      rating = 'rating' + (i + 1).toString();
+      dollar = 'dollar' + (i + 1).toString();
+      document.getElementById(img).src = data[i].image_url;
+      document.getElementById(name).innerHTML = data[i].name;
+      document.getElementById(rating).src = getRating(data[i].rating);
+      document.getElementById(dollar).innerHTML = ((data[i].hasOwnProperty('price')) ? data[i].price : ?);
+    }
+    /*
     // Images
     document.getElementById("rest1").src = data[0].image_url;
     document.getElementById("rest2").src = data[1].image_url;
@@ -28,7 +39,9 @@ window.onload = () => {
     document.getElementById("rating4").src = getRating(data[3].rating);
     document.getElementById("rating5").src = getRating(data[4].rating);
     
-    // 
+    // Price
+    document.getElementById("dollar1").innerHTML = data[0].price;
+    */
   });
   xhr.send(null);
 };
