@@ -34,27 +34,27 @@ window.onload = () => {
 function getRating(e) {
   switch (e) {
     case 0:
-      return "/0.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F0.png?v=1591256325203";
     case 0.5:
-      return "/1.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F1.png?v=1591255699229";
     case 1:
-      return "/2.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F2.png?v=1591255699229";
     case 1.5:
-      return "/3.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F3.png?v=1591255699229";
     case 2:
-      return "/4.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F4.png?v=1591255699229";
     case 2.5:
-      return "/5.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F5.png?v=1591255699229";
     case 3:
-      return "/6.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F6.png?v=1591255699229";
     case 3.5:
-      return "/7.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F7.png?v=1591255699229";
     case 4:
-      return "/8.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F8.png?v=1591255699229";
     case 4.5:
-      return "/9.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F9.png?v=1591255699229";
     case 5:
-      return "/10.png";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F1.png?v=1591255699229";
     default:
       return "/";
   }
