@@ -27,9 +27,11 @@ window.onload = () => {
       
       // Locations
       location = 'location' + (i + 1).toString();
-      document.getElementById(location).innerHTML = data[i].location.display_address[0]
-      console.log(data[i].location);
+      document.getElementById(location).innerHTML = data[i].location.display_address[0] + ', ' + data[i].location.display_address[1];
       
+      // Reviews
+      reviews = 'review' + (i + 1).toString();
+      document.getElementById(reviews).innerHTML = data[i].review_count.toString() + ' reviews';
     }
   });
   xhr.send(null);
