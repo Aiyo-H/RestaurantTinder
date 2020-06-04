@@ -14,12 +14,6 @@ https://drive.google.com/drive/folders/1F_8lAtSYVqlKjhE8q63KsejW8bcZAW7q?usp=sha
 
 0.popup没对齐
 
-1.location 和 keyword 做一下 preholder
-
-location: coffee
-
-keyword: Davis, CA
-
 2.建议 => 帮我做一个Tinder的卡片 数据都有了
 
 做的跟design specs 
@@ -29,7 +23,6 @@ https://drive.google.com/drive/folders/1K-vASDDNZMuKxL1WD2K-7TjW9FmMi5mk
 里的一样就行
 
 在tinder.html中间 改一个卡片就行 在style.css里用 
-
 
 # Aiyo
 

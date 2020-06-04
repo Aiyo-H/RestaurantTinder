@@ -283,6 +283,10 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+#textarea1:empty:before, #textarea2:empty:before {
+  content:attr(data-placeholder);
+  color:gray
+}
 footer {
   text-align: center;
   bottom: 0;
