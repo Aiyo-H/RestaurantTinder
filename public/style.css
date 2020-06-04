@@ -10,13 +10,13 @@ body {
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
 .hoverimg {
-  height: 100px;
-  width: 150px;
+  height: 50px;
+  width: 100px;
   background-color: transparent;
   position: fixed;
   display: inline-block;
   cursor: pointer;
-  left: 60px;
+  right: 60px;
   bottom: 17%;
 }
 .hoverimg img {
@@ -24,8 +24,8 @@ body {
   transition: all 300ms;
   position: absolute;
   width: 200px;
-  top: -100%;
-  left: -25%;
+  top: -200%;
+  left: -50%;
   z-index: 99999;
 }
 .hoverimg:hover img {
@@ -290,13 +290,14 @@ footer p {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591242183375");
   }
   .hoverimg {
-    left: 100px;
-    bottom: 20%;
+    right: 170px;
+    height: 100px;
+    bottom: 15%;
   }
   .hoverimg img {
     width: 300px;
-    top: -130%;
-    left: -50%;
+    top: -150%;
+    left: -70%;
   }
   #icon {
     width: 40%;
@@ -322,8 +323,8 @@ footer p {
     width: 50%;
   }
   #butn {
-    width: 30%;
-    left: 35%;
+    width: 25%;
+    left: 36%;
   }
   #butn2 {
     position: absolute;
@@ -408,13 +409,13 @@ footer p {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1591240856610");
   }
   .hoverimg {
-    left: 200px;
-    bottom: 20%;
+    right: 230px;
+    bottom: 15%;
   }
   .hoverimg img {
     width: 400px;
     top: -200%;
-    left: -65%;
+    left: -140%;
   }
   #icon {
     width: 30%;
