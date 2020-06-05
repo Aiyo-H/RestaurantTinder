@@ -530,8 +530,8 @@ footer p {
     padding: 8px;
     font-size: 17px;
   }
+  
   #nope {
-    display: block;
     position: fixed;
     top: 40%;
     left: 5%;
@@ -539,7 +539,6 @@ footer p {
     height: 75px;
   }
   #love {
-    display: block;
     position: fixed;
     top: 40%;
     right: 5%;
