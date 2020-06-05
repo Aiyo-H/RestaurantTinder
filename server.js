@@ -214,11 +214,11 @@ const client = yelp.client(
 
 function search() {
   client.search({
-      term: "coffee",
-      location: "davis, ca"
+      term: term,
+      location: location
     })
     .then(response => {
-      //console.log(response.jsonBody.businesses[0].name);
+      console.log(response.jsonBody.businesses[0].name);
       var data = [];
       //console.log(response.jsonBody.businesses[0]);
       for (var i = 0; i < 8; i++) {
@@ -238,8 +238,10 @@ function search() {
 }
 
 app.post("/search", function(request, response) {
-  location = request.location;
-  term = request.term;
+  console.log(request.body);
+  location = request.body.location;
+  term = request.body.term;
+  search();
   response.send(request.body);
   response.end();
 });
@@ -247,7 +249,7 @@ app.post("/search", function(request, response) {
 app.get("/info", function(request, response) {
   fs.readFile("/app/restaurant.json", function(err, data) {
     response.writeHead(200, { "Content-Type": "application/json" });
-    console.log(JSON.parse(data));
+    //console.log(JSON.parse(data));
     response.write(data);
     response.end();
   });
