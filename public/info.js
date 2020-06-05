@@ -41,27 +41,27 @@ function getRating(e) {
   switch (e) {
     // Asssets created by Jean from Noun Project
     case 0:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F0.png?v=1591256325203";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F0.png?v=1591398893926";
     case 0.5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F1.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F1.png?v=1591398893926";
     case 1:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F2.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F2.png?v=1591398893926";
     case 1.5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F3.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F3.png?v=1591398893926";
     case 2:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F4.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F4.png?v=1591398893926";
     case 2.5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F5.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F5.png?v=1591398893926";
     case 3:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F6.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F6.png?v=1591398893926";
     case 3.5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F7.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F7.png?v=1591398893926";
     case 4:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F8.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F8.png?v=1591398893926";
     case 4.5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F9.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F9.png?v=1591398893926";
     case 5:
-      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F10.png?v=1591255699229";
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F10.png?v=1591398893926";
     default:
       return "/";
   }
