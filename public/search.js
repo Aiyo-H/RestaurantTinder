@@ -16,5 +16,7 @@ document.querySelector("#butn3").addEventListener("click", function() {
   xhr.onloadend = function(e) {
     //window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
   };
+  console.log(info);
+  console.log(JSON.stringify(info));
   xhr.send(JSON.stringify(info));
 });
