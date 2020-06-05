@@ -119,6 +119,8 @@ function randomString() {
 // Serve static files out of public directory
 app.use(express.static("public"));
 
+app.use(express.json());
+
 // Also serve static files out of /images
 app.use("/images", express.static("images"));
 
