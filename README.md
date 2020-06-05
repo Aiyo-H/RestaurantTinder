@@ -33,7 +33,6 @@ https://drive.google.com/drive/folders/1F_8lAtSYVqlKjhE8q63KsejW8bcZAW7q?usp=sha
 
 3.选完waiting
 
-4.❤❌ + 震动
 
 人数到了之后的拒绝HTML & 开始游戏时的HTML
 

@@ -339,12 +339,7 @@ body {
   border-radius: 10px;
   padding: 8px;
 }
-#nope {
-  display: none;
-}
-#love {
-  display: none;
-}
+
 /*----------------*/
 
 #wait {

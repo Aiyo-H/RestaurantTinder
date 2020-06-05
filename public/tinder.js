@@ -68,6 +68,9 @@ allCards.forEach(function (el) {
 
 function createButtonListener(love) {
   return function (event) {
+    
+    console.log("1");
+    
     var cards = document.querySelectorAll('.tinder--card:not(.removed)');
     var moveOutWidth = document.body.clientWidth * 1.5;
 
