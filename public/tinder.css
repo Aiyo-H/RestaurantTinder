@@ -55,12 +55,12 @@
 
 .tinder--card {
   display: inline-block;
-  width: 90vw;
+  width: 80vw;
   max-width: 400px;
-  height: 70vh;
+  height: 500px;
   background: #FFFFFF;
   padding-bottom: 40px;
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
   position: absolute;
   will-change: transform;
@@ -127,4 +127,18 @@
 
 .fa-remove {
   color: #CDD6DD;
+}
+
+.rest--tinder {
+  height: 60%;
+}
+#restname1,
+#restname2,
+#restname3,
+#restname4,
+#restname5,
+#restname6,
+#restname7,
+#restname8 {
+  font-size: 30px;
 }
