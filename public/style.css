@@ -243,13 +243,13 @@ body {
 .tinder--card {
   display: inline-block;
   width: 80%;
-  height: 55%;
+  height: 60%;
   border-radius: 10px;
   background: #FFFFFF;
   padding-bottom: 40px;
   overflow: hidden;
   position: absolute;
-  top: 10%;
+  top: 12%;
   will-change: transform;
   transition: all 0.3s ease-in-out;
   cursor: -webkit-grab;
@@ -265,7 +265,7 @@ body {
   margin-bottom: -4vh;
   width: 40%;
   position: fixed;
-  left: 5px;
+  left: 0px;
   top: 66%;
 }
 .restname {
@@ -276,7 +276,7 @@ body {
   top: 55%;
   font-family: "Carter One", cursive;
 }
-.dollar{
+.dollar {
   font-size: 15px;
   position: fixed;
   right: 10px;
@@ -287,13 +287,13 @@ body {
   position: fixed;
   font-size: 18px;
   top: 69%;
-  left: 25px;
+  left: 22px;
   font-family: "Playfair Display", serif;
 }
 .review {
   font-family: "Playfair Display", serif;
   position: fixed;
-  top: 78%;
+  top: 80%;
   left: 20px;
   border: 1px solid black;
   border-radius: 10px;
@@ -301,13 +301,15 @@ body {
 }
 #nope {
   position: fixed;
-  bottom: 17%;
+  bottom: 10%;
   left: 20%;
+  z-index: 2;
 }
 #love {
   position: fixed;
-  bottom: 17%;
-  right:20%;
+  bottom: 10%;
+  right: 20%;
+  z-index: 2;
 }
 /*----------------*/
 
@@ -465,6 +467,7 @@ footer p {
   }
   .rating--tinder {
     top: 66%;
+    left: 5px;
   }
   .restname {
     font-size: 20px;
@@ -474,8 +477,8 @@ footer p {
     top: 68%;
     left: 25px;
   }
-  .dollar{
-     right: 20px;
+  .dollar {
+    right: 20px;
   }
   .review {
     top: 80%;
@@ -591,13 +594,13 @@ footer p {
   #wait {
     margin-top: 50px;
   }
-  .dollar{
+  .dollar {
     right: 20px;
   }
-.restname {
+  .restname {
     font-size: 22px;
   }
-.location {
+  .location {
     font-size: 17px;
     top: 68%;
     left: 25px;
@@ -614,6 +617,3 @@ footer p {
     height: 100px;
   }
 }
-
-
-
