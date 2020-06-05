@@ -211,6 +211,9 @@ server.listen(process.env.PORT, () => {
 
 // -------------------Yelp API-----------------------------
 
+var 
+
+
 const client = yelp.client('a-rz6KFK-1vvLJPMK_MBe-87qtO7omEq8Fk9q4YUo5lAodMng785UgrhB7iDHs8BDW4B3Czqlf0kDpBn4UGpQIFq_xFASEi6Gh1XlCSG0ckQlPcR32ZqHV_PQkPYXnYx');
 
 client.search({
