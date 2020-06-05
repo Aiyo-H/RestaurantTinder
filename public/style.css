@@ -280,14 +280,7 @@ body {
   left: 5px;
   top: 64%;
 }
-#restname1,
-#restname2,
-#restname3,
-#restname4,
-#restname5,
-#restname6,
-#restname7,
-#restname8 {
+.restname {
   text-align: left;
   font-size: 25px;
   position: fixed;
@@ -295,28 +288,14 @@ body {
   top: 55%;
   font-family: "Carter One", cursive;
 }
-#dollar1,
-#dollar2,
-#dollar3,
-#dollar4,
-#dollar5,
-#dollar6,
-#dollar7,
-#dollar8 {
+.dollar{
   font-size: 15px;
   position: fixed;
   right: 5px;
   top: 57%;
-  font-family: "Playfair Display", serif;
+  font-family: "Carter One", cursive;
 }
-#location1,
-#location2,
-#location3,
-#location4,
-#location5,
-#location6,
-#location7,
-#location8 {
+location {
   position: fixed;
   font-size: 18px;
   top: 68%;
