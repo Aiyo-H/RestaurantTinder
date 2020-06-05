@@ -6,7 +6,6 @@ html {
 }
 body {
   font-family: Arial;
-  margin: 0 auto; /* Center website */
   padding: 20px;
   height: 100%;
   background-color: #FFCF99;
@@ -687,6 +686,9 @@ footer p {
 
 /*--------------------*/
 
+.rank{
+  margin: 0 auto;
+}
 .heading {
   font-size: 25px;
   margin-right: 25px;
@@ -711,6 +713,7 @@ footer p {
   margin-top:10px;
   float: left;
   width: 70%;
+  border-radius: 25px;
 }
 
 /* Place text to the right */
@@ -726,6 +729,7 @@ footer p {
 }
 .row{
   max-width: 800px; /* Max width */
+  margin: 0 auto;
 }
 
 /* The bar container */
