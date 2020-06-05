@@ -52,24 +52,6 @@
   z-index: 1;
 }
 
-.tinder--card {
-  display: inline-block;
-  width: 65vw;
-  max-width: 350px;
-  height: 500px;
-  background: #FFFFFF;
-  padding-bottom: 40px;
-  border-radius: 15px;
-  overflow: hidden;
-  position: absolute;
-  top: 100px;
-  will-change: transform;
-  transition: all 0.3s ease-in-out;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
-}
-
 .moving.tinder--card {
   transition: none;
   cursor: -webkit-grabbing;
