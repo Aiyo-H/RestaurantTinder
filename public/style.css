@@ -265,7 +265,7 @@ body {
   margin-bottom: -4vh;
   width: 40%;
   position: fixed;
-  left: 0;
+  left: 16px;
   top: 66%;
 }
 .restname {
@@ -286,7 +286,7 @@ body {
 .location {
   position: fixed;
   font-size: 18px;
-  top: 69%;
+  top: 70%;
   left: 22px;
   font-family: "Playfair Display", serif;
 }
@@ -466,8 +466,8 @@ footer p {
     padding-bottom: 20px;
   }
   .rating--tinder {
-    top: 66%;
-    left: 5px;
+    top: 65%;
+    left: 17px;
   }
   .restname {
     font-size: 20px;
@@ -475,7 +475,7 @@ footer p {
   .location {
     font-size: 15px;
     top: 68%;
-    left: 25px;
+    left: 23px;
   }
   .dollar {
     right: 20px;
