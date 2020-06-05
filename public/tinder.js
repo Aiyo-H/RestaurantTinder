@@ -6,7 +6,8 @@ var love = document.getElementById('love');
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
-
+  // All cards selected
+  if (newCards.length == 0) {stopTinder(); return;}
   newCards.forEach(function (card, index) {
     card.style.zIndex = allCards.length - index;
     card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
@@ -69,8 +70,6 @@ allCards.forEach(function (el) {
 function createButtonListener(love) {
   return function (event) {
     
-    console.log("1");
-    
     var cards = document.querySelectorAll('.tinder--card:not(.removed)');
     var moveOutWidth = document.body.clientWidth * 1.5;
 
@@ -97,3 +96,8 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+
+// All cards selected
+function stopTinder() {
+  window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
+}
