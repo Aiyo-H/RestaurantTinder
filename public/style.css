@@ -265,7 +265,7 @@ body {
   margin-bottom: -4vh;
   width: 40%;
   position: fixed;
-  left: 0px;
+  left: 0;
   top: 66%;
 }
 .restname {
