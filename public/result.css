@@ -159,10 +159,15 @@ footer p {
 }
 .heading {
   font-size: 25px;
-  text-align: center;
   margin-right: 25px;
+  display: inline-block;
+  
 }
 
+.above{
+  margin: 0 auto;
+  text-align: center;
+}
 .fa {
   font-size: 25px;
 }
