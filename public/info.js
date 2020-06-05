@@ -39,6 +39,7 @@ window.onload = () => {
 
 function getRating(e) {
   switch (e) {
+    // Asssets created by Jean from Noun Project
     case 0:
       return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F0.png?v=1591256325203";
     case 0.5:
