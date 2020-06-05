@@ -1,73 +1,682 @@
-* {
-  box-sizing: border-box;
-}
 
+html {
+  height: 90%;
+}
 body {
-  font-family: Arial;
-  margin: 0 auto; /* Center website */
-  max-width: 800px; /* Max width */
-  padding: 20px;
+  height: 100%;
+  background-color: #FFCF99;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 0% bottom 0%;
+  background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
-
-.heading {
-  font-size: 25px;
-  margin-right: 25px;
+.hoverimg {
+  height: 50px;
+  width: 100px;
+  background-color: transparent;
+  position: fixed;
+  display: inline-block;
+  cursor: pointer;
+  left: 60px;
+  bottom: 18%;
 }
-
-.fa {
-  font-size: 25px;
+.hoverimg img {
+  opacity: 0;
+  transition: all 300ms;
+  position: absolute;
+  width: 200px;
+  top: -200%;
+  left: -50%;
+  z-index: 99999;
 }
-
-.checked {
-  color: orange;
+.hoverimg:hover img {
+  opacity: 1;
 }
-
-/* Three column layout */
-.side {
-  float: left;
-  width: 15%;
-  margin-top:10px;
+#icon {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.middle {
-  margin-top:10px;
-  float: left;
-  width: 70%;
-}
-
-/* Place text to the right */
-.right {
-  text-align: right;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The bar container */
-.bar-container {
-  width: 100%;
-  background-color: #f1f1f1;
+#hd1 {
+  margin: 0 auto;
+  width: 50%;
   text-align: center;
-  color: white;
+  font-family: "Vidaloka", serif;
+  color: #F15156;
+  font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#hrline1,
+#hrline2 {
+  margin: 0 auto;
+  width: 60%;
+  border: 1px solid #F15156;
+}
+#hrline1 {
+  margin-top: 70px;
+}
+#desc {
+  font-style: italic;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 13px;
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #721121;
+}
+.link {
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  height: 150px;
+  color: #A62639;
+  background-color: white;
+  width: 65%;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+}
+#link1 {
+  margin-top: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+#link2 {
+  margin-top: 15px;
+  font-size: 13px;
+  color: black;
+  font-family: "Playfair Display", serif;
+}
+#link3 {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  position: absolute;
+  left: 20%;
+  bottom: 10px;
+  font-style: italic;
+  cursor: pointer;
+}
+#link4 {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  position: absolute;
+  right: 20%;
+  bottom: 10px;
+  font-style: italic;
+  cursor: pointer;
+}
+#butn {
+  width: 40%;
+  background-color: white;
+  color: #f15156;
+  font-size: 35px;
+  font-family: "Vidaloka", serif;
+  position: absolute;
+  top: 68%;
+  left: 30%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#butn2 {
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  color: #f15156;
+  font-size: 35px;
+  position: absolute;
+  bottom: 28%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  text-shadow: 1px 1px white;
+}
+.enter {
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  height: 175px;
+  color: #721121;
+  background-color: white;
+  border-radius: 25px;
+  width: 65%;
+  margin: 0 auto;
+}
+#textarea1,
+#textarea2 {
+  font-size: 13px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #721121;
+  border-radius: 5px;
+}
+#textarea1 {
+  margin-bottom: 10px;
+}
+#textarea2 {
+  height: 50px;
+}
+#forgot {
+  font-size: 14px;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  color: #721121;
+  font-style: 12px;
+  position: absolute;
+  right: 11%;
+  top: 90%;
+  cursor: pointer;
+}
+#butn3 {
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  color: #f15156;
+  font-size: 25px;
+  position: absolute;
+  bottom: 28%;
+  left: 48%;
+  cursor: pointer;
+  transform: translate(-50%, 0);
+  text-shadow: 1px 1px white;
+}
+.infodisplay {
+  background-color: white;
+  border-radius: 25px;
+  height: 350px;
+  width: 85%;
+  margin: 0 auto;
+  color: #A62639;
+  margin-top: 20px;
+  text-align: center;
+}
+#no,
+#yes {
+  width: 20%;
+  position: fixed;
+  cursor: pointer;
+  margin-top: 30px;
+}
+#no {
+  left: 30px;
+}
+#yes {
+  right: 30px;
+}
+#no:hover,
+#yes:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
-/* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+/* Restaurant Tinder */
+.tinder--card {
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+  background: #FFFFFF;
+  padding-bottom: 40px;
+  overflow: hidden;
+  position: absolute;
+  top: 25px;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+.rest--tinder {
+  width: 100%;
+  height: 60%;
+}
+.rating--tinder {
+  margin-top: 1vh;
+  margin-bottom: -4vh;
+  width: 40%;
+  position: fixed;
+  left: 5px;
+  top: 64%;
+}
+#restname1,
+#restname2,
+#restname3,
+#restname4,
+#restname5,
+#restname6,
+#restname7,
+#restname8 {
+  text-align: left;
+  font-size: 25px;
+  position: fixed;
+  left: 10px;
+  top: 55%;
+  font-family: "Carter One", cursive;
+}
+#dollar1,
+#dollar2,
+#dollar3,
+#dollar4,
+#dollar5,
+#dollar6,
+#dollar7,
+#dollar8 {
+  font-size: 15px;
+  position: fixed;
+  right: 5px;
+  top: 57%;
+  font-family: "Playfair Display", serif;
+}
+#location1,
+#location2,
+#location3,
+#location4,
+#location5,
+#location6,
+#location7,
+#location8 {
+  position: fixed;
+  font-size: 18px;
+  top: 68%;
+  left: 9px;
+  font-family: "Playfair Display", serif;
+}
+#review1,
+#review2,
+#review3,
+#review4,
+#review5,
+#review6,
+#review7,
+#review8 {
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 75%;
+  left: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
+}
+#nope {
+  display: none;
+}
+#love {
+  display: none;
+}
+/*----------------*/
 
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  .side, .middle {
-    width: 100%;
+#wait {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 20px;
+  margin-top: 60px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #721121;
+}
+#icon1 {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+#textarea1:empty:before,
+#textarea2:empty:before {
+  content: attr(data-placeholder);
+  color: gray;
+}
+footer {
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: #FFC07F;
+}
+footer p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #F15156;
+  font-family: "Vidaloka", serif;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591242183375");
   }
-  .right {
-    display: none;
+  .hoverimg {
+    left: 20%;
+    width: 120px;
+    height: 100px;
+    bottom: 15%;
+  }
+  .hoverimg img {
+    width: 300px;
+    top: -170%;
+    left: -60%;
+  }
+  #icon {
+    width: 40%;
+  }
+  #hd1 {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  #hrline1,
+  #hrline2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20%;
+    top: 70px;
+  }
+  #hrline1 {
+    left: 3%;
+  }
+  #hrline2 {
+    right: 3%;
+  }
+  #bg1 {
+    width: 50%;
+  }
+  #butn {
+    width: 25%;
+    left: 36%;
+  }
+  #butn2 {
+    position: absolute;
+    bottom: 28%;
+  }
+  #butn3 {
+    position: absolute;
+    bottom: 28%;
+    left: 37%;
+  }
+  .link {
+    top: 30%;
+    left: 25%;
+    height: 130px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 15px;
+  }
+  #link1 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  #link2 {
+    font-size: 14px;
+  }
+  #link3 {
+    font-size: 15px;
+  }
+  #link4 {
+    font-size: 15px;
+  }
+  #butn2,
+  #butn3 {
+    font-size: 30px;
+  }
+  #butn3 {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .enter {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    font-size: 18px;
+    height: 180px;
+    width: 50%;
+  }
+  #forgot {
+    font-size: 12px;
+    right: 10%;
+    top: 90%;
+  }
+  .infodisplay {
+    border-radius: 25px;
+    height: 375px;
+    width: 45%;
+    margin-top: 15%;
+  }
+  #wait {
+    width: 50%;
+    font-size: 25px;
+    margin-top: 70px;
+  }
+  .tinder--card {
+    width: 65vw;
+    height: 60%;
+    max-width: 350px;
+    border-radius: 15px;
+    top: 100px;
+    padding-bottom: 20px;
+  }
+  .rating--tinder {
+    top: 66%;
+  }
+  #restname1,
+  #restname2,
+  #restname3,
+  #restname4,
+  #restname5,
+  #restname6,
+  #restname7,
+  #restname8 {
+    font-size: 20px;
+  }
+  #location1,
+  #location2,
+  #location3,
+  #location4,
+  #location5,
+  #location6,
+  #location7,
+  #location8 {
+    font-size: 15px;
+    top: 68%;
+  }
+  #review1,
+  #review2,
+  #review3,
+  #review4,
+  #review5,
+  #review6,
+  #review7,
+  #review8 {
+    top: 80%;
+    padding: 8px;
+    font-size: 17px;
+  }
+  #nope {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top: 40%;
+    left: 5%;
+    width: 75px;
+    height: 75px;
+    z-index: 2;
+  }
+  #love {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top: 40%;
+    right: 5%;
+    width: 75px;
+    height: 75px;
+    z-index: 2;
   }
 }
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-position: right 0% bottom 1%;
+    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1591251140550");
+  }
+  .hoverimg {
+    left: 25%;
+    bottom: 15%;
+    width: 200px;
+  }
+  .hoverimg img {
+    width: 500px;
+    top: -300%;
+    left: -120%;
+  }
+  #icon {
+    width: 30%;
+  }
+  #hd1 {
+    margin-top: 55px;
+    font-size: 50px;
+  }
+  #hrline1,
+  #hrline2 {
+    position: absolute;
+    margin: 0 auto;
+    top: 75px;
+    width: 23%;
+  }
+  #hrline1 {
+    left: 3%;
+  }
+  #hrline2 {
+    right: 3%;
+  }
+  #desc {
+    margin-top: 60px;
+    font-size: 14px;
+  }
+  #bg1 {
+    width: 20%;
+  }
+  #butn {
+    width: 15%;
+    left: 42%;
+  }
+  .link {
+    top: 30%;
+    left: 32%;
+    height: 130px;
+    width: 35%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 15px;
+  }
+  #link3 {
+    left: 10%;
+  }
+  #link4 {
+    right: 10%;
+  }
+  #butn2,
+  #butn3 {
+    font-size: 35px;
+  }
+  .enter {
+    top: 25%;
+    left: 31%;
+    font-size: 18px;
+    height: 180px;
+    width: 35%;
+  }
+  #forgot {
+    right: 20%;
+    top: 90%;
+  }
+  .infodisplay {
+    position: absolute;
+    margin-top: 0;
+    top: 175px;
+    left: 35%;
+    height: 400px;
+    width: 30%;
+  }
+  #wait {
+    margin-top: 50px;
+  }
+  #restname1,
+  #restname2,
+  #restname3,
+  #restname4,
+  #restname5,
+  #restname6,
+  #restname7,
+  #restname8 {
+    font-size: 22px;
+  }
+  #location1,
+  #location2,
+  #location3,
+  #location4,
+  #location5,
+  #location6,
+  #location7,
+  #location8 {
+    font-size: 17px;
+    top: 68%;
+  }
+
+  #nope {
+    left: 10%;
+    width: 100px;
+    height: 100px;
+  }
+  #love {
+    right: 10%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
