@@ -240,10 +240,10 @@ function search() {
 }
 
 app.post("/search", function(request, response) {
-  console.log(request);
+  console.log(request.body);
   location = request.body.location;
   term = request.body.term;
-  //search();
+  search();
   response.send(request.body);
   response.end();
 });
