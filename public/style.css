@@ -264,7 +264,7 @@ body {
   width: 40%;
   position: fixed;
   left: 3px;
-  top: 64%;
+  top: 66%;
 }
 #restname1,
 #restname2,
@@ -304,8 +304,24 @@ body {
 #location7,
 #location8 {
   position: fixed;
-  top: 67%;
+  font-size: 18px;
+  top: 70%;
   left: 9px;
+   font-family: "Playfair Display", serif;
+}
+#review1,
+#review2,
+#review3,
+#review4,
+#review5,
+#review6,
+#review7,
+#review8 {
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 80%;
+  left: 5px;
+  border:1px solid black;
 }
 /*----------------*/
 
