@@ -3,6 +3,7 @@ var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
+var selections = [];
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -44,7 +45,9 @@ allCards.forEach(function (el) {
     el.classList.remove('moving');
     tinderContainer.classList.remove('tinder_love');
     tinderContainer.classList.remove('tinder_nope');
-
+    
+    console.log(tinderContainer);
+    
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
 
@@ -81,8 +84,12 @@ function createButtonListener(love) {
 
     if (love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+      // Add love to list
+      selections.push(true);
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+      // Add nope to list
+      selections.push(false);
     }
 
     initCards();
