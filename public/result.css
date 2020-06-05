@@ -117,10 +117,10 @@ footer p {
 @media only screen and (min-width: 900px) {
   body {
     background-position: right 0% bottom 1%;
-    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1591251140550");
+    background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FToTheLeft.png?v=1591382526299");
   }
   .hoverimg {
-    left: 25%;
+    left: 15%;
     bottom: 15%;
     width: 200px;
   }
