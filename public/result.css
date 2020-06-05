@@ -159,6 +159,7 @@ footer p {
 }
 .heading {
   font-size: 25px;
+  text-align: center;
   margin-right: 25px;
 }
 
@@ -172,7 +173,7 @@ footer p {
 
 /* Three column layout */
 .side {
-  
+  font-family: "Vidaloka", serif;
   margin-top:10px;
 }
 
@@ -184,8 +185,9 @@ footer p {
 }
 
 /* Place text to the right */
-.right {
+.vote {
   text-align: right;
+  font-family: "Vidaloka", serif;
 }
 
 /* Clear floats after the columns */
