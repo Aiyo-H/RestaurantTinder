@@ -295,21 +295,14 @@ body {
   top: 57%;
   font-family: "Carter One", cursive;
 }
-location {
+.location {
   position: fixed;
   font-size: 18px;
   top: 68%;
-  left: 9px;
+  left: 32px;
   font-family: "Playfair Display", serif;
 }
-#review1,
-#review2,
-#review3,
-#review4,
-#review5,
-#review6,
-#review7,
-#review8 {
+.review {
   font-family: "Playfair Display", serif;
   position: fixed;
   top: 75%;
@@ -481,35 +474,18 @@ footer p {
   .rating--tinder {
     top: 66%;
   }
-  #restname1,
-  #restname2,
-  #restname3,
-  #restname4,
-  #restname5,
-  #restname6,
-  #restname7,
-  #restname8 {
+  .restname {
     font-size: 20px;
   }
-  #location1,
-  #location2,
-  #location3,
-  #location4,
-  #location5,
-  #location6,
-  #location7,
-  #location8 {
+  .location {
     font-size: 15px;
     top: 68%;
+    left: 25px;
   }
-  #review1,
-  #review2,
-  #review3,
-  #review4,
-  #review5,
-  #review6,
-  #review7,
-  #review8 {
+  .dollar{
+     right: 20px;
+  }
+  .review {
     top: 80%;
     padding: 8px;
     font-size: 17px;
@@ -623,26 +599,16 @@ footer p {
   #wait {
     margin-top: 50px;
   }
-  #restname1,
-  #restname2,
-  #restname3,
-  #restname4,
-  #restname5,
-  #restname6,
-  #restname7,
-  #restname8 {
+  .dollar{
+    right: 20px;
+  }
+.restname {
     font-size: 22px;
   }
-  #location1,
-  #location2,
-  #location3,
-  #location4,
-  #location5,
-  #location6,
-  #location7,
-  #location8 {
+.location {
     font-size: 17px;
     top: 68%;
+    left: 25px;
   }
 
   #nope {
