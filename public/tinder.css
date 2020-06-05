@@ -55,7 +55,7 @@
 
 .tinder--card {
   display: inline-block;
-  width: 80vw;
+  width: 75vw;
   max-width: 400px;
   height: 500px;
   background: #FFFFFF;
@@ -140,5 +140,24 @@
 #restname6,
 #restname7,
 #restname8 {
-  font-size: 30px;
+  text-align: left;
+  font-size: 23px;
+  position: fixed;
+  left: 5px;
+  top: 55%;
+  font-family: 'Carter One', cursive;
+}
+#dollar1,
+#dollar2,
+#dollar3,
+#dollar4,
+#dollar5,
+#dollar6,
+#dollar7,
+#dollar8 {
+  font-size: 23px;
+  position: fixed;
+  right: 5px;
+  top: 57%;
+  font-family: 'Carter One', cursive;
 }
