@@ -640,17 +640,6 @@ footer p {
   #wait {
     margin-top: 50px;
   }
-    .tinder--card {
-    width: 65vw;
-    height: 60%;
-    max-width: 350px;
-    border-radius: 15px;
-    top: 100px;
-    padding-bottom: 20px;
-  }
-  .rating--tinder {
-    top: 66%;
-  }
   #restname1,
   #restname2,
   #restname3,
@@ -659,7 +648,7 @@ footer p {
   #restname6,
   #restname7,
   #restname8 {
-    font-size: 20px;
+    font-size: 22px;
   }
   #location1,
   #location2,
@@ -669,35 +658,18 @@ footer p {
   #location6,
   #location7,
   #location8 {
-    font-size: 15px;
+    font-size: 17px;
     top: 68%;
   }
-  #review1,
-  #review2,
-  #review3,
-  #review4,
-  #review5,
-  #review6,
-  #review7,
-  #review8 {
-    top: 80%;
-    padding: 8px;
-    font-size: 17px;
-  }
+
   #nope {
-    display: block;
-    position: fixed;
-    top: 40%;
-    left: 5%;
-    width: 75px;
-    height: 75px;
+    left: 10%;
+    width: 100px;
+    height: 100px;
   }
   #love {
-    display: block;
-    position: fixed;
-    top: 40%;
-    right: 5%;
-    width: 75px;
-    height: 75px;
+    right: 10%;
+    width: 100px;
+    height: 100px;
   }
 }
