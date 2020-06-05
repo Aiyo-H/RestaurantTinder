@@ -108,5 +108,5 @@ function stopTinder() {
     selections.push(sel);
   }
   console.log(selections);
-  window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
+  //window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
 }
