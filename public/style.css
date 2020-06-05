@@ -289,11 +289,11 @@ body {
 #dollar6,
 #dollar7,
 #dollar8 {
-  font-size: 23px;
+  font-size: 18px;
   position: fixed;
   right: 5px;
   top: 57%;
-  font-family: "Carter One", cursive;
+  font-family: "Playfair Display", serif;
 }
 #location1,
 #location2,
@@ -307,7 +307,7 @@ body {
   font-size: 18px;
   top: 70%;
   left: 9px;
-   font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
 }
 #review1,
 #review2,
@@ -320,8 +320,10 @@ body {
   font-family: "Playfair Display", serif;
   position: fixed;
   top: 80%;
-  left: 5px;
-  border:1px solid black;
+  left: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
 }
 /*----------------*/
 
