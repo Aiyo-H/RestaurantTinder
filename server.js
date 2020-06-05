@@ -2,16 +2,16 @@
 // where your node app starts
 
 // include modules
-const express = require('express');
-const multer = require('multer');
-const bodyParser = require('body-parser');
-const fs = require('fs');
+const express = require("express");
+const multer = require("multer");
+const bodyParser = require("body-parser");
+const fs = require("fs");
 const sql = require("sqlite3").verbose();
 const FormData = require("form-data");
-const nodemailer = require('nodemailer');
-const WebSocket = require('ws');
+const nodemailer = require("nodemailer");
+const WebSocket = require("ws");
 const http = require("http");
-const yelp = require('yelp-fusion');
+const yelp = require("yelp-fusion");
 
 // begin constructing the server pipeline
 const app = express();
@@ -68,14 +68,13 @@ let upload = multer({storage: storage});
 
 */
 
-
 // ------------------------------DATABASE---------------------------------------
 
 // A middleware function to handles the GET query /saveDisplay
 // Observe that it either ends up sending the HTTP response or calls next(), so it
-// is a valid middleware function. 
+// is a valid middleware function.
 //function handlePostcard(request, response, next) {
-  /*
+/*
   //let cmd = "SELECT * FROM PostcardsTable";
   postcardsDB.all(cmd, function (err, rows) {
     if (err) {
@@ -87,8 +86,8 @@ let upload = multer({storage: storage});
       console.log("rows",rows);
     }
   });*/
-  
-  // Example of just getting first row
+
+// Example of just getting first row
 
 /*
   const r = request.query.id;
@@ -102,43 +101,40 @@ let upload = multer({storage: storage});
 */
 // -------------------------------------------------------------------------------
 
-
 // --------------------------RandomString-----------------------------------------
 // Availability: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 
 function randomString() {
-   var result           = '';
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-   var charactersLength = characters.length;
-   for ( var i = 0; i < 22; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+  var result = "";
+  var characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersLength = characters.length;
+  for (var i = 0; i < 22; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }
 // --------------------------------------------------------------------------------
 
-
 // Serve static files out of public directory
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Also serve static files out of /images
-app.use("/images",express.static('images'));
+app.use("/images", express.static("images"));
 
 // Handle GET request to base URL with no other route specified
 // by sending index.html, the main page of the app
-app.get("/", function (request, response) {
-  response.sendFile(__dirname + '/public/index.html');
+app.get("/", function(request, response) {
+  response.sendFile(__dirname + "/public/index.html");
 });
 
-
-// The GET AJAX query is handled by the static server, since the 
+// The GET AJAX query is handled by the static server, since the
 // file postcardData.json is stored in /public
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
+var listener = app.listen(process.env.PORT, function() {
+  console.log("Your app is listening on port " + listener.address().port);
 });
-
 
 /*
 app.post("/sendemail", function (request, response) {
@@ -172,7 +168,6 @@ var mailOptions = {
 
 // -----------------------------------------------------------------------------
 */
-
 
 /*----------------WebSocket---------------------*/
 
@@ -208,124 +203,128 @@ server.listen(process.env.PORT, () => {
 */
 /*--------Game round------------*/
 
-
 // -------------------Yelp API-----------------------------
 
-var 
+var location = "";
+var term = "";
 
+const client = yelp.client(
+  "a-rz6KFK-1vvLJPMK_MBe-87qtO7omEq8Fk9q4YUo5lAodMng785UgrhB7iDHs8BDW4B3Czqlf0kDpBn4UGpQIFq_xFASEi6Gh1XlCSG0ckQlPcR32ZqHV_PQkPYXnYx"
+);
 
-const client = yelp.client('a-rz6KFK-1vvLJPMK_MBe-87qtO7omEq8Fk9q4YUo5lAodMng785UgrhB7iDHs8BDW4B3Czqlf0kDpBn4UGpQIFq_xFASEi6Gh1XlCSG0ckQlPcR32ZqHV_PQkPYXnYx');
-
-client.search({
-  term: 'coffee',
-  location: 'davis, ca',
-}).then(response => {
-  //console.log(response.jsonBody.businesses[0].name);
-  var data = [];
-  //console.log(response.jsonBody.businesses[0]);
-  for (var i = 0; i < 8; i++) {
-    data.push(response.jsonBody.businesses[i]);
-  }
-  //console.log(data);
-  var data = {data: data};
-  fs.writeFile(
-    './restaurant.json',
-    JSON.stringify(data),
-    function(err) {
-      if (err) {
-        return console.log(err);
+function search() {
+  client.search({
+      term: "coffee",
+      location: "davis, ca"
+    })
+    .then(response => {
+      //console.log(response.jsonBody.businesses[0].name);
+      var data = [];
+      //console.log(response.jsonBody.businesses[0]);
+      for (var i = 0; i < 8; i++) {
+        data.push(response.jsonBody.businesses[i]);
       }
-    }
-  );
-}).catch(e => {
-  console.log(e);
+      //console.log(data);
+      var data = { data: data };
+      fs.writeFile("./restaurant.json", JSON.stringify(data), function(err) {
+        if (err) {
+          return console.log(err);
+        }
+      });
+    })
+    .catch(e => {
+      console.log(e);
+    });
+}
+
+app.post("/search", function(request, response) {
+  location = request.location;
+  term = request.term;
+  response.send(request.body);
+  response.end();
 });
 
-app.get('/info', function(request, response){
-  fs.readFile('/app/restaurant.json', function(err, data) {
-    response.writeHead(200, { "Content-Type": "application/json"});
+app.get("/info", function(request, response) {
+  fs.readFile("/app/restaurant.json", function(err, data) {
+    response.writeHead(200, { "Content-Type": "application/json" });
     console.log(JSON.parse(data));
     response.write(data);
     response.end();
   });
 });
 
-
 // ---------------------------------------------------------
 
-// 
+//
 const server = http.createServer(app);
 
-const wss = new WebSocket.Server({server});
+const wss = new WebSocket.Server({ server });
 
 let clientCount = 0;
 let voteCount = 0;
-const restaurantList = ["AA","BB","CC","DD"];
+const restaurantList = ["AA", "BB", "CC", "DD"];
 const yOrN = ["Yes", "No"];
 
 let restaurantInd = 0;
 let numOfVotes = [0, 0, 0, 0];
 let voteYes = 0;
 
-
-wss.on('connection', (ws) => {
+wss.on("connection", ws => {
   clientCount += 1;
   restaurantInd = 0;
   console.log("a new client, now ", clientCount, "users connected");
-  ws.on('message', (message) => {
+  ws.on("message", message => {
     console.log(message);
     //ws.send("server echo:" + message);
     //broadcast(message)
     let cmdObj = JSON.parse(message);
-    if (cmdObj.type == 'message'){
-      let msgObj = {'type': 'message', 'info':cmdObj.msg};
+    if (cmdObj.type == "message") {
+      let msgObj = { type: "message", info: cmdObj.msg };
       broadcast(message);
     }
-    if (cmdObj.type == 'command'){
+    if (cmdObj.type == "command") {
       console.log("one user vote ", yOrN[cmdObj.choice], "on this restaurant");
       voteCount += 1;
       console.log(voteCount, "users voted");
-      if (cmdObj.choice == 0){
+      if (cmdObj.choice == 0) {
         numOfVotes[restaurantInd] += 1;
         voteYes += 1;
       }
       console.log("voteYes is ", voteYes);
-      if (voteCount == clientCount){
+      if (voteCount == clientCount) {
         voteCount = 0;
         if (voteYes == clientCount) {
-          let endObj = {'type': 'end', 'info':restaurantList[restaurantInd]};
+          let endObj = { type: "end", info: restaurantList[restaurantInd] };
           broadcast(JSON.stringify(endObj));
-        }
-        
-        else if (restaurantInd == restaurantList.length-1){
+        } else if (restaurantInd == restaurantList.length - 1) {
           //reference:https://stackoverflow.com/questions/11301438/return-index-of-greatest-value-in-an-array
-          let indexOfMaxValue = numOfVotes.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
-          let endObj = {'type': 'end', 'info':restaurantList[indexOfMaxValue]};
-          
+          let indexOfMaxValue = numOfVotes.reduce(
+            (iMax, x, i, arr) => (x > arr[iMax] ? i : iMax),
+            0
+          );
+          let endObj = { type: "end", info: restaurantList[indexOfMaxValue] };
+
           broadcast(JSON.stringify(endObj));
-        }
-        else{
+        } else {
           restaurantInd += 1;
-          
-          let nrObj = {'type': 'command', 'info':restaurantList[restaurantInd]};
+
+          let nrObj = { type: "command", info: restaurantList[restaurantInd] };
           broadcast(JSON.stringify(nrObj));
         }
         voteYes = 0;
-        
       }
     }
-  })
-  
-  ws.on('close', ()=>{
-    clientCount -= 1;
-    console.log("a client quit, now ", clientCount, "users connected")
   });
-  ws.send('connected!');
-  
-})
+
+  ws.on("close", () => {
+    clientCount -= 1;
+    console.log("a client quit, now ", clientCount, "users connected");
+  });
+  ws.send("connected!");
+});
 
 function broadcast(data) {
-  wss.clients.forEach((client) => {
+  wss.clients.forEach(client => {
     if (client.readyState === WebSocket.OPEN) {
       console.log(data);
       client.send(data);
@@ -333,9 +332,9 @@ function broadcast(data) {
   });
 }
 
-
 // custom 404 page (not a very good one...)
 // last item in pipeline, sends a response to any request that gets here
-app.all("*", function (request, response) { 
-  response.status(404);  // the code for "not found"
-  response.send("This is not the droid you are looking for"); });
+app.all("*", function(request, response) {
+  response.status(404); // the code for "not found"
+  response.send("This is not the droid you are looking for");
+});
