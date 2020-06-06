@@ -1,4 +1,7 @@
 'use strict';
+
+window.load = () => {document.getElementsByClassName("tinder--card")[0].remove();}
+
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
 var nope = document.getElementById('nope');
@@ -6,6 +9,8 @@ var love = document.getElementById('love');
 
 const url = "wss://weak-playful-winterberry.glitch.me";
 const connection = new WebSocket(url);
+
+
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');

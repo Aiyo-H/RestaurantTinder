@@ -415,12 +415,12 @@ input {
   border: 0 none;
   width: 90%;
   outline: none;
-  height: 80%;
+  height: 100%;
   position: absolute;
   font-family: "Carter One", cursive;
   font-size: 11px;
 }
-#wait0{
+#wait0 {
   width: 60%;
   color: #f15156;
   font-size: 20px;

@@ -16,12 +16,11 @@ hover的位置
 
 newlink的位置
 
-
+result加个刷新按钮
 
 # 可考虑
 
 host页面加location和term
-
 
 
 # 有问题可以写在这！
