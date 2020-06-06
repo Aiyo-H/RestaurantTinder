@@ -299,6 +299,15 @@ body {
   border-radius: 10px;
   padding: 8px;
 }
+.choose{
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 80%;
+  right: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
+}
 #nope {
   position: fixed;
   bottom: 10%;
@@ -358,7 +367,7 @@ body {
   height: 200px;
   width: 45%;
   position: fixed;
-  top: 28%;
+  top: 32%;
   right: 5%;
   padding: 5px;
   border-radius: 5px;
@@ -371,7 +380,7 @@ body {
   font-size: 19px;
   color: #FC7753;
 }
-.chatenter1{
+.chatenter1 {
   font-size: 15px;
   background-color: white;
   width: 45%;
@@ -384,12 +393,11 @@ body {
   border: 2px solid white;
 }
 .chatenter {
-  padding-top:5px;
   width: 35%;
   position: fixed;
   top: 60%;
   right: 5%;
-  padding: 5px;
+  padding-top: 8px;
   color: #66D7D1;
 }
 .chatenter:empty:before {
@@ -584,6 +592,10 @@ footer p {
   .chatbox p {
     font-size: 20px;
   }
+  .chatenter1 {
+    font-size: 16px;
+    right: 10%;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -703,10 +715,11 @@ footer p {
     left: 15%;
     font-size: 24px;
   }
-  .dispname{
+  .dispname {
     font-size: 22px;
   }
   .chatbox {
+    height: 260px;
     width: 35%;
     top: 25%;
     right: 15%;
@@ -717,9 +730,15 @@ footer p {
   .chatbox p {
     font-size: 24px;
   }
-  .chatenter {
+  .chatenter1 {
     width: 35%;
-    top: 64%;
+    font-size: 16px;
+    right: 15%;
+    top: 60%;
+  }
+  .chatenter{
+    top:60%;
+    width: 28%;
     right: 15%;
   }
 }
