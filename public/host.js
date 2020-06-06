@@ -7,17 +7,20 @@ const connection = new WebSocket(url);
 let e = document.getElementById("chat");
 e.addEventListener('keydown', sendNewMsg);
 
+let p = document.getElementById("plist1");
+p.innerHTML = clientname;
+
 function sendNewMsg(key) {
-  if (e.keyCode != 13) return;
+  if (key.keyCode != 13) return;
   console.log("send");
   let e = document.getElementById("chat");
   let msgObj = {
     type: "message",
     from: clientname,
-    msg: e.value
+    msg: e.textContent
   };
   connection.send(JSON.stringify(msgObj));
-  e.value = null;
+  e.textContent = null;
 }
 
 let addMessage = function(message) {
