@@ -119,7 +119,7 @@ function stopTinder() {
   let cmdObj = {
     type: "result",
     choice: selections
-    
+    finish: 
   };
   connection.send(JSON.stringify(cmdObj));
   wait();

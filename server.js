@@ -259,6 +259,7 @@ wss.on('connection', (ws) => {
     if (cmdObj.type == 'result'){
       voteCount += 1;
       let voteResult = cmdObj.choice;
+      let msgObj = cmdObj;
       //console.log(cmdObj);
       console.log("one user's vote is", voteResult);
       for(var i = 0 ; i < numOfVotes.length ; i++){
@@ -272,11 +273,17 @@ wss.on('connection', (ws) => {
           arr : numOfVotes,
         }; //save in obj
         // Save the data
-        voteCount = 0;
-        if (settleVotesAndFinish(numOfVotes)) {
-          
+        if (settleVotesAndFinish(numOfVotes, voteCount)) {
+          let msgObj = cmdObj;
+          msgObj.first = changeName(cmdObj.msg);
+          msgObj.data = nameList;
+          msgObj.location = location;
+          msgObj.term = term;
+          broadcast(JSON.stringify(msgObj));
         }
+        voteCount = 0;
         saveData(voteObj);
+        broadcast(JSON.stringify(msgObj));
       }
     }
     
@@ -361,7 +368,7 @@ function createNameList() {
   return l;
 }
 
-function settleVotesAndFinish(current) {
+function settleVotesAndFinish(current, count) {
   let finish = false;
   let before = [];
   
@@ -370,9 +377,15 @@ function settleVotesAndFinish(current) {
     before = (JSON.parse(data)).arr;
   });
   
+  if (Math.max(...current) == 0) {
+    finish = true;
+  } else if ((!firstVote) && (Math.max(...current) * 1.0 / Math.max(...before) <= 1.414)) {
+    finish = true;
+  }
   
-  if (Math.max(...current) *1.0 / Math.max(...before) >= 1.414) && (!)
-  
+  if (Math.max(...current) == count) {
+    finish = true;
+  }
   
   firstVote = false;
   return finish;
