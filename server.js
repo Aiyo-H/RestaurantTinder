@@ -109,10 +109,13 @@ app.use(express.json());
 // Also serve static files out of /images
 app.use("/images", express.static("images"));
 
+var playingAlready = false;
+
 // Handle GET request to base URL with no other route specified
 // by sending index.html, the main page of the app
 app.get("/", function(request, response) {
-  response.sendFile(__dirname + "/public/index.html");
+  if (!playingAlready) response.sendFile(__dirname + "/public/index.html");
+  if (playingAlready) response.sendFile("http://www.google.com");
 });
 
 // The GET AJAX query is handled by the static server, since the
@@ -155,6 +158,7 @@ var mailOptions = {
 
 
 /*--------Game round------------*/
+
 
 // -------------------Yelp API-----------------------------
 
@@ -206,6 +210,7 @@ app.get("/info", function(request, response) {
     response.write(data);
     response.end();
   });
+  playingAlready = true;
 });
 
 // --------------------websocket-------------------------------------
@@ -231,6 +236,7 @@ let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each res
 wss.on('connection', (ws) => {
   clientCount += 1;
   console.log("a new client, now ", clientCount, "users connected");
+  if (clientCount >= 8) playingAlready = true;
   ws.on('message', (message) => {
     //console.log(message);
     //ws.send("server echo:" + message);
@@ -276,6 +282,7 @@ wss.on('connection', (ws) => {
         if (settleVotesAndFinish(numOfVotes, voteCount)) {
           let msgObj = cmdObj;
           msgObj.finish = true;
+          playingAlready = false;
         }
         voteCount = 0;
         saveData(voteObj);
@@ -397,6 +404,7 @@ function init() {
   voteCount = 0;
   firstVote = true;
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
+  playingAlready = false;
 }
 
 // -----------------------------------------------------------------
