@@ -1,6 +1,10 @@
 'use strict';
 
 var data = [];
+var voteList = [];
+var removeList = [];
+var firstVote = true;
+
 window.onload = () => {
   //document.getElementsByClassName("tinder--card")[0].remove();
   //let removeList = [0];
@@ -9,7 +13,13 @@ window.onload = () => {
   xhr.addEventListener("load", () => {
     let restaurant = JSON.parse(xhr.responseText);
     data = restaurant.data;
+    voteList = restaurant.vote;
+    firstVote = restaurant.first;
+    
     console.log(data[0].image_url);
+    console.log(voteList);
+    console.log(firstVote);
+    
     let img, name, rating, dollar, location, reviews;
     for (var i = 0; i < 8; i++) {
       //if (removeList.includes(i)) continue;

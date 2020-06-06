@@ -22,24 +22,9 @@ window.onload = () => {
     document.getElementById("location1").innerHTML = "239 G St, Davis, CA 95616";
     document.getElementById("review1").innerHTML = "445 reviews";
     document.getElementById("choose1").innerHTML = "5 chosen";
+    document.querySelector("#bun").addEventListener("click", () => {
+      window.location = "https://weak-playful-winterberry.glitch.me";
+    });
   });
   xhr.send(null);
 };
-
-
-
-/*
-b.addEventListener("mouseover", () => {
-    b.style.border = "1px dashed black";
-    document.querySelector(".postcard").style.backgroundColor = colors[i];
-  });
-b.addEventListener("mouseout", () => {
-    if (b != currentColor) {
-      b.style.border = "none";
-      document.querySelector(".postcard").style.backgroundColor =
-        currentColor.style.backgroundColor;
-    } else {
-      b.style.border = "1px solid black";
-    }
-});
-*/

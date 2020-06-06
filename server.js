@@ -159,6 +159,8 @@ var mailOptions = {
 
 // -------------------Yelp API-----------------------------
 
+let firstVote = true;
+
 var location = "";
 var term = "";
 
@@ -205,12 +207,10 @@ app.get("/info", function(request, response) {
   let data = (JSON.parse(x)).data;
   let y = fs.readFileSync("/app/voteresult.json", 'utf8');
   let vote = (JSON.parse(x)).arr;
-  fs.readFile("/app/restaurant.json", function(err, data) {
-    response.writeHead(200, { "Content-Type": "application/json" });
-    //console.log(JSON.parse(data));
-    response.write(data);
-    response.end();
-  });
+  response.writeHead(200, { "Content-Type": "application/json" });
+  //console.log(data);
+  response.write(JSON.stringify({ data: data, vote : vote, first : firstVote }));
+  response.end();
 });
 
 // --------------------websocket-------------------------------------
@@ -219,8 +219,6 @@ app.get("/info", function(request, response) {
 const server = http.createServer(app);
 
 const wss = new WebSocket.Server({server});
-
-let firstVote = true;
 
 let voteResults = [];
 

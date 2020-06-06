@@ -28,7 +28,7 @@ body {
   left: -80%;
   z-index: 99999;
 }
-.hoverimg:hover img {
+.hoverimg:hover img{
   opacity: 1;
 }
 #icon {
