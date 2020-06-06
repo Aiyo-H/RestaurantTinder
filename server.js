@@ -373,6 +373,7 @@ function settleVotesAndFinish(current, count) {
     //console.log(JSON.parse(data));
     before = (JSON.parse(data)).arr;
   });
+  console.log(before);
   
   if (Math.max(...current) == 0) {
     finish = true;
@@ -403,26 +404,35 @@ function init() {
 
 // ----------------------Final-------------------------------------
 
+
 app.get("/result", function(request, response) {
+  
+  response.writeHead(200, { "Content-Type": "application/json" });
+  response.write(JSON.stringify(sendResult()));
+  response.end();
+});
+
+function sendResult() {
   var rests = [];
   var votes = [];
-  
-
   fs.readFile("/app/restaurant.json", function(err, data) {
     for (let i = 0; i < 8; i++) {
       rests.push((JSON.parse(data)).data[i].name);
     }
     console.log(rests);
+    processFile(rests);
   });
   
   fs.readFile("/app/voteresult.json", function(err, data) {
     votes = (JSON.parse(data)).data;
   });
   console.log(rests);
-  let send = { rests : rests, votes : votes };
-  response.write(JSON.stringify(send));
-  response.end();
-});
+  return { rests : rests, votes : votes };
+}
+
+function processFile(r) {
+  
+}
 
 // ----------------------------------------------------------------
 
