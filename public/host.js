@@ -44,7 +44,8 @@ let addMessage = function(message) {
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
   // Assign the name
-  connection.send(JSON.stringify({type: "name", msg: clientname}));
+  let p = document.querySelectorAll('.dispname');
+  connection.send(JSON.stringify({type: "name", data: p, msg: clientname}));
 };
 
 connection.onerror = error => {
@@ -56,7 +57,7 @@ connection.onmessage = event => {
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "name") {
-    signName();
+    //signName();
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);

@@ -263,6 +263,8 @@ const wss = new WebSocket.Server({server});
 
 let voteResults = [];
 
+let nameList = {};
+
 let clientCount = 0;
 let voteCount = 0; // how many people have voted this round
 const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
@@ -284,7 +286,7 @@ wss.on('connection', (ws) => {
       broadcast(message);
     }
     if (cmdObj.type == 'name'){
-      let msgObj = {type : 'message', info : cmdObj.msg};
+      //let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
     if (cmdObj.type == 'result'){
