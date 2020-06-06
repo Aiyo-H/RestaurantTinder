@@ -263,11 +263,11 @@ const wss = new WebSocket.Server({server});
 
 let clientCount = 0;
 let voteCount = 0;
-const restaurantList = ["AA","BB","CC","DD"];
+const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
 const yOrN = ["Yes", "No"];
 
 let restaurantInd = 0;
-let numOfVotes = [0, 0, 0, 0];
+let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each restaurant
 let voteYes = 0;
 
 wss.on('connection', (ws) => {
@@ -340,6 +340,15 @@ app.all("*", function(request, response) {
   response.status(404); // the code for "not found"
   response.send("This is not the droid you are looking for");
 });
-var listener = app.listen(process.env.PORT, function() {
+
+
+
+
+
+/*var listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
+});
+*/
+server.listen(process.env.PORT, () => {
+    console.log(`Server started on port ${server.address().port} :)`);
 });

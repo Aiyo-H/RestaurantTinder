@@ -333,13 +333,53 @@ body {
   animation-timing-function: ease-in-out;
 }
 #textarea1:empty:before,
-#textarea2:empty:before {
+#textarea2:empty:before{
   content: attr(data-placeholder);
   color: gray;
 }
 .plist{
   background-color: white;
-  height: 300px
+  height: 200px;
+  width: 30%;
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  font-family: "Carter One", cursive;
+  font-size: 19px;
+  color: #FC7753;
+  text-align: center;
+  padding:5px;
+  border-radius: 5px;
+}
+.chatbox{
+  background-color: white;
+  height: 200px;
+  width: 45%;
+  position: fixed;
+  top: 30%;
+  right: 5%;
+  padding:5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.chatbox p{
+  font-family: "Carter One", cursive;
+  font-size: 19px;
+  color: #FC7753;
+}
+.chatenter{
+  background-color: white;
+  width: 45%;
+  position: fixed;
+  top: 60%;
+  right: 5%;
+  padding:5px;
+  border-radius: 50px;
+}
+.chatenter:empty:before{
+  content: attr(data-placeholder);
+  color: gray;
+  font-family: "Vidaloka", serif;
 }
 footer {
   text-align: center;
