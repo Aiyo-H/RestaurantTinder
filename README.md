@@ -1,39 +1,27 @@
-# Code
-1. Yelp API
-2. website redirect
-3. swiper
-4.
-
 # UI
 
 Icon/Pics(加了五个):
 https://drive.google.com/drive/folders/1F_8lAtSYVqlKjhE8q63KsejW8bcZAW7q?usp=sharing
 
 
-# 🍩
+小皇冠
 
-0.popup没对齐
+Final Result 手机端
 
+新的round没删div
 
-# Aiyo
+人数满了redirect
 
-1.最后统计的HTML
+hover的位置
 
-2.实现一下 人数满了 加不进来 （可以在之前那个app里先试
-
-3.Websockets最后得整合一下（不用现在做
-
-
-# Wheaton
-
-1.Yelp的Post
-
-2.统计算法
-
-3.选完waiting
+newlink的位置
 
 
-人数到了之后的拒绝HTML & 开始游戏时的HTML
+
+# 可考虑
+
+host页面加location和term
+
 
 
 # 有问题可以写在这！

@@ -118,12 +118,13 @@ function stopTinder() {
   console.log(selections);
   let cmdObj = {
     type: "result",
-    choice: selections
-    finish: 
+    choice: selections,
+    complete: false,
+    finish: false
   };
   connection.send(JSON.stringify(cmdObj));
   wait();
-  //window.location = "https://weak-playful-winterberry.glitch.me/result.html";
+  //window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
 }
 
 connection.onerror = error => {
@@ -134,5 +135,10 @@ connection.onmessage = event => {
   console.log(event.data);
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
-  
+  if (msgObj.type == "result") {
+    if (msgObj.complete) {
+      if (msgObj.finish) window.location = "https://weak-playful-winterberry.glitch.me/result.html";
+      else window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
+    }
+  }
 };

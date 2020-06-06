@@ -275,16 +275,13 @@ wss.on('connection', (ws) => {
         // Save the data
         if (settleVotesAndFinish(numOfVotes, voteCount)) {
           let msgObj = cmdObj;
-          msgObj.first = changeName(cmdObj.msg);
-          msgObj.data = nameList;
-          msgObj.location = location;
-          msgObj.term = term;
-          broadcast(JSON.stringify(msgObj));
+          msgObj.finish = true;
         }
         voteCount = 0;
         saveData(voteObj);
-        broadcast(JSON.stringify(msgObj));
+        msgObj.complete = true;
       }
+      broadcast(JSON.stringify(msgObj));
     }
     
     /*if (cmdObj.type == 'command'){
@@ -399,7 +396,7 @@ function init() {
   nameList = createNameList();
   voteCount = 0;
   firstVote = true;
-  
+  numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
 }
 
 // -----------------------------------------------------------------
