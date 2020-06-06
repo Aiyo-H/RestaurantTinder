@@ -4,7 +4,7 @@
 import {animalList} from "/animal.js";
 const clientname = animalList[Math.floor(Math.random() * animalList.length)];
 
-const url = "wss://swift-periwinkle-asparagus.glitch.me";
+const url = "wss://weak-playful-winterberry.glitch.me/";
 const connection = new WebSocket(url);
 
 let e = document.getElementById("newMsg");
