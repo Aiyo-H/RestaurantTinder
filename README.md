@@ -20,6 +20,8 @@ result加个刷新按钮
 
 # 可考虑
 
+result hover result
+
 host页面加location和term
 
 ipad没小人
