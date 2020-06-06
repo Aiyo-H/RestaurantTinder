@@ -2,19 +2,6 @@
 var id = "";
 
 window.onload = () => {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", '/play');
-  xhr.addEventListener("load", () => {
-    console.log(JSON.parse(xhr.responseText));
-    let result = JSON.parse(xhr.responseText);
-    console.log(result);
-    console.log(result.playing);
-    if (result.playing) window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
-  });
-  xhr.send(null);
-};
-
-window.onload = () => {
   id = randomString();
   document.getElementById("link2").innerHTML =
     "https://weak-playful-winterberry.glitch.me/host.html?id=" + id;
@@ -24,6 +11,7 @@ window.onload = () => {
     console.log(JSON.parse(xhr.responseText));
     let result = JSON.parse(xhr.responseText);
     console.log(result);
+    if (result.playing) window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
   });
   xhr.send(null);
 };
