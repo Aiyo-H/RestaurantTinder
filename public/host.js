@@ -22,10 +22,12 @@ function signName(l) {
 }
 
 function signHost(f) {
+  //console.log(firstPlayer);
   if (!f) {
+    if (firstPlayer) return;
     document.getElementById("butn").style.display = "none";
     document.getElementById("wait0").style.display = "block";
-  }
+  } else firstPlayer = true;
 }
 
 function sendNewMsg(key) {

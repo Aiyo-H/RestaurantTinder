@@ -4,7 +4,7 @@ var id = "";
 window.onload = () => {
   id = randomString();
   document.getElementById("link2").innerHTML =
-    "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
+    "https://weak-playful-winterberry.glitch.me/host.html?id=" + id;
 };
 
 // --------------------------RandomString-----------------------------------------
@@ -27,14 +27,14 @@ document.querySelector("#butn2").addEventListener("click", () => {
 });
 
 document.querySelector("#link3").addEventListener("click", () => {
-  const url = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
+  const url = "https://weak-playful-winterberry.glitch.me/host.html?id=" + id;
   var subject = "Invitation to RestaurantTinder";
   var body = "Here is the link to join the Game:) " + url;
   window.open("mailto:test@example.com?subject=" + subject + "&body=" + body);
 });
 
 document.querySelector("#link4").addEventListener("click", () => {
-  const url = "https://weak-playful-winterberry.glitch.me/play.html?id=" + id;
+  const url = "https://weak-playful-winterberry.glitch.me/host.html?id=" + id;
   const el = document.createElement("textarea");
   el.value = url;
   document.body.appendChild(el);
