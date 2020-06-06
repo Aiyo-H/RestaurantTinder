@@ -337,6 +337,10 @@ body {
   content: attr(data-placeholder);
   color: gray;
 }
+.plist{
+  background-color: white;
+  height: 300px
+}
 footer {
   text-align: center;
   bottom: 0;
