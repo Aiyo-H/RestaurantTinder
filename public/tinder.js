@@ -123,7 +123,7 @@ function stopTinder() {
   };
   connection.send(JSON.stringify(cmdObj));
   wait();
-  //window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
+  //window.location = "https://weak-playful-winterberry.glitch.me/result.html";
 }
 
 connection.onerror = error => {

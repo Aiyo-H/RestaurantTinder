@@ -215,9 +215,9 @@ const server = http.createServer(app);
 
 const wss = new WebSocket.Server({server});
 
-let voteResults = [];
+let firstVote = true;
 
-let completeClients = 0;
+let voteResults = [];
 
 let nameList = createNameList();
 
@@ -272,7 +272,9 @@ wss.on('connection', (ws) => {
           arr : numOfVotes,
         }; //save in obj
         // Save the data
-        saveData(voteObj);        
+        voteCount = 0;
+        settleVotes(numOfVotes);
+        saveData(voteObj);
       }
     }
     
@@ -311,7 +313,7 @@ wss.on('connection', (ws) => {
     }*/
   })
   
-  ws.on('close', ()=>{
+  ws.on('close', () => {
     clientCount -= 1;
     if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected");
@@ -357,11 +359,19 @@ function createNameList() {
   return l;
 }
 
+function settleVotes() {
+  
+  firstVote = false;
+}
+
+
 // -----------------------------------------------------------------
 
 // ----------------------Initial------------------------------------
 function init() {
   nameList = createNameList();
+  voteCount = 0;
+  firstVote = true;
   
 }
 
