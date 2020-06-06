@@ -262,7 +262,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({server});
 
 let clientCount = 0;
-let voteCount = 0;
+let voteCount = 0; // how many people have voted this round
 const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
 const yOrN = ["Yes", "No"];
 
@@ -284,19 +284,20 @@ wss.on('connection', (ws) => {
       broadcast(message);
     }
     if (cmdObj.type == 'result'){
-      let voteResult = cmdObj.selections
+      voteCount += 1;
+      let voteResult = cmdObj.selections;
       console.log("one user's vote is", voteResult);
       var i
       for(i=0 ; i<8 ; i++){
         if (voteResult[i] == "true"){
-          voteYes += 1;
+          numOfVotes[i] += 1;
         }
       }
-      numOfVotes[restaurantInd] = voteYes;
-      if (restaurantInd > 0){
-        if (numOfVotes[restaurantInd] >= numOfVotes[restaurantInd-1]*1.414){
-          
-        }
+      if (voteCount == clientCount) {
+        let voteObj = {
+          type: "voteCounting",
+          arr: numOfVotes
+        };
       }
     }
     /*if (cmdObj.type == 'command'){

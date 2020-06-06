@@ -333,11 +333,11 @@ body {
   animation-timing-function: ease-in-out;
 }
 #textarea1:empty:before,
-#textarea2:empty:before{
+#textarea2:empty:before {
   content: attr(data-placeholder);
   color: gray;
 }
-.plist{
+.plist {
   height: 200px;
   width: 30%;
   position: fixed;
@@ -347,41 +347,41 @@ body {
   font-size: 19px;
   color: #FC7753;
   text-align: center;
-  padding:5px;
+  padding: 5px;
 }
-.dispname{
+.dispname {
   font-size: 15px;
   padding-top: 5px;
   font-family: "Playfair Display", serif;
 }
-.chatbox{
+.chatbox {
   height: 200px;
   width: 45%;
   position: fixed;
   top: 30%;
   right: 5%;
-  padding:5px;
+  padding: 5px;
   border-radius: 5px;
   text-align: center;
   border: 2px solid white;
-  background-color: hsla(0, 100%, 90%, 0.3);;
+  background-color: hsla(0, 100%, 90%, 0.3);
 }
-.chatbox p{
+.chatbox p {
   font-family: "Carter One", cursive;
   font-size: 19px;
   color: #FC7753;
 }
-.chatenter{
+.chatenter {
   background-color: white;
   width: 45%;
   position: fixed;
   top: 60%;
   right: 5%;
-  padding:5px;
+  padding: 5px;
   border-radius: 50px;
   color: #66D7D1;
 }
-.chatenter:empty:before{
+.chatenter:empty:before {
   content: attr(data-placeholder);
   color: gray;
   font-family: "Vidaloka", serif;
@@ -554,25 +554,25 @@ footer p {
     height: 75px;
     z-index: 2;
   }
-  .plist{
-  height: 300px;
-  width: 30%;
-  position: fixed;
-  top: 20%;
-  left: 10%;
-  font-size: 20px;
-}
-.chatbox{
-  height: 300px;
-  width: 45%;
-  position: fixed;
-  top: 20%;
-  right: 10%;
-  padding:5px;
-}
-.chatbox p{
-  font-size: 20px;
-}
+  .plist {
+    height: 300px;
+    width: 30%;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    font-size: 20px;
+  }
+  .chatbox {
+    height: 300px;
+    width: 45%;
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    padding: 5px;
+  }
+  .chatbox p {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -684,28 +684,31 @@ footer p {
     width: 100px;
     height: 100px;
   }
-  .plist{
-  height: 300px;
-  width: 30%;
-  position: fixed;
-  top: 25%;
-  left: 15%;
-  font-size: 24px;
-}
-.chatbox{
-  width: 35%;
-  top: 25%;
-  right: 15%;
-  padding:5px;
-  border-radius: 5px;
-  text-align: center;
-}
-  .chatbox p{
+  .plist {
+    height: 300px;
+    width: 30%;
+    position: fixed;
+    top: 25%;
+    left: 15%;
     font-size: 24px;
   }
-.chatenter{
-  width: 35%;
-  top: 64%;
-  right: 15%;
-}
+  .dispname{
+    font-size: 22px;
+  }
+  .chatbox {
+    width: 35%;
+    top: 25%;
+    right: 15%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .chatbox p {
+    font-size: 24px;
+  }
+  .chatenter {
+    width: 35%;
+    top: 64%;
+    right: 15%;
+  }
 }
