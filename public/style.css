@@ -626,19 +626,19 @@ footer p {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1025px) {
   body {
     background-position: right 0% bottom 1%;
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1591251140550");
   }
   .hoverimg {
-    left: 25%;
-    bottom: 15%;
+    left: 30%;
+    bottom: 25%;
     width: 200px;
   }
   .hoverimg img {
     width: 500px;
-    top: -250%;
+    top: -400%;
   }
   #icon {
     width: 30%;

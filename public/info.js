@@ -7,7 +7,7 @@ window.onload = () => {
   xhr.addEventListener("load", () => {
     let restaurant = JSON.parse(xhr.responseText);
     data = restaurant.data;
-    //console.log(data[0].image_url);
+    console.log(data[0].image_url);
     let img, name, rating, dollar, location, reviews;
     for (var i = 0; i < 8; i++) {
       //if (removeList.includes(i)) continue;
