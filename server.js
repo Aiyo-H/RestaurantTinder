@@ -283,6 +283,20 @@ wss.on('connection', (ws) => {
       let msgObj = {'type': 'message', 'info':cmdObj.msg};
       broadcast(message);
     }
+    if (cmdObj.type == 'result'){
+      let voteResult = cmdObj.selections
+      console.log("the result for this round is", voteResult);
+      var i
+      for(i=0 ; i<8 ; i++){
+        if (voteResult[i] == "true"){
+          voteYes += 1;
+        }
+      }
+      numOfVotes[restaurantInd] = voteYes;
+      if (restaurantInd > 0){
+        if (numOfVotes[restaurantInd] >= numOfVotes[restaurantInd-1]*1.414)
+      }
+    }
     if (cmdObj.type == 'command'){
       console.log("one user vote ", yOrN[cmdObj.choice], "on this restaurant");
       voteCount += 1;

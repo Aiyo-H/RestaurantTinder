@@ -352,7 +352,6 @@ body {
   border-radius: 5px;
 }
 .chatbox{
-  background-color: white;
   height: 200px;
   width: 45%;
   position: fixed;
@@ -361,6 +360,7 @@ body {
   padding:5px;
   border-radius: 5px;
   text-align: center;
+  border: 2px solid white;
 }
 .chatbox p{
   font-family: "Carter One", cursive;
