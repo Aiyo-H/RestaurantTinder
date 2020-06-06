@@ -10,9 +10,6 @@ e.addEventListener('change', sendNewMsg);
 let n = document.getElementById("name");
 n.innerHTML = clientname;
 
-// Assign the name
-//connection.send(JSON.stringify({type: "name", msg: clientname}));
-
 function signName() {
   let p = document.querySelectorAll('.dispname');
   for (var i = 0; i < p.length; i++) {
@@ -32,7 +29,6 @@ function sendNewMsg(key) {
     from: clientname,
     msg: e.value
   };
-  connection.send(JSON.stringify({ type: "name", msg: clientname}));
   connection.send(JSON.stringify(msgObj));
   e.value = null;
 }
@@ -47,6 +43,8 @@ let addMessage = function(message) {
 
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
+  // Assign the name
+  connection.send(JSON.stringify({type: "name", msg: clientname}));
 };
 
 connection.onerror = error => {
