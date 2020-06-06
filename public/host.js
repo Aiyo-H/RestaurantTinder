@@ -10,14 +10,12 @@ e.addEventListener('change', sendNewMsg);
 let n = document.getElementById("name");
 n.innerHTML = clientname;
 
-function signName() {
+function signName(l) {
   let p = document.querySelectorAll('.dispname');
   for (var i = 0; i < p.length; i++) {
-    if (p[i].innerHTML != "Waiting...") {
-      p[i].innerHTML = clientname;
-      p[i].style.color = "#118AB2";
-      break;
-    }
+    if (l[i] == "Waiting...") return;
+    p[i].innerHTML = l[i];
+    p[i].style.color = "#118AB2";
   }
 }
 
@@ -44,7 +42,6 @@ let addMessage = function(message) {
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
   // Assign the name
-  let nameList = [];
   connection.send(JSON.stringify({type: "name", data: [], msg: clientname}));
 };
 
@@ -57,7 +54,7 @@ connection.onmessage = event => {
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "name") {
-    console.log(msgObj.data);
+    signName(msgObj.data);
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);

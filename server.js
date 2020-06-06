@@ -101,21 +101,6 @@ let upload = multer({storage: storage});
 */
 // -------------------------------------------------------------------------------
 
-// --------------------------RandomString-----------------------------------------
-// Availability: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
-
-function randomString() {
-  var result = "";
-  var characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  var charactersLength = characters.length;
-  for (var i = 0; i < 22; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}
-// --------------------------------------------------------------------------------
-
 // Serve static files out of public directory
 app.use(express.static("public"));
 
@@ -350,6 +335,7 @@ wss.on('connection', (ws) => {
   
   ws.on('close', ()=>{
     clientCount -= 1;
+    if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected")
   });
   ws.send('connected!');
@@ -376,7 +362,7 @@ function saveData(result) {
 function changeName(n) {
   let p = nameList;
   for (var i = 0; i < p.length; i++) {
-    if (p[i] != "Waiting...") {
+    if (p[i] == "Waiting...") {
       p[i] = n;
       break;
     }
@@ -393,6 +379,9 @@ function createNameList() {
 }
 
 // -----------------------------------------------------------------
+
+
+
 
 // custom 404 page (not a very good one...)
 // last item in pipeline, sends a response to any request that gets here
