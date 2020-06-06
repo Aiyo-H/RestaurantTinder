@@ -24,8 +24,8 @@ body {
   transition: all 300ms;
   position: absolute;
   width: 200px;
-  top: -200%;
-  left: -50%;
+  top: -150%;
+  left: -80%;
   z-index: 99999;
 }
 .hoverimg:hover img {
@@ -450,7 +450,7 @@ footer p {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591399112522");
   }
   .hoverimg {
-    left: 20%;
+    left: 5%;
     width: 120px;
     height: 100px;
     bottom: 15%;
@@ -458,7 +458,7 @@ footer p {
   .hoverimg img {
     width: 300px;
     top: -170%;
-    left: -60%;
+    left: -80%;
   }
   #icon {
     width: 40%;
@@ -638,8 +638,7 @@ footer p {
   }
   .hoverimg img {
     width: 500px;
-    top: -300%;
-    left: -120%;
+    top: -250%;
   }
   #icon {
     width: 30%;

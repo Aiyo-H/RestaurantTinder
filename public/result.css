@@ -279,11 +279,11 @@ footer p {
 }
 
 @media only screen and (min-width: 600px) {
+  html{
+    height:90%;
+  }
   body {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591242183375");
-  }
-  .tinder-card{
-    
   }
   .hoverimg {
     left: 20%;
@@ -316,8 +316,27 @@ footer p {
   #hrline2 {
     right: 3%;
   }
+  .tinder--card {
+    position: fixed;
+    left: 10%;
+    top: 20%;
+    height: 300px;
+    width: 30%;
+  }
+  .rank{
+    position: fixed;
+    right: 10%;
+    width: 40%;
+    top:20%;
+  }
   button {
     margin-left: 45%;
+    position: fixed;
+    bottom: 10%;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
   }
 }
 
@@ -359,8 +378,38 @@ footer p {
   .rank {
     width: 50%;
   }
+    .tinder--card {
+    position: fixed;
+    left: 10%;
+    top: 20%;
+    height: 300px;
+    width: 30%;
+  }
+  .rank{
+    position: fixed;
+    right: 10%;
+    width: 40%;
+  }
   button {
     margin-left: 47%;
+    bottom: 8%;
+  }
+  .tinder--card {
+    position: fixed;
+    left: 17%;
+    top: 20%;
+    height: 350px;
+    width: 25%;
+  }
+  .rank{
+    position: fixed;
+    right: 17%;
+    width: 35%;
+    top:20%;
+  }
+    button {
+    margin-left: 47%;
+    bottom: 8%;
   }
 }
 

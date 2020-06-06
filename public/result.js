@@ -15,9 +15,12 @@ window.onload = () => {
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
     }
+    document.getElementById(rests1).innerHTML = result.votes[i].toString();
   });
   xhr.send(null);
 };
+
+
 
 /*
 b.addEventListener("mouseover", () => {

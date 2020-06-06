@@ -220,6 +220,8 @@ let firstVote = true;
 
 let voteResults = [];
 
+let removeList = [];
+
 let nameList = createNameList();
 
 let clientCount = 0;
@@ -285,6 +287,7 @@ wss.on('connection', (ws) => {
         }
         voteCount = 0;
         saveData(voteObj);
+        if (removeList.length != 0) updateRemove();
         msgObj.complete = true;
       }
       broadcast(JSON.stringify(msgObj));
@@ -352,6 +355,10 @@ function saveData(result) {
   });
 }
 
+function updateRemove() {
+  
+}
+
 function changeName(n) {
   let first = false;
   if (nameList[0] == "Waiting...") first = true;
@@ -406,6 +413,7 @@ function init() {
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
   playingAlready = false;
   //playingNumbers = 0;
+  removeList = [];
 }
 
 // -----------------------------------------------------------------
