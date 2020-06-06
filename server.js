@@ -157,8 +157,6 @@ var mailOptions = {
 */
 
 
-/*--------Game round------------*/
-
 
 // -------------------Yelp API-----------------------------
 
@@ -210,7 +208,6 @@ app.get("/info", function(request, response) {
     response.write(data);
     response.end();
   });
-  playingAlready = true;
 });
 
 // --------------------websocket-------------------------------------
@@ -236,7 +233,11 @@ let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each res
 wss.on('connection', (ws) => {
   clientCount += 1;
   console.log("a new client, now ", clientCount, "users connected");
-  if (clientCount >= 8) playingNumbers = 8;
+  
+  if (clientCount >= 8) {playingNumbers = 8; playingAlready = true;}
+  else playingNumbers += 1;
+  if (clientCount > playingNumbers) {playingNumbers = 8; playingAlready = true;}
+  
   ws.on('message', (message) => {
     //console.log(message);
     //ws.send("server echo:" + message);
@@ -329,6 +330,7 @@ wss.on('connection', (ws) => {
   
   ws.on('close', () => {
     clientCount -= 1;
+    if (clientCount == 8) {playingNumbers = 8; playingAlready = false;}
     if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected");
   });
@@ -433,6 +435,16 @@ function sendResult() {
 }
 
 // ----------------------------------------------------------------
+
+/*--------Game round------------*/
+
+app.get("/play", function(request, response) {
+  response.write(JSON.stringify({number : playingNumbers}));
+  response.end();
+});
+
+
+// --------------------------------------------------
 
 
 // custom 404 page (not a very good one...)
