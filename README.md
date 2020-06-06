@@ -22,6 +22,8 @@ result加个刷新按钮
 
 host页面加location和term
 
+ipad没小人
+
 
 # 有问题可以写在这！
 

@@ -1,5 +1,6 @@
 var data = [];
 window.onload = () => {
+  document.getElementsByClassName("tinder--card")[0].remove();
   let xhr = new XMLHttpRequest();
   xhr.open("GET", '/info');
   xhr.addEventListener("load", () => {
