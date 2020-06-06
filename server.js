@@ -208,6 +208,7 @@ app.get("/info", function(request, response) {
     response.write(data);
     response.end();
   });
+  playingAlready = true;
 });
 
 // --------------------websocket-------------------------------------
@@ -406,7 +407,7 @@ function init() {
   voteCount = 0;
   firstVote = true;
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
-  //playingAlready = false;
+  playingAlready = false;
   //playingNumbers = 0;
 }
 

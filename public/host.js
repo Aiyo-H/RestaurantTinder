@@ -12,6 +12,18 @@ e.addEventListener('change', sendNewMsg);
 let n = document.getElementById("name");
 n.innerHTML = clientname;
 
+window.onload = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", '/play');
+  xhr.addEventListener("load", () => {
+    console.log(JSON.parse(xhr.responseText));
+    let result = JSON.parse(xhr.responseText);
+    console.log(result);
+    if (result) window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
+  });
+  xhr.send(null);
+};
+
 function signName(l) {
   let p = document.querySelectorAll('.dispname');
   for (var i = 0; i < p.length; i++) {

@@ -1,7 +1,6 @@
 "use strict";
 var id = "";
 
-
 window.onload = () => {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", '/play');
@@ -9,6 +8,7 @@ window.onload = () => {
     console.log(JSON.parse(xhr.responseText));
     let result = JSON.parse(xhr.responseText);
     console.log(result);
+    if (result) window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
   });
   xhr.send(null);
 };
