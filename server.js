@@ -295,17 +295,15 @@ wss.on('connection', (ws) => {
       }
       if (voteCount >= clientCount) {
         let voteObj = {
-          type: "voteCounting",
-          arr: numOfVotes
+          type : "voteCounting",
+          arr : numOfVotes,
         }; //save in obj
-        
+        // Save the data
+        saveData(voteObj);
         
         
       }
     }
-    
-    // Save the data
-    if (voteResults.length >= clientCount) saveData();
     
     /*if (cmdObj.type == 'command'){
       console.log("one user vote ", yOrN[cmdObj.choice], "on this restaurant");
@@ -323,8 +321,9 @@ wss.on('connection', (ws) => {
           broadcast(JSON.stringify(endObj));
         }
         
-        else if (restaurantInd == restaurantList.length-1){
-          let indexOfMaxValue = numOfVotes.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);//reference:https://stackoverflow.com/questions/11301438/return-index-of-greatest-value-in-an-array
+        else if (restaurantInd == restaurantList.length-1) {
+          //reference:https://stackoverflow.com/questions/11301438/return-index-of-greatest-value-in-an-array
+          let indexOfMaxValue = numOfVotes.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
           let endObj = {'type': 'end', 'info':restaurantList[indexOfMaxValue]};
           
           broadcast(JSON.stringify(endObj));
@@ -358,8 +357,7 @@ function broadcast(data) {
   });
 }
 
-function saveData() {
-  let result = {data : voteResults};
+function saveData(result) {
   fs.writeFile("./voteresult.json", JSON.stringify(result), function(err) {
         if (err) {
           return console.log(err);
