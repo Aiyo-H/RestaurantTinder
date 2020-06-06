@@ -276,17 +276,18 @@ wss.on('connection', (ws) => {
     //ws.send("server echo:" + message);
     //broadcast(message)
     let cmdObj = JSON.parse(message);
+    console.log(message);
     if (cmdObj.type == 'message'){
-      let msgObj = {'type': 'message', 'info':cmdObj.msg};
+      let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
     if (cmdObj.type == 'result'){
       voteCount += 1;
       let voteResult = cmdObj.selections;
+      console.log(voteResult);
       console.log("one user's vote is", voteResult);
-      var i
-      for(i=0 ; i < numOfVotes.length ; i++){
-        if (voteResult[i] == "true"){
+      for(var i = 0 ; i < numOfVotes.length ; i++){
+        if (voteResult.choice[i]){
           numOfVotes[i] += 1;
         }
       }
