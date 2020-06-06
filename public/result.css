@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 html {
-  height: 90%;
 }
 body {
   padding: 20px;
@@ -17,12 +16,72 @@ body {
   display: block;
   margin: 0 auto;
   width: 55%;
-  height: 50%;
+  height: 350px;
   border-radius: 10px;
   background: #FFFFFF;
   margin-top: 20px;
   padding-bottom: 40px;
   top: 12%;
+}
+.tinder--card img {
+    max-width: 100%;
+    pointer-events: none;
+}
+.tinder--card h3 {
+    margin-top: 32px;
+    padding: 0 16px;
+    pointer-events: none;
+}
+.tinder--card p {
+    margin-top: 24px;
+    pointer-events: none;
+}
+.dollar {
+    font-size: 15px;
+    right: 10px;
+    top: 57%;
+    font-family: "Carter One", cursive;
+}
+.restname {
+    text-align: left;
+    font-size: 20px;
+    font-family: "Carter One", cursive;
+}
+.rest--tinder {
+    width: 100%;
+    height: 50%;
+}
+.tinder--card img {
+    max-width: 100%;
+    pointer-events: none;
+}
+.rating--tinder {
+    margin-top: 1vh;
+    margin-bottom: -4vh;
+    width: 40%;
+    left: 16px;
+    top: 66%;
+}
+.location {
+    position: fixed;
+    font-size: 18px;
+    top: 70%;
+    left: 22px;
+    font-family: "Playfair Display", serif;
+}
+.review {
+    font-family: "Playfair Display", serif;
+    top: 80%;
+    left: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+}
+.choose {
+    font-family: "Playfair Display", serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
 }
 .hoverimg {
   height: 50px;
