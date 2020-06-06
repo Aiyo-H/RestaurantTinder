@@ -234,9 +234,8 @@ wss.on('connection', (ws) => {
   clientCount += 1;
   console.log("a new client, now ", clientCount, "users connected");
   
-  if (clientCount >= 8) {playingNumbers = 8; playingAlready = true;}
-  else playingNumbers += 1;
-  if (clientCount > playingNumbers) {playingNumbers = 8; playingAlready = true;}
+  if (clientCount > 8) {playingAlready = true;}
+  if (clientCount > playingNumbers) {playingAlready = true;}
   
   ws.on('message', (message) => {
     //console.log(message);
@@ -261,6 +260,7 @@ wss.on('connection', (ws) => {
     // Redirect to Tinder.html
     if (cmdObj.type == 'nextTinder'){
       playingNumbers = clientCount;
+      playingAlready = true;
       broadcast(message);
     }
     // Compute the result of Tinder
@@ -330,7 +330,8 @@ wss.on('connection', (ws) => {
   
   ws.on('close', () => {
     clientCount -= 1;
-    if (clientCount == 8) {playingNumbers = 8; playingAlready = false;}
+    if (clientCount == 8) {playingAlready = false;}
+    if (clientCount < playingNumbers) {playingAlready = false;}
     if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected");
   });
@@ -407,8 +408,8 @@ function init() {
   voteCount = 0;
   firstVote = true;
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
-  playingAlready = false;
-  playingNumbers = 9;
+  //playingAlready = false;
+  //playingNumbers = 0;
 }
 
 // -----------------------------------------------------------------
@@ -439,7 +440,7 @@ function sendResult() {
 /*--------Game round------------*/
 
 app.get("/play", function(request, response) {
-  response.write(JSON.stringify({number : playingNumbers}));
+  response.write(JSON.stringify({playing : playingAlready}));
   response.end();
 });
 
