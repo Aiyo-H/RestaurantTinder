@@ -108,5 +108,11 @@ function stopTinder() {
     selections.push(sel);
   }
   console.log(selections);
+  let cmdObj = {
+    type: "result",
+    choice: selections
+    
+  };
+  connection.send(JSON.stringify(cmdObj));
   //window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
 }

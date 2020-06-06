@@ -697,24 +697,24 @@ footer p {
   height: 300px;
   width: 30%;
   position: fixed;
-  top: 20%;
+  top: 25%;
   left: 15%;
-  font-size: 20px;
+  font-size: 24px;
 }
 .chatbox{
-  height: 300px;
   width: 35%;
-  position: fixed;
-  top: 20%;
+  top: 25%;
   right: 15%;
   padding:5px;
   border-radius: 5px;
   text-align: center;
 }
+  .chatbox p{
+    font-size: 24px;
+  }
 .chatenter{
   width: 35%;
-  position: fixed;
-  top: 60%;
+  top: 64%;
   right: 15%;
 }
 }
