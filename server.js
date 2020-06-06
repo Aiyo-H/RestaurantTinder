@@ -217,7 +217,7 @@ const wss = new WebSocket.Server({server});
 
 let voteResults = [];
 
-var
+let completeClients = 0;
 
 let nameList = createNameList();
 

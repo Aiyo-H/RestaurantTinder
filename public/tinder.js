@@ -100,6 +100,11 @@ var loveListener = createButtonListener(true);
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
 
+function wait() {
+  document.getElementById('tindercards').style.display = "none";
+  document.getElementById('waitingimg').style.display = "block";
+}
+
 // All cards selected
 function stopTinder() {
   var selections = [];
@@ -117,5 +122,17 @@ function stopTinder() {
     
   };
   connection.send(JSON.stringify(cmdObj));
+  wait();
   //window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
 }
+
+connection.onerror = error => {
+  console.log(`WebSocket error: ${error}`);
+};
+
+connection.onmessage = event => {
+  console.log(event.data);
+  if (event.data == "connected!") return;
+  let msgObj = JSON.parse(event.data);
+  
+};
