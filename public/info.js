@@ -1,6 +1,7 @@
 var data = [];
 window.onload = () => {
-  document.getElementsByClassName("tinder--card")[0].remove();
+  //document.getElementsByClassName("tinder--card")[0].remove();
+  //let removeList = [0];
   let xhr = new XMLHttpRequest();
   xhr.open("GET", '/info');
   xhr.addEventListener("load", () => {
@@ -9,6 +10,7 @@ window.onload = () => {
     //console.log(data[0].image_url);
     let img, name, rating, dollar, location, reviews;
     for (var i = 0; i < 8; i++) {
+      //if (removeList.includes(i)) continue;
       
       // Images
       img = 'rest' + (i + 1).toString();

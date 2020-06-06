@@ -401,6 +401,26 @@ function init() {
 
 // -----------------------------------------------------------------
 
+// ----------------------Final-------------------------------------
+
+app.get("/result", function(request, response) {
+  let send = {};
+  let restaurant = {};
+  let votes = {};
+  
+  response.writeHead(200, { "Content-Type": "application/json" });
+  fs.readFile("/app/restaurant.json", function(err, data) {
+    restaurant = (JSON.parse(data)).data;
+  });
+  
+  fs.readFile("/app/voteresult.json", function(err, data) {
+    restaurant = (JSON.parse(data)).data;
+  });
+});
+
+// ----------------------------------------------------------------
+
+
 // custom 404 page (not a very good one...)
 // last item in pipeline, sends a response to any request that gets here
 app.all("*", function(request, response) {
