@@ -19,7 +19,7 @@ window.onload = () => {
     console.log(JSON.parse(xhr.responseText));
     let result = JSON.parse(xhr.responseText);
     console.log(result);
-    if (result) window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
+    if (result.playing) window.location = "https://weak-playful-winterberry.glitch.me/waiting.html";
   });
   xhr.send(null);
 };

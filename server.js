@@ -439,7 +439,7 @@ function sendResult() {
 /*--------Game round------------*/
 
 app.get("/play", function(request, response) {
-  response.write(JSON.stringify({playing : playingAlready}));
+  response.write(JSON.stringify({playing : playingAlready, client : clientCount}));
   response.end();
 });
 
