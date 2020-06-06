@@ -1,18 +1,5 @@
 "use strict";
 
-window.onload = () => {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", '/play');
-  xhr.addEventListener("load", () => {
-    console.log(JSON.parse(xhr.responseText));
-    let result = JSON.parse(xhr.responseText);
-    console.log(result);
-  });
-  xhr.send(null);
-};
-
-
-
 document.querySelector("#forgot").addEventListener("click", () => {
   window.location = "https://weak-playful-winterberry.glitch.me/game.html";
 });

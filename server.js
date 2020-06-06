@@ -110,7 +110,7 @@ app.use(express.json());
 app.use("/images", express.static("images"));
 
 var playingAlready = false;
-var playingNumbers = 9;
+var playingNumbers = 0;
 
 // Handle GET request to base URL with no other route specified
 // by sending index.html, the main page of the app
@@ -235,7 +235,6 @@ wss.on('connection', (ws) => {
   console.log("a new client, now ", clientCount, "users connected");
   
   if (clientCount > 8) {playingAlready = true;}
-  if (clientCount > playingNumbers) {playingAlready = true;}
   
   ws.on('message', (message) => {
     //console.log(message);
@@ -331,7 +330,6 @@ wss.on('connection', (ws) => {
   ws.on('close', () => {
     clientCount -= 1;
     if (clientCount == 8) {playingAlready = false;}
-    if (clientCount < playingNumbers) {playingAlready = false;}
     if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected");
   });

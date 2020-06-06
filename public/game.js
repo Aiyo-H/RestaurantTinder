@@ -1,10 +1,30 @@
 "use strict";
 var id = "";
 
+
+window.onload = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", '/play');
+  xhr.addEventListener("load", () => {
+    console.log(JSON.parse(xhr.responseText));
+    let result = JSON.parse(xhr.responseText);
+    console.log(result);
+  });
+  xhr.send(null);
+};
+
 window.onload = () => {
   id = randomString();
   document.getElementById("link2").innerHTML =
     "https://weak-playful-winterberry.glitch.me/host.html?id=" + id;
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", '/play');
+  xhr.addEventListener("load", () => {
+    console.log(JSON.parse(xhr.responseText));
+    let result = JSON.parse(xhr.responseText);
+    console.log(result);
+  });
+  xhr.send(null);
 };
 
 // --------------------------RandomString-----------------------------------------
