@@ -4,6 +4,8 @@ const clientname = animalList[Math.floor(Math.random() * animalList.length)];
 const url = "wss://weak-playful-winterberry.glitch.me";
 const connection = new WebSocket(url);
 
+var firstPlayer = false;
+
 let e = document.getElementById("chat");
 e.addEventListener('change', sendNewMsg);
 
@@ -16,6 +18,12 @@ function signName(l) {
     if (l[i] == "Waiting...") return;
     p[i].innerHTML = l[i];
     p[i].style.color = "#118AB2";
+  }
+}
+
+function signHost(f) {
+  if (f) {
+    
   }
 }
 
@@ -42,7 +50,7 @@ let addMessage = function(message) {
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
   // Assign the name
-  connection.send(JSON.stringify({type: "name", data: [], msg: clientname}));
+  connection.send(JSON.stringify({type: "name", data: [], msg: clientname, first: false}));
 };
 
 connection.onerror = error => {
@@ -55,6 +63,7 @@ connection.onmessage = event => {
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "name") {
     signName(msgObj.data);
+    signHost(msgObj.first);
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);

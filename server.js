@@ -272,7 +272,7 @@ wss.on('connection', (ws) => {
     }
     if (cmdObj.type == 'name'){
       let msgObj = cmdObj;
-      nameList = changeName(cmdObj.msg);
+      msgObj.first = changeName(cmdObj.msg);
       msgObj.data = nameList;
       broadcast(JSON.stringify(msgObj));
     }
@@ -336,7 +336,7 @@ wss.on('connection', (ws) => {
   ws.on('close', ()=>{
     clientCount -= 1;
     if (clientCount == 0) init();
-    console.log("a client quit, now ", clientCount, "users connected")
+    console.log("a client quit, now ", clientCount, "users connected");
   });
   ws.send('connected!');
   
@@ -360,14 +360,15 @@ function saveData(result) {
 }
 
 function changeName(n) {
-  let p = nameList;
-  for (var i = 0; i < p.length; i++) {
-    if (p[i] == "Waiting...") {
-      p[i] = n;
+  let first = false;
+  if (nameList[0] == "Waiting...") first = true;
+  for (var i = 0; i < nameList.length; i++) {
+    if (nameList[i] == "Waiting...") {
+      nameList[i] = n;
       break;
     }
   }
-  return p;
+  return first;
 }
 
 function createNameList() {
@@ -380,8 +381,13 @@ function createNameList() {
 
 // -----------------------------------------------------------------
 
+// ----------------------Initial------------------------------------
+function init() {
+  nameList = createNameList();
+  
+}
 
-
+// -----------------------------------------------------------------
 
 // custom 404 page (not a very good one...)
 // last item in pipeline, sends a response to any request that gets here
