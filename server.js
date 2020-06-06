@@ -264,15 +264,12 @@ const wss = new WebSocket.Server({server});
 let clientCount = 0;
 let voteCount = 0; // how many people have voted this round
 const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
-const yOrN = ["Yes", "No"];
 
-let restaurantInd = 0;
 let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each restaurant
-let voteYes = 0;
+
 
 wss.on('connection', (ws) => {
   clientCount += 1;
-  restaurantInd = 0;
   console.log("a new client, now ", clientCount, "users connected");
   ws.on('message', (message) => {
     console.log(message);
@@ -288,7 +285,7 @@ wss.on('connection', (ws) => {
       let voteResult = cmdObj.selections;
       console.log("one user's vote is", voteResult);
       var i
-      for(i=0 ; i<8 ; i++){
+      for(i=0 ; i < numOfVotes.length ; i++){
         if (voteResult[i] == "true"){
           numOfVotes[i] += 1;
         }
@@ -297,7 +294,10 @@ wss.on('connection', (ws) => {
         let voteObj = {
           type: "voteCounting",
           arr: numOfVotes
-        };
+        }; //save in obj
+        
+        
+        
       }
     }
     /*if (cmdObj.type == 'command'){

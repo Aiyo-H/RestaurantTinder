@@ -358,7 +358,7 @@ body {
   height: 200px;
   width: 45%;
   position: fixed;
-  top: 30%;
+  top: 28%;
   right: 5%;
   padding: 5px;
   border-radius: 5px;
@@ -371,14 +371,25 @@ body {
   font-size: 19px;
   color: #FC7753;
 }
-.chatenter {
+.chatenter1{
+  font-size: 15px;
   background-color: white;
   width: 45%;
   position: fixed;
   top: 60%;
   right: 5%;
   padding: 5px;
-  border-radius: 50px;
+  border-radius: 5px;
+  color: #FC7753;
+  border: 2px solid white;
+}
+.chatenter {
+  padding-top:5px;
+  width: 35%;
+  position: fixed;
+  top: 60%;
+  right: 5%;
+  padding: 5px;
   color: #66D7D1;
 }
 .chatenter:empty:before {
