@@ -266,16 +266,23 @@ wss.on('connection', (ws) => {
     //broadcast(message)
     let cmdObj = JSON.parse(message);
     console.log(message);
+    // Send messages in chatbox
     if (cmdObj.type == 'message'){
       let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
+    // Assign the names for players
     if (cmdObj.type == 'name'){
       let msgObj = cmdObj;
       msgObj.first = changeName(cmdObj.msg);
       msgObj.data = nameList;
       broadcast(JSON.stringify(msgObj));
     }
+    // Redirect to Tinder.html
+    if (cmdObj.type == 'nextTinder'){
+      broadcast(message);
+    }
+    // Compute the result of Tinder
     if (cmdObj.type == 'result'){
       voteCount += 1;
       let voteResult = cmdObj.choice;
@@ -292,9 +299,7 @@ wss.on('connection', (ws) => {
           arr : numOfVotes,
         }; //save in obj
         // Save the data
-        saveData(voteObj);
-        
-        
+        saveData(voteObj);        
       }
     }
     

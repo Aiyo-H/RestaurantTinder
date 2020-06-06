@@ -22,8 +22,9 @@ function signName(l) {
 }
 
 function signHost(f) {
-  if (f) {
-    
+  if (!f) {
+    document.getElementById("butn").style.display = "none";
+    document.getElementById("wait0").style.display = "block";
   }
 }
 
@@ -47,6 +48,9 @@ let addMessage = function(message) {
   text.innerHTML = text.textContent == "" ? text.textContent + message : text.textContent + newline + message;
 };
 
+// NEXT HTML
+document.querySelector('#butn').addEventListener('click', () => {connection.send(JSON.stringify({ type: "nextTinder" }));});
+
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
   // Assign the name
@@ -64,6 +68,9 @@ connection.onmessage = event => {
   if (msgObj.type == "name") {
     signName(msgObj.data);
     signHost(msgObj.first);
+  }
+  if (msgObj.type == "nextTinder") {
+    window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
