@@ -12,7 +12,7 @@ p.innerHTML = clientname;
 p.style.color = "#118AB2";
 
 let n = document.getElementById("name");
-n.vaule = clientname;
+n.innerHTML = clientname;
 
 function sendNewMsg(key) {
   if (key.keyCode != 13) return;
