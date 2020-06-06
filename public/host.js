@@ -11,13 +11,17 @@ let n = document.getElementById("name");
 n.innerHTML = clientname;
 
 // Assign the name
-connection.send(JSON.stringify({type: "name", msg: clientname}));
+//connection.send(JSON.stringify({type: "name", msg: clientname}));
 
 function signName() {
   let p = document.querySelectorAll('.dispname');
-  for (var i = 0; i < )
-  p.innerHTML = clientname;
-  p.style.color = "#118AB2";
+  for (var i = 0; i < p.length; i++) {
+    if (p[i].innerHTML != "Waiting...") {
+      p[i].innerHTML = clientname;
+      p[i].style.color = "#118AB2";
+      break;
+    }
+  }
 }
 
 function sendNewMsg(key) {
@@ -28,6 +32,7 @@ function sendNewMsg(key) {
     from: clientname,
     msg: e.value
   };
+  connection.send(JSON.stringify({ type: "name", msg: clientname}));
   connection.send(JSON.stringify(msgObj));
   e.value = null;
 }
@@ -49,25 +54,13 @@ connection.onerror = error => {
 };
 
 connection.onmessage = event => {
-  console.log(event.data);
+  console.log(event);
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
-  if (msgObj.type == "message") {
-    addMessage(msgObj.from + ": " + msgObj.msg);
+  if (msgObj.type == "name") {
+    signName();
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
 };
-
-
-
-// Enter
-/*
-var btn = document.getElementById('MsgToSend');
-btn.addEventListerner('keydown', function (e) {
-    if(e.keyCode==13) {
-     // i know i should do this but my problem is what is 'e' in my case how can i specify it ?
-    }
-});
-*/

@@ -283,6 +283,10 @@ wss.on('connection', (ws) => {
       let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
+    if (cmdObj.type == 'name'){
+      let msgObj = {type : 'message', info : cmdObj.msg};
+      broadcast(message);
+    }
     if (cmdObj.type == 'result'){
       voteCount += 1;
       let voteResult = cmdObj.choice;
