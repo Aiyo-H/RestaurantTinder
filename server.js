@@ -404,18 +404,24 @@ function init() {
 // ----------------------Final-------------------------------------
 
 app.get("/result", function(request, response) {
-  let send = {};
-  let restaurant = {};
-  let votes = {};
+  var rests = [];
+  var votes = [];
   
-  response.writeHead(200, { "Content-Type": "application/json" });
+
   fs.readFile("/app/restaurant.json", function(err, data) {
-    restaurant = (JSON.parse(data)).data;
+    for (let i = 0; i < 8; i++) {
+      rests.push((JSON.parse(data)).data[i].name);
+    }
+    console.log(rests);
   });
   
   fs.readFile("/app/voteresult.json", function(err, data) {
-    restaurant = (JSON.parse(data)).data;
+    votes = (JSON.parse(data)).data;
   });
+  console.log(rests);
+  let send = { rests : rests, votes : votes };
+  response.write(JSON.stringify(send));
+  response.end();
 });
 
 // ----------------------------------------------------------------
