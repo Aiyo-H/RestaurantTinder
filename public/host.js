@@ -5,7 +5,7 @@ const url = "wss://weak-playful-winterberry.glitch.me";
 const connection = new WebSocket(url);
 
 let e = document.getElementById("chat");
-//e.addEventListener('keydown', sendNewMsg);
+e.addEventListener('change', sendNewMsg);
 
 let p = document.getElementById("plist1");
 p.innerHTML = clientname;
@@ -15,22 +15,22 @@ let n = document.getElementById("name");
 n.innerHTML = clientname;
 
 function sendNewMsg(key) {
-  if (key.keyCode != 13) return;
   console.log("send");
   let e = document.getElementById("chat");
   let msgObj = {
     type: "message",
     from: clientname,
-    msg: e.textContent
+    msg: e.value
   };
   connection.send(JSON.stringify(msgObj));
-  e.textContent = null;
+  e.value = null;
 }
 
 let addMessage = function(message) {
-  const pTag = document.createElement("p");
-  pTag.appendChild(document.createTextNode(message));
-  document.getElementById("messages").appendChild(pTag);
+  let text = document.getElementById("chatarea");
+  console.log(message);
+  console.log(text.textContent + '\n' + message);
+  text.innerText = text.textContent + '\n' + message;
 };
 
 connection.onopen = () => {
