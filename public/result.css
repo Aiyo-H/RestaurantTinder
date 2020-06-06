@@ -13,9 +13,6 @@ body {
   background-position: right 0% bottom 0%;
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
-.rank {
-  width: 75%;
-}
 .hoverimg {
   height: 50px;
   width: 100px;
@@ -65,20 +62,21 @@ body {
 }
 .rank {
   margin: 0 auto;
+  width: 75%;
 }
 .heading {
+  margin-top: 10px;
   display: inline-block;
   font-size: 20px;
   font-family: "Carter One", cursive;
 }
-
 .above {
   margin: 0 auto;
   text-align: center;
-  width: 75%;
+  width: 100%;
 }
 .fa {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .checked {
@@ -87,7 +85,7 @@ body {
 
 /* Three column layout */
 .side {
-  font-family: "Vidaloka", serif;
+  color: #D64045;
   margin-top: 10px;
 }
 
@@ -100,7 +98,9 @@ body {
 /* Place text to the right */
 .vote {
   text-align: right;
-  font-family: "Vidaloka", serif;
+  font-family: "Carter One", cursive;
+  text-shadow: 0 0 5px white;
+  font-size: 20px;
 }
 
 /* Clear floats after the columns */
@@ -112,6 +112,7 @@ body {
 .row {
   max-width: 800px; /* Max width */
   margin: 0 auto;
+  font-family: "Carter One", cursive;
 }
 
 /* The bar container */
