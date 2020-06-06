@@ -12,6 +12,14 @@ body {
   background-position: right 0% bottom 0%;
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
+#top1{
+  margin: 0 auto;
+  margin-top: 10px;
+}
+img{
+  display: block;
+  width: 35%;
+}
 .tinder--card {
   display: block;
   margin: 0 auto;
@@ -19,7 +27,6 @@ body {
   height: 350px;
   border-radius: 10px;
   background: #FFFFFF;
-  margin-top: 20px;
   padding-bottom: 40px;
   top: 12%;
   position: relative;
