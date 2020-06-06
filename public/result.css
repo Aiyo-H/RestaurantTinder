@@ -13,6 +13,9 @@ body {
   background-position: right 0% bottom 0%;
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
+.rank {
+  width: 75%;
+}
 .hoverimg {
   height: 50px;
   width: 100px;
@@ -60,7 +63,107 @@ body {
 #hrline1 {
   margin-top: 70px;
 }
+.rank {
+  margin: 0 auto;
+}
+.heading {
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Carter One", cursive;
+}
 
+.above {
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+}
+.fa {
+  font-size: 15px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  font-family: "Vidaloka", serif;
+  margin-top: 10px;
+}
+
+.middle {
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.vote {
+  text-align: right;
+  font-family: "Vidaloka", serif;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  max-width: 800px; /* Max width */
+  margin: 0 auto;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-1 {
+  width: 60%;
+  height: 18px;
+  background-color: #4CAF50;
+}
+.bar-2 {
+  width: 30%;
+  height: 18px;
+  background-color: #2196F3;
+}
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #00bcd4;
+}
+.bar-4 {
+  width: 4%;
+  height: 18px;
+  background-color: #ff9800;
+}
+.bar-5 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
+.bar-6 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
+.bar-7 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
+.bar-8 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
 
 footer {
   text-align: center;
@@ -151,86 +254,14 @@ footer p {
   }
 }
 
-
 /*--------------------*/
 
-.rank{
-  margin: 0 auto;
-}
-.heading {
-  font-size: 25px;
-  margin-right: 25px;
-  display: inline-block;
-  
-}
-
-.above{
-  margin: 0 auto;
-  text-align: center;
-}
-.fa {
-  font-size: 25px;
-}
-
-.checked {
-  color: orange;
-}
-
-/* Three column layout */
-.side {
-  font-family: "Vidaloka", serif;
-  margin-top:10px;
-}
-
-.middle {
-  margin-top:10px;
-  float: left;
-  width: 70%;
-  
-}
-
-/* Place text to the right */
-.vote {
-  text-align: right;
-  font-family: "Vidaloka", serif;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row{
-  max-width: 800px; /* Max width */
-  margin: 0 auto;
-}
-
-/* The bar container */
-.bar-container {
-  width: 100%;
-  background-color: #f1f1f1;
-  border-radius: 25px;
-  text-align: center;
-  color: white;
-}
-
-/* Individual bars */
-.bar-1 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-2 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-4 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-5 {width: 15%; height: 18px; background-color: #f44336;}
-.bar-6 {width: 15%; height: 18px; background-color: #f44336;}
-.bar-7 {width: 15%; height: 18px; background-color: #f44336;}
-.bar-8 {width: 15%; height: 18px; background-color: #f44336;}
-
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
+/*@media (max-width: 400px) {
   .side, .middle {
     width: 100%;
   }
   .right {
     display: none;
   }
-}
+}*/

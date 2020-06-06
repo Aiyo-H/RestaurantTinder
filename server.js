@@ -110,7 +110,6 @@ app.use(express.json());
 app.use("/images", express.static("images"));
 
 var playingAlready = false;
-var playingNumbers = 0;
 
 // Handle GET request to base URL with no other route specified
 // by sending index.html, the main page of the app
@@ -208,7 +207,6 @@ app.get("/info", function(request, response) {
     response.write(data);
     response.end();
   });
-  playingAlready = true;
 });
 
 // --------------------websocket-------------------------------------
@@ -259,7 +257,6 @@ wss.on('connection', (ws) => {
     }
     // Redirect to Tinder.html
     if (cmdObj.type == 'nextTinder'){
-      playingNumbers = clientCount;
       playingAlready = true;
       broadcast(message);
     }
