@@ -261,6 +261,8 @@ const server = http.createServer(app);
 
 const wss = new WebSocket.Server({server});
 
+let voteResults = [];
+
 let clientCount = 0;
 let voteCount = 0; // how many people have voted this round
 const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
@@ -272,26 +274,26 @@ wss.on('connection', (ws) => {
   clientCount += 1;
   console.log("a new client, now ", clientCount, "users connected");
   ws.on('message', (message) => {
-    console.log(message);
+    //console.log(message);
     //ws.send("server echo:" + message);
     //broadcast(message)
     let cmdObj = JSON.parse(message);
-    console.log(message);
+    //console.log(message);
     if (cmdObj.type == 'message'){
       let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
     if (cmdObj.type == 'result'){
       voteCount += 1;
-      let voteResult = cmdObj.selections;
-      console.log(voteResult);
+      let voteResult = cmdObj.choice;
+      //console.log(cmdObj);
       console.log("one user's vote is", voteResult);
       for(var i = 0 ; i < numOfVotes.length ; i++){
-        if (voteResult.choice[i]){
+        if (voteResult[i]){
           numOfVotes[i] += 1;
         }
       }
-      if (voteCount == clientCount) {
+      if (voteCount >= clientCount) {
         let voteObj = {
           type: "voteCounting",
           arr: numOfVotes
@@ -301,6 +303,10 @@ wss.on('connection', (ws) => {
         
       }
     }
+    
+    // Save the data
+    if (voteResults.length >= clientCount) saveData();
+    
     /*if (cmdObj.type == 'command'){
       console.log("one user vote ", yOrN[cmdObj.choice], "on this restaurant");
       voteCount += 1;
@@ -351,6 +357,17 @@ function broadcast(data) {
     }
   });
 }
+
+function saveData() {
+  let result = {data : voteResults};
+  fs.writeFile("./voteresult.json", JSON.stringify(result), function(err) {
+        if (err) {
+          return console.log(err);
+        }
+  });
+}
+
+// -----------------------------------------------------------------
 
 // custom 404 page (not a very good one...)
 // last item in pipeline, sends a response to any request that gets here
