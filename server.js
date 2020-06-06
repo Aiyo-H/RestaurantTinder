@@ -201,6 +201,10 @@ app.post("/search", function(request, response) {
 });
 
 app.get("/info", function(request, response) {
+  let x = fs.readFileSync("/app/restaurant.json", 'utf8');
+  let data = (JSON.parse(x)).data;
+  let y = fs.readFileSync("/app/voteresult.json", 'utf8');
+  let vote = (JSON.parse(x)).arr;
   fs.readFile("/app/restaurant.json", function(err, data) {
     response.writeHead(200, { "Content-Type": "application/json" });
     //console.log(JSON.parse(data));
@@ -219,8 +223,6 @@ const wss = new WebSocket.Server({server});
 let firstVote = true;
 
 let voteResults = [];
-
-let removeList = [];
 
 let nameList = createNameList();
 
@@ -287,7 +289,6 @@ wss.on('connection', (ws) => {
         }
         voteCount = 0;
         saveData(voteObj);
-        if (removeList.length != 0) updateRemove();
         msgObj.complete = true;
       }
       broadcast(JSON.stringify(msgObj));
@@ -355,10 +356,6 @@ function saveData(result) {
   });
 }
 
-function updateRemove() {
-  
-}
-
 function changeName(n) {
   let first = false;
   if (nameList[0] == "Waiting...") first = true;
@@ -413,7 +410,6 @@ function init() {
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
   playingAlready = false;
   //playingNumbers = 0;
-  removeList = [];
 }
 
 // -----------------------------------------------------------------

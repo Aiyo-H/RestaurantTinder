@@ -82,11 +82,12 @@ img{
   font-family: "Playfair Display", serif;
   position: relative;
   left: 10px;
+  top:23px;
   border: 1px solid black;
   border-radius: 10px;
   padding: 8px;
   text-align: center;
-  width: 35%;
+  width: 40%;
   font-size: 12px;
 }
 .tinder--card p {
@@ -102,7 +103,7 @@ img{
   border-radius: 10px;
   padding: 8px;
   right: 10px;
-  top: 76%;
+  top: 78.5%;
 }
 .hoverimg {
   height: 50px;
@@ -323,10 +324,16 @@ footer p {
   #hrline2 {
     right: 3%;
   }
+  #top1{
+    width:25%;
+    position:fixed;
+    left:15%;
+    top:15%;
+  }
   .tinder--card {
     position: fixed;
     left: 10%;
-    top: 20%;
+    top: 35%;
     height: 350px;
     width: 35%;
   }
@@ -348,7 +355,7 @@ footer p {
     font-size:16px;
   }
   .choose{
-    top:77%;
+    top:78%;
   }
   button {
     margin-left: 45%;
@@ -396,16 +403,6 @@ footer p {
     right: 3%;
   }
   .rank {
-    width: 50%;
-  }
-  .tinder--card {
-    position: fixed;
-    left: 10%;
-    top: 20%;
-    height: 300px;
-    width: 30%;
-  }
-  .rank {
     position: fixed;
     right: 10%;
     width: 40%;
@@ -414,10 +411,14 @@ footer p {
     margin-left: 47%;
     bottom: 8%;
   }
+  #top1{
+    width:15%;
+    
+  }
   .tinder--card {
     position: fixed;
     left: 17%;
-    top: 20%;
+    top: 30%;
     height: 400px;
     width: 22%;
   }
