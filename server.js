@@ -369,10 +369,9 @@ function settleVotesAndFinish(current, count) {
   let finish = false;
   let before = [];
   
-  fs.readFile("/app/voteresult.json", function(err, data) {
-    //console.log(JSON.parse(data));
-    before = (JSON.parse(data)).arr;
-  });
+  let x = fs.readFileSync("/app/voteresult.json", 'utf8');
+  before = (JSON.parse(x)).arr;
+
   console.log(before);
   
   if (Math.max(...current) == 0) {
@@ -404,34 +403,23 @@ function init() {
 
 // ----------------------Final-------------------------------------
 
-
 app.get("/result", function(request, response) {
-  
   response.writeHead(200, { "Content-Type": "application/json" });
   response.write(JSON.stringify(sendResult()));
   response.end();
 });
 
 function sendResult() {
-  var rests = [];
-  var votes = [];
-  fs.readFile("/app/restaurant.json", function(err, data) {
-    for (let i = 0; i < 8; i++) {
-      rests.push((JSON.parse(data)).data[i].name);
-    }
-    console.log(rests);
-    processFile(rests);
-  });
+  let rests = [];
+  let votes = [];
   
-  fs.readFile("/app/voteresult.json", function(err, data) {
-    votes = (JSON.parse(data)).data;
-  });
-  console.log(rests);
+  let x = fs.readFileSync("/app/restaurant.json", 'utf8');
+  for (let i = 0; i < 8; i++) {
+      rests.push((JSON.parse(x)).data[i].name);
+  }
+  let y = fs.readFileSync("/app/voteresult.json", 'utf8');
+  votes = (JSON.parse(y)).arr;
   return { rests : rests, votes : votes };
-}
-
-function processFile(r) {
-  
 }
 
 // ----------------------------------------------------------------
