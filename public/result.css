@@ -36,10 +36,10 @@ body {
   pointer-events: none;
 }
 .dollar {
-  font-size: 15px;
+  font-size: 12px;
   position: absolute;
   right: 10px;
-  top: 57%;
+  top: 51%;
   font-family: "Carter One", cursive;
 }
 .restname {
@@ -286,15 +286,15 @@ footer p {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591242183375");
   }
   .hoverimg {
-    left: 20%;
+    left: 5%;
     width: 120px;
     height: 100px;
-    bottom: 15%;
+    bottom: 17%;
   }
   .hoverimg img {
     width: 300px;
     top: -170%;
-    left: -60%;
+    left: -80%;
   }
   #icon {
     width: 40%;
@@ -320,8 +320,8 @@ footer p {
     position: fixed;
     left: 10%;
     top: 20%;
-    height: 300px;
-    width: 30%;
+    height: 350px;
+    width: 35%;
   }
   .rank {
     position: fixed;
@@ -330,13 +330,23 @@ footer p {
     top: 20%;
   }
   .review{
+    font-size:13px;
     width: 40%;
   }
-  
+  .dollar{
+    font-size: 15px;
+    top:51%;
+  }
+  .restname{
+    font-size:16px;
+  }
+  .choose{
+    top:77%;
+  }
   button {
     margin-left: 45%;
     position: fixed;
-    bottom: 10%;
+    bottom: 8%;
   }
   footer {
     position: fixed;
@@ -350,14 +360,13 @@ footer p {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FToTheLeft.png?v=1591382526299");
   }
   .hoverimg {
-    left: 15%;
-    bottom: 15%;
+    left: 30%;
+    bottom: 25%;
     width: 200px;
   }
   .hoverimg img {
     width: 500px;
-    top: -300%;
-    left: -120%;
+    top: -250%;
   }
   #icon {
     width: 30%;
@@ -402,14 +411,30 @@ footer p {
     position: fixed;
     left: 17%;
     top: 20%;
-    height: 350px;
-    width: 25%;
+    height: 400px;
+    width: 22%;
+  }
+  .restname{
+    font-size:16px;
+  }
+  .location{
+    font-size:15px;
+  }
+  .dollar{
+    top:52%;
+    font-size: 17px;
   }
   .rank {
     position: fixed;
     right: 17%;
     width: 35%;
     top: 20%;
+  }
+  .review{
+    width:45%;
+  }
+  .choose{
+    top:76%;
   }
   button {
     margin-left: 47%;
