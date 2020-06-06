@@ -263,7 +263,7 @@ const wss = new WebSocket.Server({server});
 
 let voteResults = [];
 
-let nameList = {};
+let nameList = createNameList();
 
 let clientCount = 0;
 let voteCount = 0; // how many people have voted this round
@@ -280,14 +280,15 @@ wss.on('connection', (ws) => {
     //ws.send("server echo:" + message);
     //broadcast(message)
     let cmdObj = JSON.parse(message);
-    //console.log(message);
+    console.log(message);
     if (cmdObj.type == 'message'){
       let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
     if (cmdObj.type == 'name'){
       let msgObj = cmdObj;
-      msgObj.data = changeName(cmdObj.data, cmdObj.msg);
+      nameList = changeName(cmdObj.msg);
+      msgObj.data = nameList;
       broadcast(JSON.stringify(msgObj));
     }
     if (cmdObj.type == 'result'){
@@ -372,15 +373,23 @@ function saveData(result) {
   });
 }
 
-function changeName(p, n) {
+function changeName(n) {
+  let p = nameList;
   for (var i = 0; i < p.length; i++) {
-    if (p[i].innerHTML != "Waiting...") {
-      p[i].innerHTML = n;
-      p[i].style.color = "#118AB2";
+    if (p[i] != "Waiting...") {
+      p[i] = n;
       break;
     }
   }
   return p;
+}
+
+function createNameList() {
+  let l = [];
+  for (let i = 0; i < 8; i++) {
+    l.push("Waiting...");
+  }
+  return l;
 }
 
 // -----------------------------------------------------------------
