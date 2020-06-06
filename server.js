@@ -257,7 +257,7 @@ app.get("/info", function(request, response) {
   });
 });
 
-// ---------------------------------------------------------
+// --------------------websocket-------------------------------------
 
 //
 const server = http.createServer(app);
@@ -266,11 +266,11 @@ const wss = new WebSocket.Server({ server });
 
 let clientCount = 0;
 let voteCount = 0;
-const restaurantList = ["AA", "BB", "CC", "DD"];
+const restaurantList = ["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH"]; // from YELP API
 const yOrN = ["Yes", "No"];
 
 let restaurantInd = 0;
-let numOfVotes = [0, 0, 0, 0];
+let numOfVotes = [0, 0, 0, 0, 0 ,0 ,0 ,0]; // how many people vote yes for each restaurant
 let voteYes = 0;
 
 wss.on("connection", ws => {
