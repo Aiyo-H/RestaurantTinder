@@ -273,7 +273,9 @@ wss.on('connection', (ws) => {
         }; //save in obj
         // Save the data
         voteCount = 0;
-        settleVotes(numOfVotes);
+        if (settleVotesAndFinish(numOfVotes)) {
+          
+        }
         saveData(voteObj);
       }
     }
@@ -359,9 +361,21 @@ function createNameList() {
   return l;
 }
 
-function settleVotes() {
+function settleVotesAndFinish(current) {
+  let finish = false;
+  let before = [];
+  
+  fs.readFile("/app/voteresult.json", function(err, data) {
+    //console.log(JSON.parse(data));
+    before = (JSON.parse(data)).arr;
+  });
+  
+  
+  if (Math.max(...current) *1.0 / Math.max(...before) >= 1.414) && (!)
+  
   
   firstVote = false;
+  return finish;
 }
 
 
