@@ -285,7 +285,7 @@ wss.on('connection', (ws) => {
     }
     if (cmdObj.type == 'result'){
       let voteResult = cmdObj.selections
-      console.log("the result for this round is", voteResult);
+      console.log("one user's vote is", voteResult);
       var i
       for(i=0 ; i<8 ; i++){
         if (voteResult[i] == "true"){
@@ -294,10 +294,12 @@ wss.on('connection', (ws) => {
       }
       numOfVotes[restaurantInd] = voteYes;
       if (restaurantInd > 0){
-        if (numOfVotes[restaurantInd] >= numOfVotes[restaurantInd-1]*1.414)
+        if (numOfVotes[restaurantInd] >= numOfVotes[restaurantInd-1]*1.414){
+          
+        }
       }
     }
-    if (cmdObj.type == 'command'){
+    /*if (cmdObj.type == 'command'){
       console.log("one user vote ", yOrN[cmdObj.choice], "on this restaurant");
       voteCount += 1;
       console.log(voteCount, "users voted");
@@ -328,7 +330,7 @@ wss.on('connection', (ws) => {
         voteYes = 0;
         
       }
-    }
+    }*/
   })
   
   ws.on('close', ()=>{

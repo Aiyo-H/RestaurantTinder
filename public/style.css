@@ -338,7 +338,6 @@ body {
   color: gray;
 }
 .plist{
-  background-color: white;
   height: 200px;
   width: 30%;
   position: fixed;
@@ -349,7 +348,11 @@ body {
   color: #FC7753;
   text-align: center;
   padding:5px;
-  border-radius: 5px;
+}
+.dispname{
+  font-size: 15px;
+  padding-top: 5px;
+  font-family: "Playfair Display", serif;
 }
 .chatbox{
   height: 200px;
@@ -361,6 +364,7 @@ body {
   border-radius: 5px;
   text-align: center;
   border: 2px solid white;
+  background-color: hsla(0, 100%, 90%, 0.3);;
 }
 .chatbox p{
   font-family: "Carter One", cursive;
@@ -559,28 +563,15 @@ footer p {
   font-size: 20px;
 }
 .chatbox{
-  background-color: white;
   height: 300px;
   width: 45%;
   position: fixed;
   top: 20%;
   right: 10%;
   padding:5px;
-  border-radius: 5px;
-  text-align: center;
 }
 .chatbox p{
   font-size: 20px;
-}
-.chatenter{
-  background-color: white;
-  width: 45%;
-  position: fixed;
-  top: 60%;
-  right: 10%;
-  padding:5px;
-  border-radius: 50px;
-  color: #66D7D1;
 }
 }
 
