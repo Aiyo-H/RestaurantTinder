@@ -453,7 +453,7 @@ footer p {
     left: 5%;
     width: 120px;
     height: 100px;
-    bottom: 15%;
+    bottom: 17%;
   }
   .hoverimg img {
     width: 300px;
@@ -638,7 +638,7 @@ footer p {
   }
   .hoverimg img {
     width: 500px;
-    top: -400%;
+    top: -250%;
   }
   #icon {
     width: 30%;

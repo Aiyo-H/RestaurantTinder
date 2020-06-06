@@ -29,8 +29,6 @@ body {
   pointer-events: none;
 }
 .tinder--card h3 {
-  margin-top: 32px;
-  padding: 0 16px;
   pointer-events: none;
 }
 .tinder--card p {
@@ -46,9 +44,10 @@ body {
 }
 .restname {
   text-align: left;
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
-  left: 5px;
+  margin-top: 10px;
+  left: 10px;
   font-family: "Carter One", cursive;
 }
 .rest--tinder {
@@ -60,42 +59,43 @@ body {
   pointer-events: none;
 }
 .rating--tinder {
-  margin-top: 1vh;
+  margin-top: 10px;
   margin-bottom: -4vh;
   width: 40%;
   position: relative;
-  left: 16px;
-  top: 66%;
+  left: 5px;
 }
 .location {
   position: relative;
-  font-size: 18px;
-  top: 70%;
-  left: 22px;
+  font-size: 13px;
+  left: 10px;
   font-family: "Playfair Display", serif;
 }
 .review {
   font-family: "Playfair Display", serif;
   position: relative;
-  left: 20px;
+  left: 10px;
   border: 1px solid black;
   border-radius: 10px;
   padding: 8px;
   text-align: center;
-  width: 25%;
+  width: 35%;
+  font-size: 12px;
 }
 .tinder--card p {
   margin-top: 24px;
   pointer-events: none;
 }
 .choose {
+  font-size: 12px;
   font-family: "Playfair Display", serif;
   position: absolute;
   text-align: center;
-  width: 25%;
   border: 1px solid black;
   border-radius: 10px;
   padding: 8px;
+  right: 10px;
+  top: 76%;
 }
 .hoverimg {
   height: 50px;
@@ -279,8 +279,8 @@ footer p {
 }
 
 @media only screen and (min-width: 600px) {
-  html{
-    height:90%;
+  html {
+    height: 90%;
   }
   body {
     background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2FArtboard%201.png?v=1591242183375");
@@ -323,18 +323,22 @@ footer p {
     height: 300px;
     width: 30%;
   }
-  .rank{
+  .rank {
     position: fixed;
     right: 10%;
     width: 40%;
-    top:20%;
+    top: 20%;
   }
+  .review{
+    width: 40%;
+  }
+  
   button {
     margin-left: 45%;
     position: fixed;
     bottom: 10%;
   }
-  footer{
+  footer {
     position: fixed;
     bottom: 0;
   }
@@ -378,14 +382,14 @@ footer p {
   .rank {
     width: 50%;
   }
-    .tinder--card {
+  .tinder--card {
     position: fixed;
     left: 10%;
     top: 20%;
     height: 300px;
     width: 30%;
   }
-  .rank{
+  .rank {
     position: fixed;
     right: 10%;
     width: 40%;
@@ -401,13 +405,13 @@ footer p {
     height: 350px;
     width: 25%;
   }
-  .rank{
+  .rank {
     position: fixed;
     right: 17%;
     width: 35%;
-    top:20%;
+    top: 20%;
   }
-    button {
+  button {
     margin-left: 47%;
     bottom: 8%;
   }
