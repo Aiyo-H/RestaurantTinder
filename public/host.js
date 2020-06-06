@@ -28,9 +28,10 @@ function sendNewMsg(key) {
 
 let addMessage = function(message) {
   let text = document.getElementById("chatarea");
+  let newline = String.fromCharCode(13, 10);
   console.log(message);
-  console.log(text.textContent + '\n' + message);
-  text.innerText = text.textContent + '\n' + message;
+  console.log(text.textContent + '&#13;&#10;' + message);
+  text.innerHTML = text.textContent + newline + message;
 };
 
 connection.onopen = () => {

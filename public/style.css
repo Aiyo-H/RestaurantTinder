@@ -417,6 +417,8 @@ input {
   outline: none;
   height: 120%;
   position: absolute;
+  font-family: "Carter One", cursive;
+  font-size: 10px;
 }
 #wait0{
   width: 60%;
