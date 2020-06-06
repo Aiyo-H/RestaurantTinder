@@ -22,8 +22,7 @@ function signName(l) {
 }
 
 function signHost(f) {
-  if (f) {
-  } else {
+  if (!f) {
     document.getElementById("butn").style.display = "none";
     document.getElementById("wait0").style.display = "block";
   }
@@ -69,8 +68,8 @@ connection.onmessage = event => {
   if (msgObj.type == "name") {
     signHost(msgObj.first);
     signName(msgObj.data);
-    addMessage("Search location: " + );
-    addMessage("Search term: " + t);
+    //addMessage("Search location: " + msgObj.location);
+    //addMessage("Search term: " + msgObj.term);
     addMessage("Welcome " + msgObj.msg + "!");
   }
   if (msgObj.type == "nextTinder") {
