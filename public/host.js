@@ -4,15 +4,13 @@ const clientname = animalList[Math.floor(Math.random() * animalList.length)];
 const url = "wss://weak-playful-winterberry.glitch.me";
 const connection = new WebSocket(url);
 
-let e = document.getElementById("newMsg");
-e.addEventListener("change", sendNewMsg);
-let button1 = document.getElementById("btn1");
-let button2 = document.getElementById("btn2");
-let progressBar = document.getElementById("progress");
-let restaurant = document.getElementById("restaurant");
+let e = document.getElementById("chat");
+e.addEventListener('keydown', sendNewMsg);
 
-function sendNewMsg() {
-  let e = document.getElementById("newMsg");
+function sendNewMsg(key) {
+  if (e.keyCode != 13) return;
+  console.log("send");
+  let e = document.getElementById("chat");
   let msgObj = {
     type: "message",
     from: clientname,
@@ -38,22 +36,13 @@ connection.onerror = error => {
 
 connection.onmessage = event => {
   console.log(event.data);
+  if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
-  } else if (msgObj.type == "command") {
-    console.log("next");
-    progressBar.textContent = "Please chose...";
-    restaurant.textContent = "Restaurant " + msgObj.info;
-  } else if (msgObj.type == "end") {
-    progressBar.textContent = msgObj.info + " is your choice, go and enjoy!";
-    restaurant.textContent = "Restaurant " + msgObj.info;
-    button1.style.display = "none";
-    button2.style.display = "none";
-  } else {
-    addMessage(msgObj.type);
   }
 };
+
 
 
 // Enter

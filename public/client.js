@@ -59,19 +59,9 @@ connection.onerror = error => {
 
 connection.onmessage = event => {
   console.log(event.data);
+  if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
-  } else if (msgObj.type == "command") {
-    console.log("next");
-    progressBar.textContent = "Please chose...";
-    restaurant.textContent = "Restaurant " + msgObj.info;
-  } else if (msgObj.type == "end") {
-    progressBar.textContent = msgObj.info + " is your choice, go and enjoy!";
-    restaurant.textContent = "Restaurant " + msgObj.info;
-    button1.style.display = "none";
-    button2.style.display = "none";
-  } else {
-    addMessage(msgObj.type);
   }
 };
