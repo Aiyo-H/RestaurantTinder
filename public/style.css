@@ -299,7 +299,7 @@ body {
   border-radius: 10px;
   padding: 8px;
 }
-.choose{
+.choose {
   font-family: "Playfair Display", serif;
   position: fixed;
   top: 80%;
@@ -404,6 +404,19 @@ body {
   content: attr(data-placeholder);
   color: gray;
   font-family: "Vidaloka", serif;
+}
+input {
+  border: none; 
+}
+#chatarea {
+  right:4%;
+  background: transparent;
+  color: black;
+  border: 0 none;
+  width: 90%;
+  outline: none;
+  height: 120%;
+  position: absolute;
 }
 footer {
   text-align: center;
@@ -736,8 +749,8 @@ footer p {
     right: 15%;
     top: 60%;
   }
-  .chatenter{
-    top:60%;
+  .chatenter {
+    top: 60%;
     width: 28%;
     right: 15%;
   }

@@ -5,10 +5,14 @@ const url = "wss://weak-playful-winterberry.glitch.me";
 const connection = new WebSocket(url);
 
 let e = document.getElementById("chat");
-e.addEventListener('keydown', sendNewMsg);
+//e.addEventListener('keydown', sendNewMsg);
 
 let p = document.getElementById("plist1");
 p.innerHTML = clientname;
+p.style.color = "#118AB2";
+
+let n = document.getElementById("name");
+n.vaule = clientname;
 
 function sendNewMsg(key) {
   if (key.keyCode != 13) return;
