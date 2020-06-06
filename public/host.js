@@ -7,12 +7,18 @@ const connection = new WebSocket(url);
 let e = document.getElementById("chat");
 e.addEventListener('change', sendNewMsg);
 
-let p = document.getElementById("plist1");
-p.innerHTML = clientname;
-p.style.color = "#118AB2";
-
 let n = document.getElementById("name");
 n.innerHTML = clientname;
+
+// Assign the name
+connection.send(JSON.stringify({type: "name", msg: clientname}));
+
+function signName() {
+  let p = document.querySelectorAll('.dispname');
+  for (var i = 0; i < )
+  p.innerHTML = clientname;
+  p.style.color = "#118AB2";
+}
 
 function sendNewMsg(key) {
   console.log("send");
@@ -29,9 +35,9 @@ function sendNewMsg(key) {
 let addMessage = function(message) {
   let text = document.getElementById("chatarea");
   let newline = String.fromCharCode(13, 10);
-  console.log(message);
-  console.log(text.textContent + '&#13;&#10;' + message);
-  text.innerHTML = text.textContent + newline + message;
+  //console.log(message);
+  //console.log(text.textContent + '&#13;&#10;' + message);
+  text.innerHTML = text.textContent == "" ? text.textContent + message : text.textContent + newline + message;
 };
 
 connection.onopen = () => {
@@ -46,6 +52,9 @@ connection.onmessage = event => {
   console.log(event.data);
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
+  if (msgObj.type == "message") {
+    addMessage(msgObj.from + ": " + msgObj.msg);
+  }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
