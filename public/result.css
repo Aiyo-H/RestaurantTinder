@@ -13,6 +13,17 @@ body {
   background-position: right 0% bottom 0%;
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
+.tinder--card {
+  display: block;
+  margin: 0 auto;
+  width: 55%;
+  height: 50%;
+  border-radius: 10px;
+  background: #FFFFFF;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  top: 12%;
+}
 .hoverimg {
   height: 50px;
   width: 100px;
@@ -167,7 +178,7 @@ body {
   height: 18px;
   background-color: #f44336;
 }
-button{
+button {
   border: none;
   width: 50px;
   height: 50px;
@@ -175,8 +186,9 @@ button{
   margin-bottom: 20px;
   border-radius: 50px;
   margin-left: 42%;
+  background-color: white;
 }
-button i{
+button i {
   font-size: 30px;
   color: orange;
 }
@@ -228,7 +240,7 @@ footer p {
   #hrline2 {
     right: 3%;
   }
-  button{
+  button {
     margin-left: 45%;
   }
 }
@@ -268,10 +280,10 @@ footer p {
   #hrline2 {
     right: 3%;
   }
-  .rank{
+  .rank {
     width: 50%;
   }
-  button{
+  button {
     margin-left: 47%;
   }
 }
