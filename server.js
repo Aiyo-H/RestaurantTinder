@@ -110,12 +110,12 @@ app.use(express.json());
 app.use("/images", express.static("images"));
 
 var playingAlready = false;
+var playingNumbers = 9;
 
 // Handle GET request to base URL with no other route specified
 // by sending index.html, the main page of the app
 app.get("/", function(request, response) {
-  if (!playingAlready) response.sendFile(__dirname + "/public/index.html");
-  if (playingAlready) response.sendFile("http://www.google.com");
+  response.sendFile(__dirname + "/public/index.html");
 });
 
 // The GET AJAX query is handled by the static server, since the
@@ -236,7 +236,7 @@ let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each res
 wss.on('connection', (ws) => {
   clientCount += 1;
   console.log("a new client, now ", clientCount, "users connected");
-  if (clientCount >= 8) playingAlready = true;
+  if (clientCount >= 8) playingNumbers = 8;
   ws.on('message', (message) => {
     //console.log(message);
     //ws.send("server echo:" + message);
@@ -259,6 +259,7 @@ wss.on('connection', (ws) => {
     }
     // Redirect to Tinder.html
     if (cmdObj.type == 'nextTinder'){
+      playingNumbers = clientCount;
       broadcast(message);
     }
     // Compute the result of Tinder
@@ -405,6 +406,7 @@ function init() {
   firstVote = true;
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
   playingAlready = false;
+  playingNumbers = 9;
 }
 
 // -----------------------------------------------------------------
