@@ -65,6 +65,7 @@ body {
   width: 75%;
 }
 .heading {
+  color: #D64045;
   margin-top: 10px;
   display: inline-block;
   font-size: 20px;
@@ -87,6 +88,7 @@ body {
 .side {
   color: #D64045;
   margin-top: 10px;
+  text-shadow: 0 0 5px white;
 }
 
 .middle {
@@ -97,9 +99,9 @@ body {
 
 /* Place text to the right */
 .vote {
+  color: #1D3354;
   text-align: right;
   font-family: "Carter One", cursive;
-  text-shadow: 0 0 5px white;
   font-size: 20px;
 }
 
@@ -252,6 +254,9 @@ footer p {
   }
   #hrline2 {
     right: 3%;
+  }
+  .rank{
+    width: 50%;
   }
 }
 
