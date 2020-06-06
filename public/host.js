@@ -53,11 +53,12 @@ connection.onerror = error => {
 };
 
 connection.onmessage = event => {
-  console.log(event);
+  console.log(event.data);
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "name") {
-    //signName();
+    let p = document.querySelectorAll('.dispname');
+    p = msgObj.data;
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);

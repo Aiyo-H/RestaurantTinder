@@ -286,8 +286,9 @@ wss.on('connection', (ws) => {
       broadcast(message);
     }
     if (cmdObj.type == 'name'){
-      //let msgObj = {type : 'message', info : cmdObj.msg};
-      broadcast(message);
+      let msgObj = cmdObj;
+      msgObj.data = changeName(cmdObj.data, cmdObj.msg);
+      broadcast(JSON.stringify(msgObj));
     }
     if (cmdObj.type == 'result'){
       voteCount += 1;
@@ -369,6 +370,17 @@ function saveData(result) {
           return console.log(err);
         }
   });
+}
+
+function changeName(p, n) {
+  for (var i = 0; i < p.length; i++) {
+    if (p[i].innerHTML != "Waiting...") {
+      p[i].innerHTML = n;
+      p[i].style.color = "#118AB2";
+      break;
+    }
+  }
+  return p;
 }
 
 // -----------------------------------------------------------------
