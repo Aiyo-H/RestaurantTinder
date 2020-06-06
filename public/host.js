@@ -22,7 +22,8 @@ function signName(l) {
 }
 
 function signHost(f) {
-  if (!f) {
+  if (f) {
+  } else {
     document.getElementById("butn").style.display = "none";
     document.getElementById("wait0").style.display = "block";
   }
@@ -54,7 +55,7 @@ document.querySelector('#butn').addEventListener('click', () => {connection.send
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
   // Assign the name
-  connection.send(JSON.stringify({type: "name", data: [], msg: clientname, first: false}));
+  connection.send(JSON.stringify({type: "name", data: [], msg: clientname, first: false, location: "", term: ""}));
 };
 
 connection.onerror = error => {
@@ -66,8 +67,11 @@ connection.onmessage = event => {
   if (event.data == "connected!") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "name") {
-    signName(msgObj.data);
     signHost(msgObj.first);
+    signName(msgObj.data);
+    addMessage("Search location: " + );
+    addMessage("Search term: " + t);
+    addMessage("Welcome " + msgObj.msg + "!");
   }
   if (msgObj.type == "nextTinder") {
     window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
