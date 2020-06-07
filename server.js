@@ -201,6 +201,7 @@ app.get("/info", function(request, response) {
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
   let data = (JSON.parse(x)).data;
   let y = fs.readFileSync("/app/voteresult.json", 'utf8');
+  console.log(y);
   let vote = (JSON.parse(y)).arr;
   response.writeHead(200, { "Content-Type": "application/json" });
   response.write(JSON.stringify({ data: data, vote : vote, first : firstVote }));
@@ -289,10 +290,10 @@ wss.on('connection', (ws) => {
           msgObj.finish = true;
           numPlayers = clientCount;
           playingAlready = false;
-          sendResult();
         }
         voteCount = 0;
         saveData(voteObj);
+        sendResult();
         msgObj.complete = true;
       }
       broadcast(JSON.stringify(msgObj));
