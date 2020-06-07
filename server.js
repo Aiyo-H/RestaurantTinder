@@ -221,8 +221,10 @@ let voteResults = [];
 let nameList = createNameList();
 
 let clientCount = 0;
+
 let voteCount = 0; // how many people have voted this round
-const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
+
+//const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
 
 let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each restaurant
 
