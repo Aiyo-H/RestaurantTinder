@@ -27,9 +27,9 @@ window.onload = () => {
 function signName(l) {
   let p = document.querySelectorAll('.dispname');
   for (var i = 0; i < p.length; i++) {
-    if (l[i] == "Waiting...") return;
     p[i].innerHTML = l[i];
-    p[i].style.color = "#118AB2";
+    if (l[i] != "Waiting...") p[i].style.color = "#118AB2";
+    else p[i].style.color = "#FC7753";
   }
 }
 
@@ -40,6 +40,15 @@ function signHost(f) {
     document.getElementById("butn").style.display = "none";
     document.getElementById("wait0").style.display = "block";
   } else firstPlayer = true;
+}
+
+function updateHost(f) {
+  //console.log(firstPlayer);
+  if (f) {
+    if (firstPlayer) return;
+    document.getElementById("butn").style.display = "block";
+    document.getElementById("wait0").style.display = "none";
+  } else firstPlayer = false;
 }
 
 function sendNewMsg(key) {
@@ -102,7 +111,12 @@ connection.onmessage = event => {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
   if (msgObj.type == "closeCmd") {
-    console.log(msgObj);
+    if (clientname == msgObj.data[0]) {
+      firstPlayer = true;
+      signHost(true);
+    }
+    signName(msgObj.data);
+    addMessage(msgObj.client + " disconnected!");
   }
 };
 
