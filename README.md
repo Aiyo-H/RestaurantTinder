@@ -94,3 +94,5 @@ This is calculated by `(A/2) * (1 + x%) ^ 2 = A`, where `A` is the number of pla
 5. Autocomplete: *https://leaverou.github.io/awesomplete*
 
 6. YelpAPI: *https://github.com/Yelp/yelp-fusion#code-samples*
+
+7. ResultRatingBoard: *https://www.w3schools.com/howto/howto_css_user_rating.asp*
