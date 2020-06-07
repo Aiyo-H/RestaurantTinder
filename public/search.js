@@ -6,7 +6,7 @@ document.querySelector("#forgot").addEventListener("click", () => {
 
 document.querySelector("#butn3").addEventListener("click", function() {
   let search_location = document.getElementById("textarea1").textContent == "" ? "davis, ca" : document.getElementById("textarea1").textContent;
-  let search_term = document.getElementById("textarea2").textContent == "" ? "coffee" : document.getElementById("textarea2").textContent;
+  let search_term = document.getElementById("textarea2").textContent == "" ? "Cafes" : document.getElementById("textarea2").textContent;
   let xhr = new XMLHttpRequest();
   let info = {
     location: search_location,

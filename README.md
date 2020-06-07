@@ -18,11 +18,11 @@ Main background color: #FFCF99
 
 Footer background color: #FFC07F
 
-Text colors: #F15156; #f15156; 
+Text colors: #F15156; #F15156; #FC7753;
 
 3. Icons from Fontawesome
 
-4. 
+4. Logo and UI images designed by team Yearbook Haters
 
 
 
