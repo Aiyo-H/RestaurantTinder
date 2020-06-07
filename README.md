@@ -2,8 +2,19 @@ A cool website helps you choose a good restaurant when you can't decide.
 
 ٩(◕‿◕｡)۶
 # How to use our website:
-1. One person click on "Go", get a new link which can share with others.
-2. Click on "Star"
+1. One person click on "Go", get a new link which can share with others by copy or email(players who entering game through this link will go to chat page directly).
+
+2. Click on "Start Game", enter location and keyword for restaurants in new page.
+
+3. Click on "Get Restaurant", go to chat page and waiting for other players to join in. 
+The first person who entering this page will be the host, not always the one who start the game and enter infomation.
+Only host can start game.
+
+4. Host starts game, everyone will be in the tinder page and make choice. 
+After all players make their choices they will see the result page. 
+If they did not get a result through one round, the tinder game will automatically continue the next round(explanation in # Principal).
+
+
 
 # Design
 
