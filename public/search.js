@@ -24,6 +24,7 @@ document.querySelector("#butn3").addEventListener("click", function() {
 });
 
 // Autocompletion
+// Reference: https://leaverou.github.io/awesomplete
 var input = document.getElementById("textarea2");
 var awesomplete = new Awesomplete(input);
 awesomplete.list = categoryList;
