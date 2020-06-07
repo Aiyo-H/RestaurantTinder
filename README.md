@@ -30,7 +30,19 @@ https://thenounproject.com
 
 
 # Implementation
+1.
 
+2.
+
+3.
+
+4. 
+
+5.
+
+6.
+
+7.
 # Principal
 
 # Reference List
@@ -43,7 +55,7 @@ https://thenounproject.com
 
 4. CategoryList: https://www.yelp.com/developers/documentation/v3/all_category_list
 
-5. ?Websocket: ?
+5. Websocket: ?
 
 6. Autocomplete: 
 

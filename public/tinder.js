@@ -3,6 +3,7 @@
 var data = [];
 var voteList = [];
 var removeList = [];
+var restl = 8;
 var firstVote = true;
 
 window.onload = () => {
@@ -15,9 +16,23 @@ window.onload = () => {
     voteList = restaurant.vote;
     firstVote = restaurant.first;
     
-    console.log(data[0].image_url);
+    console.log(data.length);
     console.log(voteList);
     console.log(firstVote);
+    
+    for (var i = 0; i < data.length; i++) {
+      if (!(data[i].hasOwnProperty('name'))) {
+        restl = i;
+        break;
+      }
+    }
+    
+    if (firstVote && restl < 8) {
+      for (var i = 0; i < 8; i++) {
+        if (restl <= i) removeList.push(i);
+      }
+    }
+    console.log(removeList);
     
     for (var i = 0; i < voteList.length; i++) {
       if ((voteList[i] == 0) && (!firstVote)) removeList.push(i);
