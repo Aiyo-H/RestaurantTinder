@@ -368,6 +368,16 @@ function settleVotesAndFinish(current, count) {
     finish = true;
   }
   
+  let notZeros = 0;
+  
+  for (let i = 0; i < current.length; i++) {
+    if (current[i] != 0) notZeros += 1;
+  }
+  
+  if (notZeros == 1 || notZeros == 0) {
+    finish = true;
+  }
+  
   firstVote = false;
   return finish;
 }
@@ -401,6 +411,11 @@ app.get("/result", function(request, response) {
 });
 
 function sendResult(V) {
+  
+  rests = [];
+  votes = [];
+  selectRests = [];
+  pick = {};
   
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
   for (let i = 0; i < 8; i++) {
