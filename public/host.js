@@ -98,7 +98,9 @@ connection.onmessage = event => {
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
-  if (msgObj.type == )
+  if (msgObj.type == "dis"){
+    addMessage(msgObj.client + msgObj.msg);
+  }
 };
 
 // NEXT HTML

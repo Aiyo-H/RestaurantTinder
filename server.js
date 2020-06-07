@@ -248,7 +248,8 @@ wss.on('connection', (ws) => {
       broadcast(message);
     }
     if (cmdObj.type == 'closeCmd'){
-      broadcast(cmdObj.client, cmdObj.msg);
+      let msgObj = {type: 'dis', msg:'disconnected', client:cmdObj.client}
+      broadcast(JSON.stringify(msgObj));
     }
     // Assign the names for players
     if (cmdObj.type == 'name'){

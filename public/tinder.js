@@ -27,7 +27,7 @@ window.onload = () => {
       document.getElementsByClassName("tinder--card")[removeList[i] - i].remove();
     }
     
-    let img, name, rating, dollar, location, reviews;
+    let img, name, rating, dollar, location, reviews, chosen;
     for (var i = 0; i < 8; i++) {
       if (removeList.includes(i)) continue;
       
@@ -54,6 +54,8 @@ window.onload = () => {
       // Reviews
       reviews = 'review' + (i + 1).toString();
       document.getElementById(reviews).innerHTML = data[i].review_count.toString() + ' reviews';
+      
+      chosen = 'choose';
     }
   });
   xhr.send(null);
@@ -218,8 +220,8 @@ function stopTinder() {
     complete: false,
     finish: false
   };
-  //connection.send(JSON.stringify(cmdObj));
-  //wait();
+  connection.send(JSON.stringify(cmdObj));
+  wait();
   //window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
 }
 
