@@ -12,11 +12,11 @@ body {
   background-position: right 0% bottom 0%;
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
-#top1{
+#top1 {
   margin: 0 auto;
   margin-top: 10px;
 }
-img{
+img {
   display: block;
   width: 35%;
   border-top-left-radius:10px;
