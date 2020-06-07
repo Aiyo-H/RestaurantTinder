@@ -424,6 +424,7 @@ function sendResult(V) {
 app.get("/play", function(request, response) {
   response.write(JSON.stringify({playing : playingAlready, client : clientCount}));
   response.end();
+  if (clientCount == 0) playingAlready = false;
 });
 
 
