@@ -43,9 +43,9 @@ function signHost(f) {
 }
 
 function updateHost(f) {
-  //console.log(firstPlayer);
+  console.log(firstPlayer);
   if (f) {
-    if (firstPlayer) return;
+    if (!firstPlayer) return;
     document.getElementById("butn").style.display = "block";
     document.getElementById("wait0").style.display = "none";
   } else firstPlayer = false;
@@ -113,7 +113,7 @@ connection.onmessage = event => {
   if (msgObj.type == "closeCmd") {
     if (clientname == msgObj.data[0]) {
       firstPlayer = true;
-      signHost(true);
+      updateHost(true);
     }
     signName(msgObj.data);
     addMessage(msgObj.client + " disconnected!");

@@ -36,7 +36,7 @@ https://thenounproject.com
 
 3.
 
-4. 
+4. Live Chat Box
 
 5.
 
