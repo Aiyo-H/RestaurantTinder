@@ -156,7 +156,7 @@ const categoryList = [
   "Vegetarian",
   "Vietnamese",
   "Waffles",
-  "Wraps"
+  "Wraps",
 ];
 
 export {categoryList}
