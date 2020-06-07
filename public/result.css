@@ -211,42 +211,42 @@ img{
 }
 
 /* Individual bars */
-#0# {
+.bar-1 {
   width: 60%;
   height: 18px;
   background-color: #4CAF50;
 }
-#1#{
+.bar-2 {
   width: 30%;
   height: 18px;
   background-color: #2196F3;
 }
-#2# {
+.bar-3 {
   width: 10%;
   height: 18px;
   background-color: #00bcd4;
 }
-#3#{
+.bar-4 {
   width: 4%;
   height: 18px;
   background-color: #ff9800;
 }
-#4# {
+.bar-5 {
   width: 1%;
   height: 18px;
   background-color: #f44336;
 }
-#5# {
+.bar-6 {
   width: 1%;
   height: 18px;
   background-color: #f44336;
 }
-#6# {
+.bar-7 {
   width: 1%;
   height: 18px;
   background-color: #f44336;
 }
-#7# {
+.bar-8 {
   width: 1%;
   height: 18px;
   background-color: #f44336;

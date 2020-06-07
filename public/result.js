@@ -7,7 +7,7 @@ window.onload = () => {
     let rests, votes, numPlayers;
     let tmp = 8;
     let container = document.getElementsByClassName("bar-container");
-    console.log(container);
+    console.log(container[0]);
     numPlayers = result.players;
     
     for (var i = 0; i < 8; i++) {
@@ -20,13 +20,15 @@ window.onload = () => {
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
       let perce = Math.round((result.votes[i]/tmp)*100) + "%";
+      let barN = "bar-"+i+1;
+      let current = document.getElementsByClassName(barN);
+      console.log(current[0]);
       console.log(tmp);
       console.log(result.votes[i]/tmp);
       console.log(Math.round((result.votes[i]/tmp)*100));
       console.log(result.votes[i]);
       console.log(perce);
-      let current = document.getElementsById(i+"#");
-      current.style.width = perce; 
+      current.style.width = perce;
     }
     
     
