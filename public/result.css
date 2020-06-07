@@ -317,16 +317,16 @@ footer p {
     right: 3%;
   }
   #top1{
-    width:25%;
+    width:20%;
     position:fixed;
-    left:15%;
+    left:18%;
     top:15%;
   }
   .tinder--card {
     position: fixed;
     left: 10%;
-    top: 35%;
-    height: 350px;
+    top: 30%;
+    height: 45%;
     width: 35%;
   }
   .rank {

@@ -204,13 +204,10 @@ app.post("/search", function(request, response) {
 
 app.get("/info", function(request, response) {
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
-  console.log(x);
   let data = (JSON.parse(x)).data;
   let y = fs.readFileSync("/app/voteresult.json", 'utf8');
-  console.log(y);
-  let vote = (JSON.parse(x)).arr;
+  let vote = (JSON.parse(y)).arr;
   response.writeHead(200, { "Content-Type": "application/json" });
-  console.log(vote);
   response.write(JSON.stringify({ data: data, vote : vote, first : firstVote }));
   response.end();
 });
