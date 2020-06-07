@@ -5,11 +5,10 @@ window.onload = () => {
     console.log(JSON.parse(xhr.responseText));
     let result = JSON.parse(xhr.responseText);
     let rests, votes, numPlayers;
-    let tmp = 8;
     let container = document.getElementsByClassName("bar-container");
     console.log(container[0]);
     numPlayers = result.players;
-    
+    /*let tmp = 4; test bar width*/
     for (var i = 0; i < 8; i++) {
       
       // Rests
@@ -19,15 +18,15 @@ window.onload = () => {
       // Votes
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
-      let perce = Math.round((result.votes[i]/tmp)*100) + "%";
-      let barN = "bar-"+i+1;
-      let current = document.getElementsByClassName(barN);
-      console.log(current[0]);
-      console.log(tmp);
-      console.log(result.votes[i]/tmp);
-      console.log(Math.round((result.votes[i]/tmp)*100));
+      let perce = Math.round((result.votes[i]/numPlayers)*100) + "%";
+      /*let perce = Math.round((result.votes[i]/tmp)*100) + "%";*/
+      let current = document.getElementById(i+"#");
+      /*console.log(current);
+      console.log(numPlayers);
+      console.log(result.votes[i]/numPlayers);
+      console.log(Math.round((result.votes[i]/numPlayers)*100));
       console.log(result.votes[i]);
-      console.log(perce);
+      console.log(perce);*/
       current.style.width = perce;
     }
     
