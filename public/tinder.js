@@ -7,7 +7,6 @@ var firstVote = true;
 
 window.onload = () => {
   //document.getElementsByClassName("tinder--card")[0].remove();
-  //let removeList = [0];
   let xhr = new XMLHttpRequest();
   xhr.open("GET", '/info');
   xhr.addEventListener("load", () => {
@@ -20,9 +19,19 @@ window.onload = () => {
     console.log(voteList);
     console.log(firstVote);
     
+    for (var i = 0; i < voteList.length; i++) {
+      if ((voteList[i] == 0) && (!firstVote)) removeList.push(i);
+    }
+    
+    removeList = [0, 2, 4];
+    
+    for (var i = 0; i < removeList.length; i++) {
+      document.getElementsByClassName("tinder--card")[removeList[i]].remove();
+    }
+    
     let img, name, rating, dollar, location, reviews;
     for (var i = 0; i < 8; i++) {
-      //if (removeList.includes(i)) continue;
+      if (removeList.includes(i)) continue;
       
       // Images
       img = 'rest' + (i + 1).toString();

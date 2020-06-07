@@ -425,14 +425,14 @@ footer p {
     position: fixed;
     right: 17%;
     width: 35%;
-    top: 20%;
+    top: 23%;
   }
   .review{
     width:45%;
   }
   button {
     margin-left: 47%;
-    bottom: 8%;
+    bottom: 5%;
   }
 }
 
