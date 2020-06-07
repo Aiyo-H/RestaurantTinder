@@ -83,7 +83,7 @@ connection.onclose = function(){
 }
 connection.onmessage = event => {
   console.log(event.data);
-  if (event.data == "connected!") return;
+  if (event.data == "connected!" || event.data == "Disconnected") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "name") {
     signHost(msgObj.first);
@@ -98,8 +98,6 @@ connection.onmessage = event => {
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
-  
-  
 };
 
 // NEXT HTML
