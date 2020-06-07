@@ -146,27 +146,26 @@ body {
   padding: 20px;
   font-size: 20px;
   font-family: "Playfair Display", serif;
-  height: 175px;
+  height: 150px;
   color: #721121;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 20px;
   width: 65%;
   margin: 0 auto;
 }
 #textarea1,
 #textarea2 {
+  font-family: "Playfair Display", serif;
   font-size: 13px;
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   border: 1px solid #721121;
   border-radius: 5px;
+  width: 100%;
 }
 #textarea1 {
-  margin-bottom: 10px;
-}
-#textarea2 {
-  height: 50px;
+  margin-bottom: 20px;
 }
 #forgot {
   font-size: 14px;
@@ -543,10 +542,10 @@ footer p {
   }
   .enter {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 25%;
     font-size: 18px;
-    height: 180px;
+    height: 150px;
     width: 50%;
   }
   #forgot {
@@ -709,7 +708,7 @@ footer p {
     top: 25%;
     left: 31%;
     font-size: 18px;
-    height: 180px;
+    height: 140px;
     width: 35%;
   }
   #forgot {

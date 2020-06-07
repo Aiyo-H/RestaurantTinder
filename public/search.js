@@ -1,12 +1,14 @@
 "use strict";
 
+import {categoryList} from "/category.js";
+
 document.querySelector("#forgot").addEventListener("click", () => {
   window.location = "https://weak-playful-winterberry.glitch.me/game.html";
 });
 
 document.querySelector("#butn3").addEventListener("click", function() {
-  let search_location = document.getElementById("textarea1").textContent == "" ? "davis, ca" : document.getElementById("textarea1").textContent;
-  let search_term = document.getElementById("textarea2").textContent == "" ? "Cafes" : document.getElementById("textarea2").textContent;
+  let search_location = document.getElementById("textarea1").value == "" ? "davis, ca" : document.getElementById("textarea1").value;
+  let search_term = document.getElementById("textarea2").value == "" ? "Cafes" : document.getElementById("textarea2").value;
   let xhr = new XMLHttpRequest();
   let info = {
     location: search_location,
@@ -21,9 +23,8 @@ document.querySelector("#butn3").addEventListener("click", function() {
   xhr.send(JSON.stringify(info));
 });
 
-
+// Autocompletion
 
 var input = document.getElementById("textarea2");
 var awesomplete = new Awesomplete(input);
-
-awesomplete.list = ["Ada", "Java", "JavaScript", "Brainfuck", "LOLCODE", "Node.js", "Ruby on Rails"];
+awesomplete.list = categoryList;
