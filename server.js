@@ -398,14 +398,25 @@ app.get("/result", function(request, response) {
 function sendResult() {
   let rests = [];
   let votes = [];
+  let selectRests = [];
+  let pick = {};
   
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
   for (let i = 0; i < 8; i++) {
       rests.push((JSON.parse(x)).data[i].name);
   }
+  
   let y = fs.readFileSync("/app/voteresult.json", 'utf8');
   votes = (JSON.parse(y)).arr;
-  return { rests : rests, votes : votes, players : numPlayers};
+  
+  let numVotes = Math.max(...votes);
+  for (let i = 0; i < 8; i++) {
+    if (votes[i] == numVotes) selectRests.push(i);
+  }
+  let select = selectRests[Math.floor(Math.random() * selectRests.length)];
+  pick = (JSON.parse(x)).data[select];
+  
+  return { rests : rests, votes : votes, players : numPlayers, pick : pick};
 }
 
 // ----------------------------------------------------------------

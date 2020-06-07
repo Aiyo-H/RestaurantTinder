@@ -18,25 +18,56 @@ window.onload = () => {
       // Votes
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
-      total += result.votes[i];
-      //container[i].style.width = 
+      let perce = Math.round((result.votes[i]/numPlayers)*100) + "%";
+      console.log(result.votes[i]);
+      console.log(perce);
+      container[i].style.width = perce; 
     }
     
-    总人数是 numPlayers 
-    那每个bar的百分比就是vote的人数/总人数？okok
-    嗯
-    votes是那个vote的list
     
     
-    document.getElementById("rest1").src = "https://s3-media3.fl.yelpcdn.com/bphoto/oHN-1eHRJAz3eoFaCOB5WA/o.jpg";
-    document.getElementById("restname1").innerHTML = "Temple Coffee Roasters";
-    document.getElementById("dollar1").innerHTML = "$";
-    document.getElementById("rating1").src = "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F6.png?v=1591398893926";
+    
+    document.getElementById("rest1").src = result.pick.image_url;
+    document.getElementById("restname1").innerHTML = result.pick.name;
+    document.getElementById("dollar1").innerHTML = ((result.pick.hasOwnProperty('price')) ? result.pick.price : '?');;
+    document.getElementById("rating1").src = getRating(result.pick.rating);
     document.getElementById("location1").innerHTML = "239 G St, Davis, CA 95616";
     document.getElementById("review1").innerHTML = "445 reviews";
+    
     document.querySelector("#bun").addEventListener("click", () => {
       window.location = "https://weak-playful-winterberry.glitch.me";
     });
   });
   xhr.send(null);
 };
+
+
+function getRating(e) {
+  switch (e) {
+    // Asssets created by Jean from Noun Project
+    case 0:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F0.png?v=1591398893926";
+    case 0.5:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F1.png?v=1591398893926";
+    case 1:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F2.png?v=1591398893926";
+    case 1.5:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F3.png?v=1591398893926";
+    case 2:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F4.png?v=1591398893926";
+    case 2.5:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F5.png?v=1591398893926";
+    case 3:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F6.png?v=1591398893926";
+    case 3.5:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F7.png?v=1591398893926";
+    case 4:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F8.png?v=1591398893926";
+    case 4.5:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F9.png?v=1591398893926";
+    case 5:
+      return "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F10.png?v=1591398893926";
+    default:
+      return "/";
+  }
+}
