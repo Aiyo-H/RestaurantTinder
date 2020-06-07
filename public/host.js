@@ -72,7 +72,7 @@ connection.onerror = error => {
   console.log(`WebSocket error: ${error}`);
 };
 
-connection.onclose = () =>{
+connection.onclose = function(){
   let closeObj = {
     type: "closeCmd",
     client: clientname,

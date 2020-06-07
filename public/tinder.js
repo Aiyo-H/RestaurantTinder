@@ -55,7 +55,9 @@ window.onload = () => {
       reviews = 'review' + (i + 1).toString();
       document.getElementById(reviews).innerHTML = data[i].review_count.toString() + ' reviews';
       
-      chosen = 'choose';
+      // Chosen
+      chosen = 'choose' + (i + 1).toString();
+      document.getElementById(chosen).innerHTML = firstVote ? '0 chosen' : (voteList[i] + ' chosen');
     }
   });
   xhr.send(null);
