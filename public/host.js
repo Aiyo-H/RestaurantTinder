@@ -72,6 +72,10 @@ connection.onerror = error => {
   console.log(`WebSocket error: ${error}`);
 };
 
+connection.onclose = () =>{
+  
+  connection.send()
+}
 connection.onmessage = event => {
   console.log(event.data);
   if (event.data == "connected!") return;

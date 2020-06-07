@@ -331,6 +331,7 @@ wss.on('connection', (ws) => {
     if (clientCount == 8) {playingAlready = false;}
     if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected");
+    
   });
   ws.send('connected!');
   
