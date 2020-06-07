@@ -21,7 +21,6 @@ window.onload = () => {
     document.getElementById("rating1").src = "https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2F6.png?v=1591398893926";
     document.getElementById("location1").innerHTML = "239 G St, Davis, CA 95616";
     document.getElementById("review1").innerHTML = "445 reviews";
-    document.getElementById("choose1").innerHTML = "5 chosen";
     document.querySelector("#bun").addEventListener("click", () => {
       window.location = "https://weak-playful-winterberry.glitch.me";
     });

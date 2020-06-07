@@ -62,9 +62,6 @@ let addMessage = function(message) {
   text.innerHTML = text.textContent == "" ? text.textContent + message : text.textContent + newline + message;
 };
 
-// NEXT HTML
-document.querySelector('#butn').addEventListener('click', () => {connection.send(JSON.stringify({ type: "nextTinder" }));});
-
 connection.onopen = () => {
   connection.send(JSON.stringify({ type: "helloClient" }));
   // Assign the name
@@ -93,3 +90,6 @@ connection.onmessage = event => {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
 };
+
+// NEXT HTML
+document.querySelector('#butn').addEventListener('click', () => {connection.send(JSON.stringify({ type: "nextTinder" }));});
