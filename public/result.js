@@ -5,8 +5,9 @@ window.onload = () => {
     console.log(JSON.parse(xhr.responseText));
     let result = JSON.parse(xhr.responseText);
     let rests, votes, numPlayers;
+    let tmp = 8;
     let container = document.getElementsByClassName("bar-container");
-    
+    console.log(container);
     numPlayers = result.players;
     
     for (var i = 0; i < 8; i++) {
@@ -18,21 +19,23 @@ window.onload = () => {
       // Votes
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
-      let perce = Math.round((result.votes[i]/numPlayers)*100) + "%";
+      let perce = Math.round((result.votes[i]/tmp)*100) + "%";
+      console.log(tmp);
+      console.log(result.votes[i]/tmp);
+      console.log(Math.round((result.votes[i]/tmp)*100));
       console.log(result.votes[i]);
       console.log(perce);
-      container[i].style.width = perce; 
+      let current = document.getElementsById(i+"#");
+      current.style.width = perce; 
     }
-    
-    
     
     
     document.getElementById("rest1").src = result.pick.image_url;
     document.getElementById("restname1").innerHTML = result.pick.name;
     document.getElementById("dollar1").innerHTML = ((result.pick.hasOwnProperty('price')) ? result.pick.price : '?');;
     document.getElementById("rating1").src = getRating(result.pick.rating);
-    document.getElementById("location1").innerHTML = "239 G St, Davis, CA 95616";
-    document.getElementById("review1").innerHTML = "445 reviews";
+    document.getElementById("location1").innerHTML = result.pick.location.display_address[0] + ', ' + result.pick.location.display_address[1];
+    document.getElementById("review1").innerHTML = result.pick.review_count.toString() + ' reviews';
     
     document.querySelector("#bun").addEventListener("click", () => {
       window.location = "https://weak-playful-winterberry.glitch.me";

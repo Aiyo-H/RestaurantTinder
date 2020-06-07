@@ -211,43 +211,43 @@ img{
 }
 
 /* Individual bars */
-.bar-1 {
-  width: 3/5;
+#0# {
+  width: 60%;
   height: 18px;
   background-color: #4CAF50;
 }
-.bar-2 {
+#1#{
   width: 30%;
   height: 18px;
   background-color: #2196F3;
 }
-.bar-3 {
+#2# {
   width: 10%;
   height: 18px;
   background-color: #00bcd4;
 }
-.bar-4 {
+#3#{
   width: 4%;
   height: 18px;
   background-color: #ff9800;
 }
-.bar-5 {
-  width: 15%;
+#4# {
+  width: 1%;
   height: 18px;
   background-color: #f44336;
 }
-.bar-6 {
-  width: 15%;
+#5# {
+  width: 1%;
   height: 18px;
   background-color: #f44336;
 }
-.bar-7 {
-  width: 15%;
+#6# {
+  width: 1%;
   height: 18px;
   background-color: #f44336;
 }
-.bar-8 {
-  width: 15%;
+#7# {
+  width: 1%;
   height: 18px;
   background-color: #f44336;
 }
