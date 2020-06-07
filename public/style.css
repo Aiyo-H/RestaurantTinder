@@ -254,8 +254,6 @@ body {
   top: 12%;
   will-change: transform;
   transition: all 0.3s ease-in-out;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
   cursor: grab;
 }
 .rest--tinder {
@@ -345,6 +343,7 @@ body {
 #refbun i {
   font-size: 30px;
   color: orange;
+  cursor: pointer;
 }
 #icon1 {
   width: 40%;
