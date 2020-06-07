@@ -1,3 +1,4 @@
+// Reference: https://www.yelp.com/developers/documentation/v3/all_category_list
 const categoryList = [
   "Afghan",
   "African",
@@ -157,3 +158,5 @@ const categoryList = [
   "Waffles",
   "Wraps"
 ];
+
+export {categoryList}

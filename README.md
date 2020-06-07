@@ -20,10 +20,26 @@ Footer background color: #FFC07F
 
 Text colors: #F15156; #F15156; #FC7753;
 
-3. Icons from Fontawesome
+3. Icons from Fontawesome and Noun Project
+
+https://fontawesome.com
+
+https://thenounproject.com
 
 4. Logo and UI images designed by team Yearbook Haters
 
 
+# Implementation
 
-加油！
+# Reference List
+
+1. Swiper: https://codepen.io/RobVermeer/pen/japZpY
+
+2. RandomString: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+
+3. AnimalList: https://gist.githubusercontent.com/borlaym/585e2e09dd6abd9b0d0a/raw/6e46db8f5c27cb18fd1dfa50c7c921a0fbacbad0/animals.json
+
+4. CategoryList: https://www.yelp.com/developers/documentation/v3/all_category_list
+
+5. Websocket:
+
