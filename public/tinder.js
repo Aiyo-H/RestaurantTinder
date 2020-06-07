@@ -23,20 +23,15 @@ window.onload = () => {
       if ((voteList[i] == 0) && (!firstVote)) removeList.push(i);
     }
     
-    removeList = [0,2];
-    
     for (var i = 0; i < removeList.length; i++) {
-      document.getElementsByClassName("tinder--card")[removeList[i]].remove();
+      document.getElementsByClassName("tinder--card")[removeList[i] - i].remove();
     }
-    console.log(removeList);
-    console.log(document.querySelectorAll('.tinder--card').length);
     
     let img, name, rating, dollar, location, reviews;
     for (var i = 0; i < 8; i++) {
       if (removeList.includes(i)) continue;
       
       // Images
-      console.log(i);
       img = 'rest' + (i + 1).toString();
       document.getElementById(img).src = data[i].image_url;
       

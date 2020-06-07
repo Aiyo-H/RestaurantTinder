@@ -73,8 +73,13 @@ connection.onerror = error => {
 };
 
 connection.onclose = () =>{
-  
-  connection.send()
+  let closeObj = {
+    type: "closeCmd",
+    client: clientname,
+    msg: "disconnected"
+  };
+  console.log(closeObj);
+  connection.send(JSON.stringify(closeObj));
 }
 connection.onmessage = event => {
   console.log(event.data);
@@ -93,6 +98,7 @@ connection.onmessage = event => {
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
   }
+  if (msgObj.type == )
 };
 
 // NEXT HTML

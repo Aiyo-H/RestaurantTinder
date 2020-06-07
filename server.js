@@ -247,6 +247,9 @@ wss.on('connection', (ws) => {
       let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
+    if (cmdObj.type == 'closeCmd'){
+      broadcast(cmdObj.client, cmdObj.msg);
+    }
     // Assign the names for players
     if (cmdObj.type == 'name'){
       let msgObj = cmdObj;
@@ -331,7 +334,7 @@ wss.on('connection', (ws) => {
     if (clientCount == 8) {playingAlready = false;}
     if (clientCount == 0) init();
     console.log("a client quit, now ", clientCount, "users connected");
-    
+    broadcast("Disconnected");
   });
   ws.send('connected!');
   
