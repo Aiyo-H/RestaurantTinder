@@ -45,6 +45,8 @@ https://thenounproject.com
 7.
 # Principal
 
+1.414
+
 # Reference List
 
 1. Swiper: https://codepen.io/RobVermeer/pen/japZpY
@@ -57,7 +59,7 @@ https://thenounproject.com
 
 5. Websocket: ?
 
-6. Autocomplete: 
+6. Autocomplete: https://leaverou.github.io/awesomplete
 
 7. YelpAPI: https://github.com/Yelp/yelp-fusion#code-samples
 
