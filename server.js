@@ -117,10 +117,8 @@ app.get("/", function(request, response) {
   response.sendFile(__dirname + "/public/index.html");
 });
 
-// The GET AJAX query is handled by the static server, since the
-// file postcardData.json is stored in /public
 
-// listen for requests :)
+// -----------------------------EmailSender-------------------------------------
 
 /*
 app.post("/sendemail", function (request, response) {
@@ -133,9 +131,6 @@ app.post("/sendemail", function (request, response) {
   }
 });
 });
-
-
-// -----------------------------EmailSender-------------------------------------
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -438,10 +433,6 @@ app.all("*", function(request, response) {
   response.status(404); // the code for "not found"
   response.send("This is not the droid you are looking for");
 });
-
-
-
-
 
 /*var listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
