@@ -258,6 +258,7 @@ wss.on('connection', (ws) => {
     }
     // Redirect to Tinder.html
     if (cmdObj.type == 'nextTinder'){
+      firstVote = true;
       playingAlready = true;
       broadcast(message);
     }
@@ -288,6 +289,7 @@ wss.on('connection', (ws) => {
           msgObj.finish = true;
           numPlayers = clientCount;
           playingAlready = false;
+          sendResult();
         }
         voteCount = 0;
         saveData(voteObj);
@@ -375,9 +377,8 @@ function settleVotesAndFinish(current, count) {
 function init() {
   nameList = createNameList();
   voteCount = 0;
-  firstVote = true && (!playingAlready);
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
-  if (!playingAlready) {playingAlready = false;}
+  if (!playingAlready) {firstVote = false;}
   //numPlayers = 0;
   //playingNumbers = 0;
 }
@@ -386,17 +387,18 @@ function init() {
 
 // ----------------------Final-------------------------------------
 
+let rests = [];
+let votes = [];
+let selectRests = [];
+let pick = {};
+
 app.get("/result", function(request, response) {
   response.writeHead(200, { "Content-Type": "application/json" });
-  response.write(JSON.stringify(sendResult()));
+  response.write(JSON.stringify({ rests : rests, votes : votes, players : numPlayers, pick : pick}));
   response.end();
 });
 
 function sendResult() {
-  let rests = [];
-  let votes = [];
-  let selectRests = [];
-  let pick = {};
   
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
   for (let i = 0; i < 8; i++) {
@@ -412,8 +414,6 @@ function sendResult() {
   }
   let select = selectRests[Math.floor(Math.random() * selectRests.length)];
   pick = (JSON.parse(x)).data[select];
-  
-  return { rests : rests, votes : votes, players : numPlayers, pick : pick};
 }
 
 // ----------------------------------------------------------------
