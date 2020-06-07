@@ -375,7 +375,7 @@ function settleVotesAndFinish(current, count) {
 function init() {
   nameList = createNameList();
   voteCount = 0;
-  firstVote = true;
+  firstVote = true && (!playingAlready);
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
   playingAlready = false;
   numPlayers = 0;
