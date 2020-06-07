@@ -212,7 +212,7 @@ img{
 
 /* Individual bars */
 .bar-1 {
-  width: 60%;
+  width: 3/5;
   height: 18px;
   background-color: #4CAF50;
 }

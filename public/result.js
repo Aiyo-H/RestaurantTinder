@@ -4,7 +4,11 @@ window.onload = () => {
   xhr.addEventListener("load", () => {
     console.log(JSON.parse(xhr.responseText));
     let result = JSON.parse(xhr.responseText);
-    let rests, votes;
+    let rests, votes, numPlayers;
+    let container = document.getElementsByClassName("bar-container");
+    
+    numPlayers = result.players;
+    
     for (var i = 0; i < 8; i++) {
       
       // Rests
@@ -14,7 +18,15 @@ window.onload = () => {
       // Votes
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
+      total += result.votes[i];
+      //container[i].style.width = 
     }
+    
+    总人数是 numPlayers 
+    那每个bar的百分比就是vote的人数/总人数？okok
+    嗯
+    votes是那个vote的list
+    
     
     document.getElementById("rest1").src = "https://s3-media3.fl.yelpcdn.com/bphoto/oHN-1eHRJAz3eoFaCOB5WA/o.jpg";
     document.getElementById("restname1").innerHTML = "Temple Coffee Roasters";

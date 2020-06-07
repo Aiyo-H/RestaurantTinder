@@ -227,6 +227,10 @@ function stopTinder() {
   //window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
 }
 
+connection.onopen = () => {
+  connection.send(JSON.stringify({ type: "tinder" }));
+};
+
 connection.onerror = error => {
   console.log(`WebSocket error: ${error}`);
 };

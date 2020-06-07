@@ -219,6 +219,8 @@ const server = http.createServer(app);
 
 const wss = new WebSocket.Server({server});
 
+let numPlayers = 0;
+
 let voteResults = [];
 
 let nameList = createNameList();
@@ -262,6 +264,10 @@ wss.on('connection', (ws) => {
       playingAlready = true;
       broadcast(message);
     }
+    // Open Tinder.html
+    if (cmdObj.type == 'tinder'){
+      playingAlready = true;
+    }
     // Compute the result of Tinder
     if (cmdObj.type == 'result'){
       voteCount += 1;
@@ -283,6 +289,7 @@ wss.on('connection', (ws) => {
         if (settleVotesAndFinish(numOfVotes, voteCount)) {
           let msgObj = cmdObj;
           msgObj.finish = true;
+          numPlayers = clientCount;
           playingAlready = false;
         }
         voteCount = 0;
@@ -374,6 +381,7 @@ function init() {
   firstVote = true;
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
   playingAlready = false;
+  numPlayers = 0;
   //playingNumbers = 0;
 }
 
@@ -397,7 +405,7 @@ function sendResult() {
   }
   let y = fs.readFileSync("/app/voteresult.json", 'utf8');
   votes = (JSON.parse(y)).arr;
-  return { rests : rests, votes : votes };
+  return { rests : rests, votes : votes, players : numPlayers};
 }
 
 // ----------------------------------------------------------------
