@@ -122,7 +122,6 @@ app.get("/", function(request, response) {
 
 /*
 app.post("/sendemail", function (request, response) {
-  console.log("1");
   transporter.sendMail(mailOptions, function(error, info){
   if (error) {
     console.log(error);
@@ -133,18 +132,11 @@ app.post("/sendemail", function (request, response) {
 });
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'restaurantinder@gmail.com',
-    pass: '19981117'
-  }
+
 });
 
 var mailOptions = {
-  from: 'restaurantinder@gmail.com',
-  to: 'wangbingwei1117@yahoo.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
+
 };
 
 // -----------------------------------------------------------------------------
@@ -224,8 +216,6 @@ let nameList = createNameList();
 let clientCount = 0;
 
 let voteCount = 0; // how many people have voted this round
-
-//const restaurantList = ["AA","BB","CC","DD", "EE", "FF", "GG", "HH"]; //from yelp API
 
 let numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0]; //counting how many votes on each restaurant
 
