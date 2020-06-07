@@ -15,6 +15,7 @@ window.onload = () => {
       votes = 'vote' + (i + 1).toString();
       document.getElementById(votes).innerHTML = result.votes[i].toString();
     }
+    
     document.getElementById("rest1").src = "https://s3-media3.fl.yelpcdn.com/bphoto/oHN-1eHRJAz3eoFaCOB5WA/o.jpg";
     document.getElementById("restname1").innerHTML = "Temple Coffee Roasters";
     document.getElementById("dollar1").innerHTML = "$";

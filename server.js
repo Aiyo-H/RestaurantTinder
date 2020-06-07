@@ -247,10 +247,7 @@ wss.on('connection', (ws) => {
       let msgObj = {type : 'message', info : cmdObj.msg};
       broadcast(message);
     }
-    if (cmdObj.type == 'closeCmd'){
-      let msgObj = {type: 'dis', msg:'disconnected', client:cmdObj.client}
-      broadcast(JSON.stringify(msgObj));
-    }
+    
     // Assign the names for players
     if (cmdObj.type == 'name'){
       let msgObj = cmdObj;
