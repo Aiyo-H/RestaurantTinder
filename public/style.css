@@ -9,7 +9,9 @@ body {
   background-position: right 0% bottom 0%;
   background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fsmall.png?v=1591243017049");
 }
-
+.noHover{
+    pointer-events: none;
+}
 .hoverimg {
   height: 50px;
   width: 100px;
@@ -332,6 +334,21 @@ body {
   font-family: "Playfair Display", serif;
   color: #721121;
 }
+#refbun{
+  display: block;
+  height: 75px;
+  width: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  margin: 0 auto;
+  background-color: white;
+  border:none;
+}
+#refbun i {
+  font-size: 30px;
+  color: orange;
+}
 #icon1 {
   width: 40%;
   display: block;
@@ -552,6 +569,9 @@ footer p {
     font-size: 17px;
     margin-top: 70px;
   }
+  #refbun{
+  margin-left: 45%;
+}
   .tinder--card {
     width: 65vw;
     height: 60%;
@@ -714,6 +734,9 @@ footer p {
   #wait {
     margin-top: 50px;
   }
+    #refbun{
+  margin-left: 47%;
+}
   .dollar {
     right: 20px;
   }

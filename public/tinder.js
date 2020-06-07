@@ -23,7 +23,7 @@ window.onload = () => {
       if ((voteList[i] == 0) && (!firstVote)) removeList.push(i);
     }
     
-    removeList = [0];
+    removeList = [0,2];
     
     for (var i = 0; i < removeList.length; i++) {
       document.getElementsByClassName("tinder--card")[removeList[i]].remove();
@@ -205,10 +205,16 @@ function stopTinder() {
   var selections = [];
   let cards = document.querySelectorAll('.tinder--card');
   let sel;
-  for (var i = 0; i < cards.length; i++) {
+  let count = 0;
+  for (var i = 0; i < 8; i++) {
     // Add nope or love to list
-    sel = cards[i].style.transform[10] == '-' ? false : true;
-    selections.push(sel);
+    if (removeList.includes(i)) {
+      selections.push(false);
+    } else {
+      sel = cards[count].style.transform[10] == '-' ? false : true;
+      selections.push(sel);
+      count += 1;
+    }
   }
   console.log(selections);
   let cmdObj = {
@@ -217,8 +223,8 @@ function stopTinder() {
     complete: false,
     finish: false
   };
-  connection.send(JSON.stringify(cmdObj));
-  wait();
+  //connection.send(JSON.stringify(cmdObj));
+  //wait();
   //window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";
 }
 
