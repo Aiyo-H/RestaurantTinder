@@ -2,7 +2,7 @@ A cool website helps you choose a good restaurant when you can't decide.
 
 ٩(◕‿◕｡)۶
 
-# DESIGN
+# Design
 
 1. Fonts:
 
@@ -31,6 +31,8 @@ https://thenounproject.com
 
 # Implementation
 
+# Principal
+
 # Reference List
 
 1. Swiper: https://codepen.io/RobVermeer/pen/japZpY
@@ -41,5 +43,10 @@ https://thenounproject.com
 
 4. CategoryList: https://www.yelp.com/developers/documentation/v3/all_category_list
 
-5. Websocket:
+5. ?Websocket: ?
 
+6. Autocomplete: 
+
+7. YelpAPI: https://github.com/Yelp/yelp-fusion#code-samples
+
+8. 

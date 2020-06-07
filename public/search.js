@@ -23,21 +23,7 @@ document.querySelector("#butn3").addEventListener("click", function() {
 
 
 
+var input = document.getElementById("textarea2");
+var awesomplete = new Awesomplete(input);
 
-
-
-var comboplete = new Awesomplete('input.dropdown-input', {
-	minChars: 0,
-});
-Awesomplete.$('.dropdown-btn').addEventListener("click", function() {
-	if (comboplete.ul.childNodes.length === 0) {
-		comboplete.minChars = 0;
-		comboplete.evaluate();
-	}
-	else if (comboplete.ul.hasAttribute('hidden')) {
-		comboplete.open();
-	}
-	else {
-		comboplete.close();
-	}
-});
+awesomplete.list = ["Ada", "Java", "JavaScript", "Brainfuck", "LOLCODE", "Node.js", "Ruby on Rails"];
