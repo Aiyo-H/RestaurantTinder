@@ -55,8 +55,6 @@
 
 .moving.tinder--card {
   transition: none;
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
   cursor: grabbing;
 }
 

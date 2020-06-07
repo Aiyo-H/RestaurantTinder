@@ -101,7 +101,7 @@ var love = document.getElementById('love');
 const url = "wss://weak-playful-winterberry.glitch.me";
 const connection = new WebSocket(url);
 
-// Reference: https://codepen.io/RobVermeer/pen/japZpY.js
+//----------------------- Reference: https://codepen.io/RobVermeer/pen/japZpY.js -------------------------
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
   // All cards selected
@@ -194,6 +194,8 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+
+// -----------------------------------------------------------------------------------------
 
 function wait() {
   document.getElementById('tindercards').style.display = "none";
