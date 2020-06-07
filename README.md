@@ -77,8 +77,6 @@ This is calculated by `(A/2) * (1 + x%) ^ 2 = A`, where `A` is the number of pla
 
 4. CategoryList: *https://www.yelp.com/developers/documentation/v3/all_category_list*
 
-5. Websocket: ?
+5. Autocomplete: *https://leaverou.github.io/awesomplete*
 
-6. Autocomplete: *https://leaverou.github.io/awesomplete*
-
-7. YelpAPI: *https://github.com/Yelp/yelp-fusion#code-samples*
+6. YelpAPI: *https://github.com/Yelp/yelp-fusion#code-samples*
