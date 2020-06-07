@@ -16,12 +16,12 @@ window.onload = () => {
     voteList = restaurant.vote;
     firstVote = restaurant.first;
     
-    console.log(data.length);
-    console.log(voteList);
-    console.log(firstVote);
+    //console.log(data);
+    //console.log(voteList);
+    //console.log(firstVote);
     
     for (var i = 0; i < data.length; i++) {
-      if (!(data[i].hasOwnProperty('name'))) {
+      if (!data[i]) {
         restl = i;
         break;
       }
@@ -258,7 +258,6 @@ connection.onmessage = event => {
   if (event.data == "connected!" || event.data == "Disconnected") return;
   let msgObj = JSON.parse(event.data);
   if (msgObj.type == "result") {
-    
     if (msgObj.complete) {
       if (msgObj.finish) window.location = "https://weak-playful-winterberry.glitch.me/result.html";
       else window.location = "https://weak-playful-winterberry.glitch.me/tinder.html";

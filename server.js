@@ -409,7 +409,8 @@ function sendResult(V) {
   
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
   for (let i = 0; i < 8; i++) {
-      rests.push((JSON.parse(x)).data[i].name);
+      if (!(JSON.parse(x)).data[i]) rests.push("Null");
+      else rests.push((JSON.parse(x)).data[i].name);
   }
   
   votes = V;
@@ -419,6 +420,9 @@ function sendResult(V) {
     if (votes[i] == numVotes) selectRests.push(i);
   }
   let select = selectRests[Math.floor(Math.random() * selectRests.length)];
+  while (!(JSON.parse(x)).data[select]) {
+    select = selectRests[Math.floor(Math.random() * selectRests.length)];
+  }
   pick = (JSON.parse(x)).data[select];
 }
 
