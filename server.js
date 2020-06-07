@@ -331,6 +331,17 @@ function changeName(n) {
   return first;
 }
 
+function updateName(n) {
+  let first = false;
+  //if (nameList[0] == "Waiting...") first = true;
+  const index = nameList.indexOf(n);
+  if (index > -1) {
+    nameList.splice(index, 1);
+  }
+  nameList.push("Waiting...");
+  return first;
+}
+
 function createNameList() {
   let l = [];
   for (let i = 0; i < 8; i++) {
