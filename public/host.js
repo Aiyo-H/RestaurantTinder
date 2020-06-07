@@ -76,7 +76,8 @@ connection.onclose = function(){
   let closeObj = {
     type: "closeCmd",
     client: clientname,
-    msg: "disconnected"
+    msg: "disconnected",
+    data: []
   };
   console.log(closeObj);
   connection.send(JSON.stringify(closeObj));
@@ -97,6 +98,9 @@ connection.onmessage = event => {
   }
   if (msgObj.type == "message") {
     addMessage(msgObj.from + ": " + msgObj.msg);
+  }
+  if (msgObj.type == "closeCmd") {
+    console.log(msgObj);
   }
 };
 

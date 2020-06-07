@@ -227,7 +227,7 @@ wss.on('connection', (ws) => {
   if (clientCount > 8) {playingAlready = true;}
   
   ws.on('message', (message) => {
-    //console.log(message);
+    console.log(message);
     //ws.send("server echo:" + message);
     //broadcast(message)
     let cmdObj = JSON.parse(message);
@@ -247,16 +247,28 @@ wss.on('connection', (ws) => {
       msgObj.term = term;
       broadcast(JSON.stringify(msgObj));
     }
+    
     // Redirect to Tinder.html
     if (cmdObj.type == 'nextTinder'){
       firstVote = true;
       playingAlready = true;
       broadcast(message);
     }
+    
     // Open Tinder.html
     if (cmdObj.type == 'tinder'){
       playingAlready = true;
     }
+    
+    // Close Host.html
+    if (cmdObj.type == 'closeCmd'){
+      console.log(cmdObj);
+      let msgObj = cmdObj;
+      updateName(cmdObj.client);
+      msgObj.data = nameList;
+      broadcast(JSON.stringify(msgObj));
+    }
+    
     // Compute the result of Tinder
     if (cmdObj.type == 'result'){
       voteCount += 1;
