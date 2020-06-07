@@ -116,7 +116,7 @@ connection.onmessage = event => {
       updateHost(true);
     }
     signName(msgObj.data);
-    addMessage(msgObj.client + " disconnected!");
+    //addMessage(msgObj.client + " disconnected!");
   }
 };
 

@@ -30,19 +30,19 @@ https://thenounproject.com
 
 
 # Implementation
-1.
 
-2.
+1. Yelp Restaurant Search Engine
 
-3.
+2. Autocompletion of category
 
-4. Live Chat Box
+3. Copy link and send link via e-mail
 
-5.
+4. Live Chat Box (Random Name User)
 
-6.
+5. Live Swiper Tinder card and buttons
 
-7.
+6. Selection algorithm for favorite restaurant
+
 # Principal
 
 1.414
@@ -63,4 +63,10 @@ https://thenounproject.com
 
 7. YelpAPI: https://github.com/Yelp/yelp-fusion#code-samples
 
-8. 
+# Specific
+
+1. Host only for a single game.
+
+2. Offer for at most eight players, and default restaurant number is eight.
+
+3. Categories are only available in "US" or "All" `(This is required)`.
