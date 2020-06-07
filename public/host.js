@@ -73,6 +73,7 @@ connection.onerror = error => {
 };
 
 connection.onclose = function(){
+  /*
   let closeObj = {
     type: "closeCmd",
     client: clientname,
@@ -81,6 +82,7 @@ connection.onclose = function(){
   };
   console.log(closeObj);
   connection.send(JSON.stringify(closeObj));
+  */
 }
 connection.onmessage = event => {
   console.log(event.data);
@@ -106,3 +108,15 @@ connection.onmessage = event => {
 
 // NEXT HTML
 document.querySelector('#butn').addEventListener('click', () => {connection.send(JSON.stringify({ type: "nextTinder" }));});
+
+// Send Onclose
+window.onbeforeunload = () => { if (connection) {
+  let closeObj = {
+    type: "closeCmd",
+    client: clientname,
+    msg: "disconnected",
+    data: []
+  };
+  console.log(closeObj);
+  connection.send(JSON.stringify(closeObj));
+}};

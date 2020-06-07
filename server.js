@@ -227,7 +227,7 @@ wss.on('connection', (ws) => {
   if (clientCount > 8) {playingAlready = true;}
   
   ws.on('message', (message) => {
-    console.log(message);
+    //console.log(message);
     //ws.send("server echo:" + message);
     //broadcast(message)
     let cmdObj = JSON.parse(message);
@@ -349,8 +349,8 @@ function updateName(n) {
   const index = nameList.indexOf(n);
   if (index > -1) {
     nameList.splice(index, 1);
+    nameList.push("Waiting...");
   }
-  nameList.push("Waiting...");
   return first;
 }
 
