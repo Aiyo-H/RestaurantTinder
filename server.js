@@ -377,7 +377,7 @@ function init() {
   voteCount = 0;
   firstVote = true && (!playingAlready);
   numOfVotes = [0, 0, 0, 0, 0, 0, 0, 0];
-  playingAlready = false;
+  if (!playingAlready) {playingAlready = false;}
   numPlayers = 0;
   //playingNumbers = 0;
 }
