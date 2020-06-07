@@ -214,41 +214,49 @@ img{
 .bar-1 {
   width: 60%;
   height: 18px;
+  border-radius: 25px;
   background-color: #4CAF50;
 }
 .bar-2 {
   width: 30%;
   height: 18px;
+  border-radius: 25px;
   background-color: #2196F3;
 }
 .bar-3 {
   width: 10%;
   height: 18px;
+  border-radius: 25px;
   background-color: #00bcd4;
 }
 .bar-4 {
   width: 4%;
   height: 18px;
+  border-radius: 25px;
   background-color: #8367C7;
 }
 .bar-5 {
   width: 1%;
   height: 18px;
+  border-radius: 25px;
   background-color: #f44336;
 }
 .bar-6 {
   width: 1%;
   height: 18px;
+  border-radius: 25px;
   background-color: #6B8E23;
 }
 .bar-7 {
   width: 1%;
   height: 18px;
+  border-radius: 25px;
   background-color: #FF69B4;
 }
 .bar-8 {
   width: 1%;
   height: 18px;
+  border-radius: 25px;
   background-color: #FFA07A;
 }
 button {
