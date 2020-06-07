@@ -290,10 +290,11 @@ wss.on('connection', (ws) => {
           msgObj.finish = true;
           numPlayers = clientCount;
           playingAlready = false;
+          sendResult(numOfVotes);
         }
         voteCount = 0;
         saveData(voteObj);
-        sendResult();
+        //sendResult();
         msgObj.complete = true;
       }
       broadcast(JSON.stringify(msgObj));
@@ -399,15 +400,14 @@ app.get("/result", function(request, response) {
   response.end();
 });
 
-function sendResult() {
+function sendResult(V) {
   
   let x = fs.readFileSync("/app/restaurant.json", 'utf8');
   for (let i = 0; i < 8; i++) {
       rests.push((JSON.parse(x)).data[i].name);
   }
   
-  let y = fs.readFileSync("/app/voteresult.json", 'utf8');
-  votes = (JSON.parse(y)).arr;
+  votes = V;
   
   let numVotes = Math.max(...votes);
   for (let i = 0; i < 8; i++) {
