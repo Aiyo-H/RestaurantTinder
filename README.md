@@ -1,6 +1,9 @@
 A cool website helps you choose a good restaurant when you can't decide.
 
 ٩(◕‿◕｡)۶
+# How to use our website:
+1. One person click on "Go", get a new link which can share with others.
+2. Click on "Star"
 
 # Design
 
