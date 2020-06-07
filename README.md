@@ -6,27 +6,27 @@ A cool website helps you choose a good restaurant when you can't decide.
 
 1. Fonts:
 
-Playfair Display: https://fonts.google.com/specimen/Playfair+Display?query=playfair
+Playfair Display: *https://fonts.google.com/specimen/Playfair+Display?query=playfair*
 
-Carter One: https://fonts.google.com/specimen/Carter+One?query=carter+one
+Carter One: *https://fonts.google.com/specimen/Carter+One?query=carter+one*
 
-Vidaloka: https://fonts.google.com/specimen/Vidaloka?query=vida
+Vidaloka: *https://fonts.google.com/specimen/Vidaloka?query=vida*
 
 2. Main Colors:
 
-Main background color: #FFCF99
+Main background color: *#FFCF99*
 
-Footer background color: #FFC07F
+Footer background color: *#FFC07F*
 
-Text colors: #F15156; #F15156; #FC7753;
+Text colors: *#F15156*; *#F15156*; *#FC7753*;
 
 3. Icons from Fontawesome and Noun Project
 
-https://fontawesome.com
+*https://fontawesome.com*
 
-https://thenounproject.com
+*https://thenounproject.com*
 
-4. Logo and UI images designed by team Yearbook Haters
+4. Logo and UI images designed by team *Yearbook Haters*
 
 
 # Implementation
@@ -45,23 +45,19 @@ https://thenounproject.com
 
 # Principal
 
-1.414
+There are four conditions to determine the end of Tinder selection.
 
-# Reference List
+1. At least one restaurant is all loved.
 
-1. Swiper: https://codepen.io/RobVermeer/pen/japZpY
+2. All restaurants are all disliked.
 
-2. RandomString: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+3. Only one restaurant left.
 
-3. AnimalList: https://gist.githubusercontent.com/borlaym/585e2e09dd6abd9b0d0a/raw/6e46db8f5c27cb18fd1dfa50c7c921a0fbacbad0/animals.json
+4. Besides the first round, the current round's top love number is lower than 1.414 times of the former round's.
 
-4. CategoryList: https://www.yelp.com/developers/documentation/v3/all_category_list
+>-- If seeing how many of the other players liked a restaurant does not lead to picking one, the game defaults to choosing a random restaurant from those which were chosen the most. 
 
-5. Websocket: ?
-
-6. Autocomplete: https://leaverou.github.io/awesomplete
-
-7. YelpAPI: https://github.com/Yelp/yelp-fusion#code-samples
+This is calculated by `(A/2) * (1 + x%) ^ 2 = A`, where `A` is the number of players (clients), and `x% = sqrt(2) - 1`.
 
 # Specific
 
@@ -70,3 +66,19 @@ https://thenounproject.com
 2. Offer for at most eight players, and default restaurant number is eight.
 
 3. Categories are only available in "US" or "All" `(This is required)`.
+
+# Reference List
+
+1. Swiper: *https://codepen.io/RobVermeer/pen/japZpY*
+
+2. RandomString: *https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript*
+
+3. AnimalList: *https://gist.githubusercontent.com/borlaym/585e2e09dd6abd9b0d0a/raw/6e46db8f5c27cb18fd1dfa50c7c921a0fbacbad0/animals.json*
+
+4. CategoryList: *https://www.yelp.com/developers/documentation/v3/all_category_list*
+
+5. Websocket: ?
+
+6. Autocomplete: *https://leaverou.github.io/awesomplete*
+
+7. YelpAPI: *https://github.com/Yelp/yelp-fusion#code-samples*
