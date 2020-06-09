@@ -1,6 +1,10 @@
 A cool website helps you choose a good restaurant when you can't decide.
 
 ٩(◕‿◕｡)۶
+
+# Group Members
+Bingwei Wang, Jingcheng He, Jinghan Zhang
+
 # How to use our website:
 1. One person click on "Go", get a new link which can share with others by copy or email(players who entering game through this link will go to chat page directly).
 
