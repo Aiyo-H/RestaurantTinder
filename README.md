@@ -2,6 +2,9 @@ A cool website helps you choose a good restaurant when you can't decide.
 
 ٩(◕‿◕｡)۶
 
+# Group Team
+Yearbook Haters
+
 # Group Members
 Bingwei Wang, Jingcheng He, Jinghan Zhang
 
@@ -79,9 +82,9 @@ This is calculated by `(A/2) * (1 + x%) ^ 2 = A`, where `A` is the number of pla
 
 # Specific
 
-1. Host only for a single game.
+1. Host only for a single game `(This is accepted)`.
 
-2. Offer for at most eight players, and default restaurant number is eight.
+2. Offer for at most eight players, and default restaurant number is eight `(Eight is a selected number for optimal use)`.
 
 3. Categories are only available in "US" or "All" `(This is required)`.
 
