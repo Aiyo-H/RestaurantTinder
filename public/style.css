@@ -639,6 +639,9 @@ footer p {
   font-size: 22px;
   }
 }
+@media only screen and (min-width: 600px){
+  body{background-image: url("https://cdn.glitch.com/60cbf0c8-51a4-497f-a391-d3bf5e32e6be%2Fbg1.png?v=1591251140550")};
+}
 
 @media only screen and (min-width: 1025px) {
   body {
