@@ -1,10 +1,10 @@
-Top Note: This web app is built on glitch: *https://glitch.com/*
-
-You can try this out on: *https://weak-playful-winterberry.glitch.me*
-
 Course: ECS162 at UC Davis
 
 Final Project: A cool website helps you choose a good restaurant when you can't decide.
+
+This web app is built on glitch: *https://glitch.com/*
+
+You can try this out on: *https://weak-playful-winterberry.glitch.me*
 
 ٩(◕‿◕｡)۶
 
