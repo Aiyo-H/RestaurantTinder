@@ -1,4 +1,5 @@
 Top Note: This web app is built on glitch: *https://glitch.com/*
+
 Course: ECS162 at UC Davis
 A cool website helps you choose a good restaurant when you can't decide.
 
